@@ -341,6 +341,42 @@
 }
 
 @media (max-width: 760px) {
+  /* Stacked comparison cards must size to their contents. Desktop flex: 1 1 0
+     can collapse their height in a column layout, particularly in iOS Safari. */
+  .page-home .compare,
+  .page-salon .compare,
+  .page-why .compare {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    height: auto;
+    align-items: start;
+  }
+
+  .page-home .compare .side,
+  .page-salon .compare .side,
+  .page-why .compare .side {
+    display: block;
+    flex: none;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    min-width: 0;
+    padding: 28px 22px;
+    overflow-wrap: anywhere;
+  }
+
+  .page-home .wallet-save-examples {
+    display: grid;
+    justify-items: center;
+    gap: 14px;
+  }
+
+  .page-home .wallet-save-art {
+    width: min(100%, 210px);
+    height: auto;
+  }
+
   .page-home section,
   .page-salon section,
   .page-why section {
