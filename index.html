@@ -565,7 +565,7 @@ h2{font-size:clamp(30px,3.5vw,46px);text-wrap:balance;}
 @media(max-width:480px){.pilot-panel{padding:26px 22px;}.pilot-action .btn{width:100%;}.wallet-save-art{width:min(100%,210px);}}
 </style>
 <style id="version-e-navigation">.back-to-top{position:fixed;bottom:22px;right:22px;z-index:100;background:#201a10;color:#f4c877;border:1px solid #a47a31;border-radius:24px;padding:10px 17px;font-size:14px;font-weight:700;box-shadow:0 5px 24px #0008}.back-to-top:hover{background:#322718}.back-to-top:focus-visible,.nav a:focus-visible{outline:2px solid #f4c877;outline-offset:4px}section[id]{scroll-margin-top:110px}footer{padding-bottom:80px}@media(max-width:760px){.nav .row{height:auto;min-height:70px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px;gap:10px}.nav .links{display:flex!important;flex-wrap:wrap;gap:12px;font-size:12px}.nav .cta{padding:8px 12px}.back-to-top{right:12px;bottom:12px}section[id]{scroll-margin-top:145px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{.back-to-top{display:none}}</style>
-<link rel="stylesheet" href="refinement.css?v=dashboard-viewer-1">
+<link rel="stylesheet" href="refinement.css?v=eleven-gold-1">
 </head>
 <body id="top" class="page-home">
 <nav class="nav">
@@ -746,216 +746,48 @@ h2{font-size:clamp(30px,3.5vw,46px);text-wrap:balance;}
 <p class="onboarding-status"><strong>See who has joined, directly from your dashboard.</strong> Managers can check their team and help anyone who still needs to get started.</p>
 </div>
 </section>
-<section id="dashboard-tour" style="padding: 80px 20px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white;">
-  <div style="max-width: 1200px; margin: 0 auto;">
-    
-    <div style="text-align: center; margin-bottom: 60px;">
-      <h2 style="font-size: 48px; margin: 0 0 20px 0; font-weight: 600;">Your CandleMe dashboard</h2>
-      <p style="font-size: 18px; color: #aaa; margin: 0; max-width: 600px; margin: 0 auto;">From setting up locations to seeing who has joined, manage your CandleMe program in one place. Select any screenshot to explore it full screen.</p>
-    </div>
-
-    <!-- Tab Navigation -->
-    <div style="display: flex; gap: 10px; margin-bottom: 40px; flex-wrap: wrap; justify-content: center; border-bottom: 1px solid #333;">
-      <button class="dashboard-tab-btn active" onclick="showDashboardTab(this, 'welcome')" style="padding: 15px 25px; background: none; border: none; border-bottom: 3px solid #ff6b5b; color: white; cursor: pointer; font-size: 16px; font-weight: 500;">Welcome Home</button>
-      <button class="dashboard-tab-btn" onclick="showDashboardTab(this, 'locations')" style="padding: 15px 25px; background: none; border: none; border-bottom: 3px solid transparent; color: #aaa; cursor: pointer; font-size: 16px; font-weight: 500;">Locations</button>
-      <button class="dashboard-tab-btn" onclick="showDashboardTab(this, 'employees')" style="padding: 15px 25px; background: none; border: none; border-bottom: 3px solid transparent; color: #aaa; cursor: pointer; font-size: 16px; font-weight: 500;">Employees</button>
-      <button class="dashboard-tab-btn" onclick="showDashboardTab(this, 'candles')" style="padding: 15px 25px; background: none; border: none; border-bottom: 3px solid transparent; color: #aaa; cursor: pointer; font-size: 16px; font-weight: 500;">Candles</button>
-      <button class="dashboard-tab-btn" onclick="showDashboardTab(this, 'data')" style="padding: 15px 25px; background: none; border: none; border-bottom: 3px solid transparent; color: #aaa; cursor: pointer; font-size: 16px; font-weight: 500;">Data & Reports</button>
-      <button class="dashboard-tab-btn" onclick="showDashboardTab(this, 'settings')" style="padding: 15px 25px; background: none; border: none; border-bottom: 3px solid transparent; color: #aaa; cursor: pointer; font-size: 16px; font-weight: 500;">Settings</button>
-    </div>
-
-    <!-- Tab Content -->
-    <div class="dashboard-tabs" style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-
-      <!-- Welcome Tab -->
-      <div id="welcome" class="dashboard-tab-content" style="display: block;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
-          <div>
-            <h3 style="font-size: 32px; margin: 0 0 20px 0; font-weight: 600;">Your CandleMe program at a glance</h3>
-            <p style="font-size: 18px; line-height: 1.6; color: #ccc; margin: 0 0 25px 0;">Your dashboard greets you with a complete snapshot of your candle network. See total candles activated, customer saves, returns, door activity, and shares at a glance. One-click access to drill into any metric or manage different parts of your network.</p>
-            <ul style="list-style: none; padding: 0; margin: 0; font-size: 16px; color: #bbb;">
-              <li style="margin-bottom: 12px;">• View real-time activation and engagement metrics</li>
-              <li style="margin-bottom: 12px;">• Monitor saves, returns, and door activity</li>
-              <li style="margin-bottom: 12px;">• Quick links to locations, employees, candles, and data</li>
-              <li>• Personalized greeting shows your organization name and scope</li>
-            </ul>
-          </div>
-          <div style="background: #fff; padding: 20px; border-radius: 8px;">
-            <img src="images/01_welcome.png" alt="Dashboard Welcome Screen" style="width: 100%; border-radius: 8px; display: block; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
-          </div>
-        </div>
-      </div>
-
-      <!-- Locations Tab -->
-      <div id="locations" class="dashboard-tab-content" style="display: none;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
-          <div>
-            <h3 style="font-size: 32px; margin: 0 0 20px 0; font-weight: 600;">Set up each location once</h3>
-            <p style="font-size: 18px; line-height: 1.6; color: #ccc; margin: 0 0 25px 0;">Set up as many locations as you have. Each location gets its own employee onboarding QR code, so managers can activate their own teams without you building a centralized roster. Track employees, activity, and performance by location.</p>
-            <ul style="list-style: none; padding: 0; margin: 0; font-size: 16px; color: #bbb;">
-              <li style="margin-bottom: 12px;">• Add and configure multiple salon locations</li>
-              <li style="margin-bottom: 12px;">• Generate unique onboarding QR per location</li>
-              <li style="margin-bottom: 12px;">• Track employees and metrics by location</li>
-              <li>• One-time setup, reuse across all locations</li>
-            </ul>
-          </div>
-          <div style="background: #fff; padding: 20px; border-radius: 8px;">
-            <img src="images/10_locations.png" alt="Locations Management" style="width: 100%; border-radius: 8px; display: block; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
-          </div>
-        </div>
-      </div>
-
-      <!-- Employees Tab -->
-      <div id="employees" class="dashboard-tab-content" style="display: none;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
-          <div>
-            <h3 style="font-size: 32px; margin: 0 0 20px 0; font-weight: 600;">See who has joined your team</h3>
-            <p style="font-size: 18px; line-height: 1.6; color: #ccc; margin: 0 0 25px 0;">See all employees across your organization. View who has activated their candle, when, and from which location. Managers can activate their own teams using location-specific QR codes, or you can bulk-upload rosters for large deployments.</p>
-            <ul style="list-style: none; padding: 0; margin: 0; font-size: 16px; color: #bbb;">
-              <li style="margin-bottom: 12px;">• Full employee roster with activation status</li>
-              <li style="margin-bottom: 12px;">• View employees by location</li>
-              <li style="margin-bottom: 12px;">• Bulk upload employee lists (Excel or CSV)</li>
-              <li>• Manager-led activation with location-specific QR codes</li>
-            </ul>
-          </div>
-          <div style="background: #fff; padding: 20px; border-radius: 8px;">
-            <img src="images/12_employees.png" alt="Employee Management" style="width: 100%; border-radius: 8px; display: block; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
-          </div>
-        </div>
-      </div>
-
-      <!-- Candles Tab -->
-      <div id="candles" class="dashboard-tab-content" style="display: none;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
-          <div>
-            <h3 style="font-size: 32px; margin: 0 0 20px 0; font-weight: 600;">Manage what goes inside your Candles</h3>
-            <p style="font-size: 18px; line-height: 1.6; color: #ccc; margin: 0 0 25px 0;">View all active candles in your network. See which employees have activated candles, their customization status, and performance. Manage what's inside: update booking links, product URLs, loyalty programs, and special offers in minutes.</p>
-            <ul style="list-style: none; padding: 0; margin: 0; font-size: 16px; color: #bbb;">
-              <li style="margin-bottom: 12px;">• View all active candles and their status</li>
-              <li style="margin-bottom: 12px;">• See which employees have activated candles</li>
-              <li style="margin-bottom: 12px;">• Update candle destinations instantly (no re-deploy needed)</li>
-              <li>• Customize what each employee can personalize</li>
-            </ul>
-          </div>
-          <div style="background: #fff; padding: 20px; border-radius: 8px;">
-            <img src="images/09_all_candles.png" alt="Candle Management" style="width: 100%; border-radius: 8px; display: block; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
-          </div>
-        </div>
-      </div>
-
-      <!-- Data & Reports Tab -->
-      <div id="data" class="dashboard-tab-content" style="display: none;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
-          <div>
-            <h3 style="font-size: 32px; margin: 0 0 20px 0; font-weight: 600;">Follow saves, returns and shares</h3>
-            <p style="font-size: 18px; line-height: 1.6; color: #ccc; margin: 0 0 25px 0;">Track every candle activation, customer save, return visit, and engagement. Filter by time range (7 days, 90 days, all-time). Export reports as CSV or view geography-based performance. See which destinations drive the most clicks, bookings, and repeat visits.</p>
-            <ul style="list-style: none; padding: 0; margin: 0; font-size: 16px; color: #bbb;">
-              <li style="margin-bottom: 12px;">• Real-time telemetry: activations, saves, returns, door activity</li>
-              <li style="margin-bottom: 12px;">• Export data anytime (CSV download button included)</li>
-              <li style="margin-bottom: 12px;">• Geographic performance maps</li>
-              <li>• Drill down by location, employee, or candle</li>
-            </ul>
-          </div>
-          <div style="background: #fff; padding: 20px; border-radius: 8px;">
-            <img src="images/26_telemetry.png" alt="Data and Reports" style="width: 100%; border-radius: 8px; display: block; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
-          </div>
-        </div>
-      </div>
-
-      <!-- Settings Tab -->
-      <div id="settings" class="dashboard-tab-content" style="display: none;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
-          <div>
-            <h3 style="font-size: 32px; margin: 0 0 20px 0; font-weight: 600;">Your business. Your settings.</h3>
-            <p style="font-size: 18px; line-height: 1.6; color: #ccc; margin: 0 0 25px 0;">Manage your organization profile, account details, billing, and user access. Update your company logo, time zone, and contact information. Invite additional team members with role-based permissions. View billing history and invoices.</p>
-            <ul style="list-style: none; padding: 0; margin: 0; font-size: 16px; color: #bbb;">
-              <li style="margin-bottom: 12px;">• Organization profile and branding</li>
-              <li style="margin-bottom: 12px;">• User management and role-based access</li>
-              <li style="margin-bottom: 12px;">• Billing and subscription management</li>
-              <li>• Account preferences and security settings</li>
-            </ul>
-          </div>
-          <div style="background: #fff; padding: 20px; border-radius: 8px;">
-            <img src="images/02_organization.png" alt="Settings and Organization" style="width: 100%; border-radius: 8px; display: block; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
+<section id="dashboard-tour" aria-labelledby="tour-heading">
+<div class="tour-wrap"><div class="tour-intro"><span class="tour-eyebrow">YOUR CANDLEME DASHBOARD</span><h2 id="tour-heading">Your business. All in view.</h2><p>Manage your team, choose your destinations and follow what happens next.</p></div>
+<div class="tour-tabs" role="tablist" aria-label="Explore your dashboard"><button type="button" role="tab" id="tour-tab-overview" aria-controls="tour-panel-overview" aria-selected="true" tabindex="0">Overview</button><button type="button" role="tab" id="tour-tab-organization" aria-controls="tour-panel-organization" aria-selected="false" tabindex="-1">Your business</button><button type="button" role="tab" id="tour-tab-destinations" aria-controls="tour-panel-destinations" aria-selected="false" tabindex="-1">Destinations</button><button type="button" role="tab" id="tour-tab-team" aria-controls="tour-panel-team" aria-selected="false" tabindex="-1">Team</button><button type="button" role="tab" id="tour-tab-network" aria-controls="tour-panel-network" aria-selected="false" tabindex="-1">Candle network</button><button type="button" role="tab" id="tour-tab-structure" aria-controls="tour-panel-structure" aria-selected="false" tabindex="-1">Structure</button><button type="button" role="tab" id="tour-tab-activity" aria-controls="tour-panel-activity" aria-selected="false" tabindex="-1">Activity</button><button type="button" role="tab" id="tour-tab-reach" aria-controls="tour-panel-reach" aria-selected="false" tabindex="-1">Reach</button><button type="button" role="tab" id="tour-tab-engagement" aria-controls="tour-panel-engagement" aria-selected="false" tabindex="-1">Engagement</button><button type="button" role="tab" id="tour-tab-account" aria-controls="tour-panel-account" aria-selected="false" tabindex="-1">Account</button><button type="button" role="tab" id="tour-tab-integrations" aria-controls="tour-panel-integrations" aria-selected="false" tabindex="-1">Integrations</button></div><div class="tour-panels"><article class="tour-panel" id="tour-panel-overview" role="tabpanel" aria-labelledby="tour-tab-overview" tabindex="0">
+<div class="tour-copy"><span class="tour-count">01 / 11</span><h3>Your business at a glance</h3><p>See views, saves, returns and team activity together. Spot what needs attention and choose where to look next.</p></div>
+<button type="button" class="tour-screenshot" aria-haspopup="dialog" aria-label="Expand screenshot: Your business at a glance" data-title="Your business at a glance"><span class="tour-image-frame"><img src="images/01-overview.png" alt="Demo Salon dashboard: Your business at a glance" width="1920" height="1703" loading="lazy" decoding="async"></span><span class="tour-image-caption"><span>Demo salon account</span><span>Expand screenshot ↗</span></span></button>
+</article><article class="tour-panel" id="tour-panel-organization" role="tabpanel" aria-labelledby="tour-tab-organization" tabindex="0" hidden>
+<div class="tour-copy"><span class="tour-count">02 / 11</span><h3>Make it your business</h3><p>Set your business name, logo, website and contact details. Choose who can create Candles for your organization.</p></div>
+<button type="button" class="tour-screenshot" aria-haspopup="dialog" aria-label="Expand screenshot: Make it your business" data-title="Make it your business"><span class="tour-image-frame"><img src="images/02-organization.png" alt="Demo Salon dashboard: Make it your business" width="1920" height="1263" loading="lazy" decoding="async"></span><span class="tour-image-caption"><span>Demo salon account</span><span>Expand screenshot ↗</span></span></button>
+</article><article class="tour-panel" id="tour-panel-destinations" role="tabpanel" aria-labelledby="tour-tab-destinations" tabindex="0" hidden>
+<div class="tour-copy"><span class="tour-count">03 / 11</span><h3>Choose what goes inside</h3><p>Bring booking, products and useful resources into your Candle. Manage destination links and control which automatic suggestions can appear.</p></div>
+<button type="button" class="tour-screenshot" aria-haspopup="dialog" aria-label="Expand screenshot: Choose what goes inside" data-title="Choose what goes inside"><span class="tour-image-frame"><img src="images/03-pathways.png" alt="Demo Salon dashboard: Choose what goes inside" width="1920" height="4692" loading="lazy" decoding="async"></span><span class="tour-image-caption"><span>Demo salon account</span><span>Expand screenshot ↗</span></span></button>
+</article><article class="tour-panel" id="tour-panel-team" role="tabpanel" aria-labelledby="tour-tab-team" tabindex="0" hidden>
+<div class="tour-copy"><span class="tour-count">04 / 11</span><h3>See who has joined</h3><p>Review your team’s accounts, roles, status and Candle assignments in one place. Help people who still need to get started.</p><p class="tour-context">To identify who is missing, compare joined accounts with your employee list.</p></div>
+<button type="button" class="tour-screenshot" aria-haspopup="dialog" aria-label="Expand screenshot: See who has joined" data-title="See who has joined"><span class="tour-image-frame"><img src="images/05-employees.png" alt="Demo Salon dashboard: See who has joined" width="1920" height="979" loading="lazy" decoding="async"></span><span class="tour-image-caption"><span>Demo salon account</span><span>Expand screenshot ↗</span></span></button>
+</article><article class="tour-panel" id="tour-panel-network" role="tabpanel" aria-labelledby="tour-tab-network" tabindex="0" hidden>
+<div class="tour-copy"><span class="tour-count">05 / 11</span><h3>Your Candles, connected</h3><p>Find and manage your organization’s Candles. Review how they connect and see the selected Candle’s setup and activity.</p></div>
+<button type="button" class="tour-screenshot" aria-haspopup="dialog" aria-label="Expand screenshot: Your Candles, connected" data-title="Your Candles, connected"><span class="tour-image-frame"><img src="images/04-network.png" alt="Demo Salon dashboard: Your Candles, connected" width="1920" height="3362" loading="lazy" decoding="async"></span><span class="tour-image-caption"><span>Demo salon account</span><span>Expand screenshot ↗</span></span></button>
+</article><article class="tour-panel" id="tour-panel-structure" role="tabpanel" aria-labelledby="tour-tab-structure" tabindex="0" hidden>
+<div class="tour-copy"><span class="tour-count">06 / 11</span><h3>See the whole structure</h3><p>Search your managed Candles by name, unit type or status. Open an individual Candle to look more closely.</p></div>
+<button type="button" class="tour-screenshot" aria-haspopup="dialog" aria-label="Expand screenshot: See the whole structure" data-title="See the whole structure"><span class="tour-image-frame"><img src="images/06-birds-eye.png" alt="Demo Salon dashboard: See the whole structure" width="1920" height="3408" loading="lazy" decoding="async"></span><span class="tour-image-caption"><span>Demo salon account</span><span>Expand screenshot ↗</span></span></button>
+</article><article class="tour-panel" id="tour-panel-activity" role="tabpanel" aria-labelledby="tour-tab-activity" tabindex="0" hidden>
+<div class="tour-copy"><span class="tour-count">07 / 11</span><h3>See where activity happens</h3><p>Review activity across locations and employee channels. Choose a reporting period, compare the results and export the report.</p></div>
+<button type="button" class="tour-screenshot" aria-haspopup="dialog" aria-label="Expand screenshot: See where activity happens" data-title="See where activity happens"><span class="tour-image-frame"><img src="images/07-activity.png" alt="Demo Salon dashboard: See where activity happens" width="1920" height="1204" loading="lazy" decoding="async"></span><span class="tour-image-caption"><span>Demo salon account</span><span>Expand screenshot ↗</span></span></button>
+</article><article class="tour-panel" id="tour-panel-reach" role="tabpanel" aria-labelledby="tour-tab-reach" tabindex="0" hidden>
+<div class="tour-copy"><span class="tour-count">08 / 11</span><h3>See where your Candle travels</h3><p>Explore the countries, regions and cities your Candle network reaches. Follow how sharing spreads across generations.</p></div>
+<button type="button" class="tour-screenshot" aria-haspopup="dialog" aria-label="Expand screenshot: See where your Candle travels" data-title="See where your Candle travels"><span class="tour-image-frame"><img src="images/08-geography.png" alt="Demo Salon dashboard: See where your Candle travels" width="1920" height="2455" loading="lazy" decoding="async"></span><span class="tour-image-caption"><span>Demo salon account</span><span>Expand screenshot ↗</span></span></button>
+</article><article class="tour-panel" id="tour-panel-engagement" role="tabpanel" aria-labelledby="tour-tab-engagement" tabindex="0" hidden>
+<div class="tour-copy"><span class="tour-count">09 / 11</span><h3>Know what brings people back</h3><p>Review saves, sharing, return visits and destination feedback. Filter activity by company, location, employee or assigned Candle.</p></div>
+<button type="button" class="tour-screenshot" aria-haspopup="dialog" aria-label="Expand screenshot: Know what brings people back" data-title="Know what brings people back"><span class="tour-image-frame"><img src="images/09-telemetry.png" alt="Demo Salon dashboard: Know what brings people back" width="1920" height="2207" loading="lazy" decoding="async"></span><span class="tour-image-caption"><span>Demo salon account</span><span>Expand screenshot ↗</span></span></button>
+</article><article class="tour-panel" id="tour-panel-account" role="tabpanel" aria-labelledby="tour-tab-account" tabindex="0" hidden>
+<div class="tour-copy"><span class="tour-count">10 / 11</span><h3>Keep your account in view</h3><p>Review your subscription, subscribed locations, enabled doors and transaction history.</p><p class="tour-context">This example account has billing disabled. Displayed amounts are test configuration, not a pricing quote.</p></div>
+<button type="button" class="tour-screenshot" aria-haspopup="dialog" aria-label="Expand screenshot: Keep your account in view" data-title="Keep your account in view"><span class="tour-image-frame"><img src="images/10-billing.png" alt="Demo Salon dashboard: Keep your account in view" width="1920" height="2428" loading="lazy" decoding="async"></span><span class="tour-image-caption"><span>Demo salon account</span><span>Expand screenshot ↗</span></span></button>
+</article><article class="tour-panel" id="tour-panel-integrations" role="tabpanel" aria-labelledby="tour-tab-integrations" tabindex="0" hidden>
+<div class="tour-copy"><span class="tour-count">11 / 11</span><h3>Connect the systems you already use</h3><p>Generate personalized Candle links for your mailing platform, CRM or automation tools. Choose the base Candle, personalize the welcome message and track campaign progress.</p></div>
+<button type="button" class="tour-screenshot" aria-haspopup="dialog" aria-label="Expand screenshot: Connect the systems you already use" data-title="Connect the systems you already use"><span class="tour-image-frame"><img src="images/11-api-access.png" alt="Demo Salon dashboard: Connect the systems you already use" width="897" height="877" loading="lazy" decoding="async"></span><span class="tour-image-caption"><span>Demo salon account</span><span>Expand screenshot ↗</span></span></button>
+</article></div><p class="tour-demo-note">Illustrative demo account. Names and links are examples; figures are test data. Select a screenshot to explore the full view.</p></div>
 </section>
-
 <dialog id="dashboard-viewer" aria-labelledby="dashboard-viewer-title">
-  <header class="dashboard-viewer-toolbar">
-    <div><span class="dashboard-viewer-brand">CandleMe · Dashboard tour</span><h2 id="dashboard-viewer-title"></h2></div>
-    <div class="dashboard-viewer-actions">
-      <button type="button" id="dashboard-viewer-zoom" aria-pressed="false">Zoom in</button>
-      <button type="button" id="dashboard-viewer-close" autofocus aria-label="Close full-screen screenshot and return to tour">✕ Close</button>
-    </div>
-  </header>
-  <div class="dashboard-viewer-stage"><img id="dashboard-viewer-image" alt=""></div>
+<header class="tour-viewer-toolbar"><div><span class="tour-eyebrow">CANDLEME · DASHBOARD TOUR</span><h2 id="dashboard-viewer-title"></h2></div><div class="tour-viewer-actions"><button type="button" id="dashboard-viewer-zoom" aria-pressed="false">Actual size</button><button type="button" id="dashboard-viewer-close" autofocus aria-label="Close screenshot">Close ×</button></div></header>
+<div class="tour-viewer-stage" tabindex="0" aria-label="Full screenshot. Scroll to explore."><img id="dashboard-viewer-image" alt=""></div>
 </dialog>
-<script>
-(() => {
-  const viewer = document.getElementById('dashboard-viewer');
-  const image = document.getElementById('dashboard-viewer-image');
-  const zoom = document.getElementById('dashboard-viewer-zoom');
-  let previousOverflow = '';
-  let opener;
-  document.querySelectorAll('#dashboard-tour .dashboard-tab-content img').forEach(thumbnail => {
-    const title = thumbnail.closest('.dashboard-tab-content').querySelector('h3').textContent;
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.className = 'dashboard-expand';
-    button.setAttribute('aria-label', 'Expand screenshot: ' + title);
-    button.setAttribute('aria-haspopup', 'dialog');
-    thumbnail.replaceWith(button);
-    const hint = document.createElement('span');
-    hint.textContent = '⛶ View full screen';
-    button.append(thumbnail, hint);
-    button.addEventListener('click', () => {
-      opener = button;
-      image.src = thumbnail.src;
-      image.alt = thumbnail.alt;
-      document.getElementById('dashboard-viewer-title').textContent = title;
-      previousOverflow = document.body.style.overflow;
-      viewer.showModal();
-      document.body.style.overflow = 'hidden';
-    });
-  });
-  document.getElementById('dashboard-viewer-close').addEventListener('click', () => viewer.close());
-  viewer.addEventListener('close', () => {
-    document.body.style.overflow = previousOverflow;
-    viewer.classList.remove('is-zoomed');
-    zoom.textContent = 'Zoom in';
-    zoom.setAttribute('aria-pressed', 'false');
-    opener?.focus({preventScroll: true});
-  });
-  zoom.addEventListener('click', () => {
-    const zoomed = viewer.classList.toggle('is-zoomed');
-    zoom.textContent = zoomed ? 'Fit to screen' : 'Zoom in';
-    zoom.setAttribute('aria-pressed', String(zoomed));
-  });
-})();
-function showDashboardTab(button, tabName) {
-  // Hide all tabs
-  const tabs = document.querySelectorAll('.dashboard-tab-content');
-  tabs.forEach(tab => tab.style.display = 'none');
-  
-  // Remove active state from all buttons
-  const buttons = document.querySelectorAll('.dashboard-tab-btn');
-  buttons.forEach(btn => {
-    btn.style.borderBottomColor = 'transparent';
-    btn.style.color = '#aaa';
-  });
-  
-  // Show selected tab and highlight button
-  document.getElementById(tabName).style.display = 'block';
-  button.style.borderBottomColor = '#ff6b5b';
-  button.style.color = 'white';
-}
-</script>
+<script src="dashboard-tour.js?v=eleven-gold-1" defer></script>
 <section class="visibility-section" id="visibility">
 <div class="wrap data-path">
 <article class="data-card">
