@@ -579,7 +579,7 @@ h2{font-size:clamp(30px,3.5vw,46px);text-wrap:balance;}
 <a href="professional.html">Sample Professional Page</a>
 <a href="why-candleme.html">Why CandleMe</a>
 <a href="start-a-pilot.html">Start a Pilot</a>
-<a class="cta" href="mailto:connect@candlemenow.com?subject=Book%20a%20CandleMe%201-to-1%20call">Book a 1-1 Call</a>
+<a class="cta" href="mailto:connect@candlemenow.com?subject=Book%20a%20CandleMe%201-to-1%20call">Book a 1-on-1 Call</a>
 </div>
 </div>
 </nav>
@@ -635,15 +635,15 @@ h2{font-size:clamp(30px,3.5vw,46px);text-wrap:balance;}
 <div class="intro-layout">
 <div class="instant-block">
 <strong>
-<span class="highlight-gold">No app to download.</span> No account to create.<br/>No personal details required. <span class="highlight-gold">Just scan and begin.</span>
+<span class="no-line"><b>No</b> app to download.</span><span class="no-line"><b>No</b> account to create.</span><span class="no-line"><b>No</b> personal details required.</span><span class="scan-begin">Just scan and begin.</span>
 </strong>
 </div>
 <div class="intro-details">
-<p>A personal digital gift clients can open instantly and save to Apple Wallet or Google Wallet in a few simple steps.</p>
+<p class="positive-benefit"><strong>Save in seconds.</strong> Keep your Candle in Apple Wallet or Google Wallet.</p>
 <p class="intro-emphasis">
-<strong>No business card to lose. No website to remember.</strong>
+<strong>Return to everything in one place.</strong> Booking, products and your business, always within reach.
 </p>
-<p>Your business stays within reach, ready whenever they need you.</p>
+<p class="positive-benefit"><strong>Share with someone new.</strong> A personal introduction to your business.</p>
 </div>
 </div>
 <p class="intro-close">
@@ -651,7 +651,7 @@ h2{font-size:clamp(30px,3.5vw,46px);text-wrap:balance;}
 </p>
 </div>
 <div class="wrap destinations">
-<h3>What will you put inside yours?</h3>
+<h3>What goes inside your Candle?</h3>
 <p class="dest-lead">Choose up to 12 destinations that bring clients back to your business. <strong class="highlight-gold">Add or update links in minutes, anytime.</strong>
 </p>
 <ul class="destination-grid">
@@ -670,6 +670,7 @@ h2{font-size:clamp(30px,3.5vw,46px);text-wrap:balance;}
 </ul>
 <p class="destination-note">Choose the links that suit your business. Booking, products, offers and more go home with your client, connected to your existing pages and services.</p>
 <p class="destination-close"><strong>Choose up to 12 standard or custom destinations. <span class="highlight-gold">Your pilot terms confirm pricing before setup.</span></strong></p>
+<p class="marketplace-note"><strong>Room to grow into sponsorship.</strong> Your Candle can become a marketplace for relevant partners, creating future opportunities to monetize selected destinations.</p>
 </div>
 <div class="wrap">
 <div class="compare updated-compare">
@@ -742,32 +743,169 @@ h2{font-size:clamp(30px,3.5vw,46px);text-wrap:balance;}
 <li><span class="example-number">04</span><h3>Ready to share</h3><div class="example-screen"><strong>Your Candle is ready</strong><span>Personal Candle</span><span>Employee dashboard</span></div><p>Save the Candle and start sharing with customers.</p></li>
 </ol>
 <p class="example-note">Example screens show the flow, not a live sign-up form.</p>
+<p class="onboarding-status"><strong>See who has joined, directly from your dashboard.</strong> Managers can check their team and help anyone who still needs to get started.</p>
 </div>
 </section>
+<section id="dashboard-tour" style="padding: 80px 20px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    
+    <div style="text-align: center; margin-bottom: 60px;">
+      <h2 style="font-size: 48px; margin: 0 0 20px 0; font-weight: 600;">Your Dashboard Tour</h2>
+      <p style="font-size: 18px; color: #aaa; margin: 0; max-width: 600px; margin: 0 auto;">See exactly what you'll manage. Browse real dashboard screens from your first day onward.</p>
+    </div>
+
+    <!-- Tab Navigation -->
+    <div style="display: flex; gap: 10px; margin-bottom: 40px; flex-wrap: wrap; justify-content: center; border-bottom: 1px solid #333;">
+      <button class="dashboard-tab-btn active" onclick="showDashboardTab(this, 'welcome')" style="padding: 15px 25px; background: none; border: none; border-bottom: 3px solid #ff6b5b; color: white; cursor: pointer; font-size: 16px; font-weight: 500;">Welcome Home</button>
+      <button class="dashboard-tab-btn" onclick="showDashboardTab(this, 'locations')" style="padding: 15px 25px; background: none; border: none; border-bottom: 3px solid transparent; color: #aaa; cursor: pointer; font-size: 16px; font-weight: 500;">Locations</button>
+      <button class="dashboard-tab-btn" onclick="showDashboardTab(this, 'employees')" style="padding: 15px 25px; background: none; border: none; border-bottom: 3px solid transparent; color: #aaa; cursor: pointer; font-size: 16px; font-weight: 500;">Employees</button>
+      <button class="dashboard-tab-btn" onclick="showDashboardTab(this, 'candles')" style="padding: 15px 25px; background: none; border: none; border-bottom: 3px solid transparent; color: #aaa; cursor: pointer; font-size: 16px; font-weight: 500;">Candles</button>
+      <button class="dashboard-tab-btn" onclick="showDashboardTab(this, 'data')" style="padding: 15px 25px; background: none; border: none; border-bottom: 3px solid transparent; color: #aaa; cursor: pointer; font-size: 16px; font-weight: 500;">Data & Reports</button>
+      <button class="dashboard-tab-btn" onclick="showDashboardTab(this, 'settings')" style="padding: 15px 25px; background: none; border: none; border-bottom: 3px solid transparent; color: #aaa; cursor: pointer; font-size: 16px; font-weight: 500;">Settings</button>
+    </div>
+
+    <!-- Tab Content -->
+    <div class="dashboard-tabs" style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+
+      <!-- Welcome Tab -->
+      <div id="welcome" class="dashboard-tab-content" style="display: block;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+          <div>
+            <h3 style="font-size: 32px; margin: 0 0 20px 0; font-weight: 600;">Welcome Home</h3>
+            <p style="font-size: 18px; line-height: 1.6; color: #ccc; margin: 0 0 25px 0;">Your dashboard greets you with a complete snapshot of your candle network. See total candles activated, customer saves, returns, door activity, and shares at a glance. One-click access to drill into any metric or manage different parts of your network.</p>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 16px; color: #bbb;">
+              <li style="margin-bottom: 12px;">• View real-time activation and engagement metrics</li>
+              <li style="margin-bottom: 12px;">• Monitor saves, returns, and door activity</li>
+              <li style="margin-bottom: 12px;">• Quick links to locations, employees, candles, and data</li>
+              <li>• Personalized greeting shows your organization name and scope</li>
+            </ul>
+          </div>
+          <div style="background: #fff; padding: 20px; border-radius: 8px;">
+            <img src="images/01_welcome.png" alt="Dashboard Welcome Screen" style="width: 100%; border-radius: 8px; display: block; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Locations Tab -->
+      <div id="locations" class="dashboard-tab-content" style="display: none;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+          <div>
+            <h3 style="font-size: 32px; margin: 0 0 20px 0; font-weight: 600;">Manage Locations</h3>
+            <p style="font-size: 18px; line-height: 1.6; color: #ccc; margin: 0 0 25px 0;">Set up as many locations as you have. Each location gets its own employee onboarding QR code, so managers can activate their own teams without you building a centralized roster. Track employees, activity, and performance by location.</p>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 16px; color: #bbb;">
+              <li style="margin-bottom: 12px;">• Add and configure multiple salon locations</li>
+              <li style="margin-bottom: 12px;">• Generate unique onboarding QR per location</li>
+              <li style="margin-bottom: 12px;">• Track employees and metrics by location</li>
+              <li>• One-time setup, reuse across all locations</li>
+            </ul>
+          </div>
+          <div style="background: #fff; padding: 20px; border-radius: 8px;">
+            <img src="images/10_locations.png" alt="Locations Management" style="width: 100%; border-radius: 8px; display: block; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Employees Tab -->
+      <div id="employees" class="dashboard-tab-content" style="display: none;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+          <div>
+            <h3 style="font-size: 32px; margin: 0 0 20px 0; font-weight: 600;">Track Your Team</h3>
+            <p style="font-size: 18px; line-height: 1.6; color: #ccc; margin: 0 0 25px 0;">See all employees across your organization. View who has activated their candle, when, and from which location. Managers can activate their own teams using location-specific QR codes, or you can bulk-upload rosters for large deployments.</p>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 16px; color: #bbb;">
+              <li style="margin-bottom: 12px;">• Full employee roster with activation status</li>
+              <li style="margin-bottom: 12px;">• View employees by location</li>
+              <li style="margin-bottom: 12px;">• Bulk upload employee lists (Excel or CSV)</li>
+              <li>• Manager-led activation with location-specific QR codes</li>
+            </ul>
+          </div>
+          <div style="background: #fff; padding: 20px; border-radius: 8px;">
+            <img src="images/12_employees.png" alt="Employee Management" style="width: 100%; border-radius: 8px; display: block; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Candles Tab -->
+      <div id="candles" class="dashboard-tab-content" style="display: none;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+          <div>
+            <h3 style="font-size: 32px; margin: 0 0 20px 0; font-weight: 600;">Manage Your Candles</h3>
+            <p style="font-size: 18px; line-height: 1.6; color: #ccc; margin: 0 0 25px 0;">View all active candles in your network. See which employees have activated candles, their customization status, and performance. Manage what's inside: update booking links, product URLs, loyalty programs, and special offers in minutes.</p>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 16px; color: #bbb;">
+              <li style="margin-bottom: 12px;">• View all active candles and their status</li>
+              <li style="margin-bottom: 12px;">• See which employees have activated candles</li>
+              <li style="margin-bottom: 12px;">• Update candle destinations instantly (no re-deploy needed)</li>
+              <li>• Customize what each employee can personalize</li>
+            </ul>
+          </div>
+          <div style="background: #fff; padding: 20px; border-radius: 8px;">
+            <img src="images/09_all_candles.png" alt="Candle Management" style="width: 100%; border-radius: 8px; display: block; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Data & Reports Tab -->
+      <div id="data" class="dashboard-tab-content" style="display: none;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+          <div>
+            <h3 style="font-size: 32px; margin: 0 0 20px 0; font-weight: 600;">Data & Reports</h3>
+            <p style="font-size: 18px; line-height: 1.6; color: #ccc; margin: 0 0 25px 0;">Track every candle activation, customer save, return visit, and engagement. Filter by time range (7 days, 90 days, all-time). Export reports as CSV or view geography-based performance. See which destinations drive the most clicks, bookings, and repeat visits.</p>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 16px; color: #bbb;">
+              <li style="margin-bottom: 12px;">• Real-time telemetry: activations, saves, returns, door activity</li>
+              <li style="margin-bottom: 12px;">• Export data anytime (CSV download button included)</li>
+              <li style="margin-bottom: 12px;">• Geographic performance maps</li>
+              <li>• Drill down by location, employee, or candle</li>
+            </ul>
+          </div>
+          <div style="background: #fff; padding: 20px; border-radius: 8px;">
+            <img src="images/26_telemetry.png" alt="Data and Reports" style="width: 100%; border-radius: 8px; display: block; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Tab -->
+      <div id="settings" class="dashboard-tab-content" style="display: none;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+          <div>
+            <h3 style="font-size: 32px; margin: 0 0 20px 0; font-weight: 600;">Organization Settings</h3>
+            <p style="font-size: 18px; line-height: 1.6; color: #ccc; margin: 0 0 25px 0;">Manage your organization profile, account details, billing, and user access. Update your company logo, time zone, and contact information. Invite additional team members with role-based permissions. View billing history and invoices.</p>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 16px; color: #bbb;">
+              <li style="margin-bottom: 12px;">• Organization profile and branding</li>
+              <li style="margin-bottom: 12px;">• User management and role-based access</li>
+              <li style="margin-bottom: 12px;">• Billing and subscription management</li>
+              <li>• Account preferences and security settings</li>
+            </ul>
+          </div>
+          <div style="background: #fff; padding: 20px; border-radius: 8px;">
+            <img src="images/02_organization.png" alt="Settings and Organization" style="width: 100%; border-radius: 8px; display: block; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script>
+function showDashboardTab(button, tabName) {
+  // Hide all tabs
+  const tabs = document.querySelectorAll('.dashboard-tab-content');
+  tabs.forEach(tab => tab.style.display = 'none');
+  
+  // Remove active state from all buttons
+  const buttons = document.querySelectorAll('.dashboard-tab-btn');
+  buttons.forEach(btn => {
+    btn.style.borderBottomColor = 'transparent';
+    btn.style.color = '#aaa';
+  });
+  
+  // Show selected tab and highlight button
+  document.getElementById(tabName).style.display = 'block';
+  button.style.borderBottomColor = '#ff6b5b';
+  button.style.color = 'white';
+}
+</script>
 <section class="visibility-section" id="visibility">
-<div class="narrow">
-<div class="sec-eyebrow">Your program at a glance</div>
-<h2>See what is happening beyond the Candle.</h2>
-<p class="sec-lead">The Candle is the client experience. The dashboard is the control center for locations, professional onboarding, Candle status and activity.</p>
-<span class="preview-label">Illustrative dashboard preview</span>
-</div>
-<div class="wrap role-tour" aria-label="Illustrative dashboard roles">
-<article class="role-card">
-<div class="role-kicker">Organization</div>
-<h3>See the full program</h3>
-<ul><li>Location and onboarding status</li><li>Candle Network visibility</li><li>Activation and activity reporting</li></ul>
-</article>
-<article class="role-card">
-<div class="role-kicker">Manager</div>
-<h3>Run one location</h3>
-<ul><li>Open or print the employee QR</li><li>See who has activated</li><li>Help with resend or recovery</li></ul>
-</article>
-<article class="role-card">
-<div class="role-kicker">Professional</div>
-<h3>Use and share the Candle</h3>
-<ul><li>Open the personal Candle</li><li>Manage approved destinations</li><li>Copy the sharing link</li></ul>
-</article>
-</div>
 <div class="wrap data-path">
 <article class="data-card">
 <div class="role-kicker">Current visibility</div>
@@ -799,6 +937,7 @@ h2{font-size:clamp(30px,3.5vw,46px);text-wrap:balance;}
 <h3>Ready to get started?</h3>
 <p>Tell us about your business, locations and managers, then choose what goes inside your Candle. We’ll handle the setup for you.</p>
 <a class="btn btn-gold" href="start-a-pilot.html">Start a Pilot</a>
+<a class="btn btn-ghost" href="https://candlemenow.com/claim">Claim your business Candle</a>
 <p class="pilot-note">Use your own file, enter locations directly or send us the website page where they are already listed. Prefer personal help? Book a call at any time.</p>
 </div>
 </div>
@@ -811,7 +950,7 @@ h2{font-size:clamp(30px,3.5vw,46px);text-wrap:balance;}
 <p>Make it easy for clients to book again, shop your products and introduce someone new to your business. One setup. A connection that goes home with every client.</p>
 </div>
 <div class="hero-cta">
-<a class="btn btn-gold" href="mailto:connect@candlemenow.com?subject=Book%20a%20CandleMe%201-to-1%20call">Book a 1-1 Call</a>
+<a class="btn btn-gold" href="mailto:connect@candlemenow.com?subject=Book%20a%20CandleMe%201-to-1%20call">Book a 1-on-1 Call</a>
 <a class="btn btn-ghost" href="start-a-pilot.html">Start a Pilot</a>
 </div>
 </section>
@@ -822,7 +961,7 @@ h2{font-size:clamp(30px,3.5vw,46px);text-wrap:balance;}
 <a href="why-candleme.html">Why CandleMe</a>
 <a href="professional.html">Sample Professional Page</a>
 <a href="start-a-pilot.html">Start a Pilot</a>
-<a href="mailto:connect@candlemenow.com?subject=Book%20a%20CandleMe%201-to-1%20call">Book a 1-1 Call</a>
+<a href="mailto:connect@candlemenow.com?subject=Book%20a%20CandleMe%201-to-1%20call">Book a 1-on-1 Call</a>
 </div>
 </div>
 </footer>
@@ -848,6 +987,6 @@ h2{font-size:clamp(30px,3.5vw,46px);text-wrap:balance;}
  window.addEventListener('beforeprint',showAll);
 })();
 </script>
-<a class="back-to-top" href="#top" aria-label="Back to top">↑ Back to top</a>
+<a class="back-to-top" href="#top" aria-label="Back to top">↑</a>
 </body>
 </html>

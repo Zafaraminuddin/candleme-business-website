@@ -1,6 +1,19 @@
 /* Proportional refinement pass: preserve the layouts while giving every page
    a calmer, more polished desktop rhythm. Main text remains comfortably readable. */
 
+/* Dashboard tour only: keep the supplied design, fix its fixed two-column mobile layout. */
+#dashboard-tour, #dashboard-tour * { box-sizing: border-box; }
+#dashboard-tour .dashboard-tab-content > div > div { min-width: 0; }
+#dashboard-tour img { max-width: 100%; height: auto; }
+@media (max-width: 760px) {
+  #dashboard-tour { padding: 44px 18px !important; }
+  #dashboard-tour h2 { font-size: 32px !important; }
+  #dashboard-tour h3 { font-size: 26px !important; }
+  #dashboard-tour .dashboard-tabs { padding: 20px !important; }
+  #dashboard-tour .dashboard-tab-content > div { grid-template-columns: minmax(0, 1fr) !important; gap: 24px !important; }
+  #dashboard-tour .dashboard-tab-btn { padding: 12px 14px !important; }
+}
+
 .onboarding-example { background: #080808; }
 .onboarding-example-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; list-style: none; padding: 0; margin: 28px 0; }
 .onboarding-example-grid > li { min-width: 0; padding: 22px; border: 1px solid #50422b; border-radius: 16px; background: #101010; }
@@ -699,4 +712,59 @@
     white-space: normal;
     text-align: center;
   }
+}
+
+/* Refined navigation and the professional sample. */
+body .nav a[href="start-a-pilot.html"], body.page-pilot .nav a[href="#top"], body .return-home, .gold-action {
+  background: #eda637; color: #16110a; border: 0; border-radius: 10px; padding: 11px 16px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; justify-content: center;
+}
+body .nav a[href="start-a-pilot.html"]:hover, body .return-home:hover, .gold-action:hover { background: #ffc465; color: #16110a; }
+body .backtop, body .back-to-top { background: rgba(255,255,255,.055); border: 1px solid rgba(255,255,255,.12); color: #f2e8d6; backdrop-filter: blur(12px); box-shadow: 0 4px 20px #0002; border-radius: 50%; width: 44px; height: 44px; padding: 0; display: grid; place-items: center; font-size: 23px; text-decoration: none; }
+.page-home .no-line { display: block; color: #efbd68; margin: 0 0 12px; }
+.page-home .no-line b { color: #fff; }
+.page-home .scan-begin { display: block; margin-top: 26px; color: #fff; font-size: .85em; }
+.page-home .intro-details strong { color: #f3cb83; }
+.page-home .marketplace-note, .onboarding-status { max-width: 850px; margin: 28px auto 0; line-height: 1.7; font-size: 17px; }
+.page-professional .sample-page-label { color: #ff8278; border: 0; background: #ff6b5b16; }
+.page-professional .nav-links { align-items: center; }
+.page-professional .section, .page-professional .scan-section, .page-professional .footer { border: 0; }
+.page-professional .section { padding: 54px 0; }
+.page-professional .scan-section { background: #0c0c0c; padding: 36px 0; }
+.page-professional .scan-card { min-height: 0; padding: 28px 38px; gap: 28px; border: 0; box-shadow: none; }
+.page-professional .scan-visual { min-height: 0; margin: 0; }
+.page-professional .scan-candle { max-height: 340px; width: min(190px,100%); }
+.page-professional .scan-copy h2 { font-size: clamp(32px,3.8vw,52px); }
+.page-professional .scan-copy .scan-lead { font-size: 19px; margin: 20px 0; }
+.page-professional .personal { min-height: 0; padding: 25px; background: linear-gradient(135deg,#242018,#111); border: 1px solid #c39448; border-inline-width: 2px; box-shadow: inset 0 1px 0 #ffe7a744, 0 10px 22px #0006; }
+.page-professional .personal-grid { margin-top: 42px; }
+.page-professional .personal .number { font-size: 40px; margin-bottom: 20px; }
+.page-professional .devices { grid-template-columns: minmax(0,360px); }
+.page-professional .device { height: auto; padding: 18px; border: 1px solid #655131; border-radius: 22px; }
+.page-professional .device::before { display: none; }
+.page-professional .tap-art { height: 320px; }
+.page-professional .device-hint, .page-professional .device-figure figcaption { text-align: center; }
+.page-professional .device-hint { font-size: 13px; padding-top: 12px; }
+.page-professional .shortcut-copy .quote { border: 0; padding: 0; }
+.page-professional .keep-share { gap: 38px; }
+.page-professional .keep-share > div { padding: 28px; background: #111; border-radius: 18px; border: 0; }
+.page-professional .keep-share h2 { font-size: clamp(27px,3vw,38px); }
+.page-professional .closing { display: grid; grid-template-columns: 135px minmax(0,650px); justify-content: center; align-items: center; column-gap: 32px; text-align: left; padding: 40px 0; }
+.page-professional .closing-candle { width: 135px; max-height: 240px; object-fit: contain; grid-row: span 2; }
+.page-professional .closing h2 { margin: 0; font-size: clamp(28px,3.5vw,44px); }
+.page-professional .closing p { margin-top: 16px; }
+.page-professional .sample-dialog { margin: auto; max-height: calc(100dvh - 32px); overflow-y: auto; }
+.page-professional .sample-dialog-inner { padding: 34px; }
+.page-professional .modal-brand { font: 700 27px Georgia,serif; color: #eaba6c; margin-bottom: 18px; }
+.page-professional .sample-dialog h2 { font-size: clamp(29px,4vw,40px); line-height: 1.2; }
+.page-professional .modal-actions { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; margin-top: 25px; }
+.page-professional .modal-actions a { color: #efbd68; font-size: 14px; }
+.page-professional .gold-action { font: inherit; cursor: pointer; }
+@media (max-width: 760px) {
+ .page-professional .scan-card { grid-template-columns: minmax(0,1fr); padding: 24px 18px; }
+ .page-professional .shortcut-layout { gap: 26px; }
+ .page-professional .closing { grid-template-columns: 80px minmax(0,1fr); gap: 15px; }
+ .page-professional .closing-candle { width: 80px; }
+ .page-professional .sample-dialog-inner { padding: 42px 22px 24px; }
+ .page-professional .sample-dialog .modal-benefits { grid-template-columns: 1fr; }
+ .page-professional .sample-dialog .modal-benefits span { padding: 8px; }
 }
