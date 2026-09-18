@@ -1,0 +1,412 @@
+/* Proportional refinement pass: preserve the layouts while giving every page
+   a calmer, more polished desktop rhythm. Main text remains comfortably readable. */
+
+@media (min-width: 761px) {
+  .page-home section,
+  .page-salon section,
+  .page-why section {
+    padding-top: 78px;
+    padding-bottom: 78px;
+  }
+
+  .page-home .hero-split,
+  .page-salon .hero-split,
+  .page-why .hero-split {
+    padding-top: 64px;
+    padding-bottom: 68px;
+  }
+
+  .page-home .hero-split.photo .inner,
+  .page-salon .hero-split.photo .inner,
+  .page-why .hero-split.photo .inner {
+    gap: 58px;
+  }
+
+  .page-home .hero-split h1,
+  .page-salon .hero-split h1,
+  .page-why .hero-split h1 {
+    font-size: clamp(34px, 4.3vw, 50px);
+  }
+
+  .page-home .hero-split .candle-col img,
+  .page-salon .hero-split .candle-col img,
+  .page-why .hero-split .candle-col img {
+    max-height: 455px;
+  }
+
+  .page-home h2,
+  .page-salon h2,
+  .page-why h2 {
+    font-size: clamp(28px, 3.1vw, 40px);
+  }
+
+  .page-home .fork .card,
+  .page-salon .fork .card,
+  .page-why .fork .card {
+    padding: 36px 40px;
+  }
+
+  .page-home .fork .card h3,
+  .page-salon .fork .card h3,
+  .page-why .fork .card h3 {
+    font-size: clamp(27px, 2.7vw, 34px);
+  }
+
+  .page-home .candle-intro h2 {
+    font-size: clamp(31px, 3.5vw, 45px);
+    margin-bottom: 28px;
+  }
+
+  .page-home .instant-block {
+    padding: 30px;
+    font-size: clamp(20px, 2vw, 25px);
+  }
+
+  .page-home .destination-grid li {
+    padding: 26px 23px;
+  }
+
+  .page-home .destination-grid strong {
+    margin-bottom: 16px;
+    font-size: clamp(22px, 2.2vw, 27px);
+  }
+
+  .page-home .updated-compare .old,
+  .page-home .updated-compare .new {
+    padding: 35px 30px;
+  }
+
+  .page-home #how .step {
+    padding: 30px 32px 34px;
+  }
+
+  .page-home #how .step h4 {
+    font-size: clamp(23px, 2.2vw, 27px);
+  }
+
+  .page-home .pilot-panel {
+    gap: 40px;
+    padding: 38px;
+  }
+
+  .page-home .finalcta,
+  .page-salon .finalcta,
+  .page-why .finalcta {
+    padding-top: 78px;
+    padding-bottom: 78px;
+  }
+
+  .page-home .finalcta h2,
+  .page-salon .finalcta h2,
+  .page-why .finalcta h2 {
+    font-size: clamp(32px, 3.8vw, 46px);
+  }
+
+  .page-salon .employee-onboarding {
+    padding-top: 58px;
+    padding-bottom: 58px;
+  }
+
+  .page-salon .employee-onboarding h2 {
+    font-size: clamp(40px, 5.2vw, 66px);
+  }
+
+  .page-salon .employee-onboarding .onboarding-lead {
+    margin-top: 22px;
+    margin-bottom: 30px;
+    font-size: clamp(17px, 1.7vw, 21px);
+  }
+
+  .page-salon .employee-onboarding .onboarding-grid {
+    gap: 50px;
+  }
+
+  .page-salon .onboarding-steps {
+    gap: 21px;
+  }
+
+  .page-salon .onboarding-step {
+    grid-template-columns: 68px 1fr;
+    gap: 22px;
+  }
+
+  .page-salon .onboarding-step .step-number {
+    width: 64px;
+    height: 64px;
+    font-size: 25px;
+  }
+
+  .page-salon .onboarding-step h3 {
+    font-size: 18px;
+  }
+
+  .page-salon .onboarding-step p {
+    font-size: 15.5px;
+  }
+
+  .page-salon .onboarding-phone {
+    width: min(100%, 320px);
+    padding: 62px 24px 40px;
+    border-radius: 48px;
+  }
+
+  .page-salon .onboarding-phone h3 {
+    font-size: 29px;
+  }
+
+  .page-professional .hero {
+    min-height: 580px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .page-professional .hero h1 {
+    font-size: clamp(42px, 5.3vw, 68px);
+  }
+
+  .page-professional .section,
+  .page-professional .personal,
+  .page-professional .scan-section,
+  .page-professional .shortcut,
+  .page-professional .keep-share,
+  .page-professional .closing {
+    padding-top: 76px;
+    padding-bottom: 76px;
+  }
+
+  .page-professional h2 {
+    font-size: clamp(31px, 3.4vw, 44px);
+  }
+
+  .page-professional .device,
+  .page-professional .scan-card,
+  .page-professional .share-panel {
+    transform: scale(.92);
+    transform-origin: center;
+  }
+
+  .page-why .whycard {
+    padding: 34px 30px;
+  }
+
+  .page-why .journey {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .page-pilot main {
+    max-width: 1180px;
+    padding: 52px 30px 68px;
+  }
+
+  .page-pilot .intro h1 {
+    margin-top: 14px;
+    margin-bottom: 15px;
+    font-size: clamp(40px, 5vw, 62px);
+  }
+
+  .page-pilot .lead {
+    font-size: clamp(18px, 1.75vw, 21px);
+  }
+
+  .page-pilot .progress {
+    max-width: 1040px;
+    gap: 17px;
+    margin-top: 34px;
+  }
+
+  .page-pilot .progress a {
+    min-height: 100px;
+    padding: 21px 20px;
+    font-size: 18px;
+  }
+
+  .page-pilot .progress span {
+    font-size: 28px;
+  }
+
+  .page-pilot .identity-panel {
+    margin-top: 50px;
+    padding: 26px 30px 24px;
+  }
+
+  .page-pilot .identity-head h2 {
+    font-size: 23px;
+  }
+
+  .page-pilot .identity input {
+    padding: 14px 16px;
+  }
+
+  .page-pilot .section {
+    margin-top: 68px;
+    padding-top: 44px;
+  }
+
+  .page-pilot .section-head {
+    gap: 21px;
+    margin-bottom: 28px;
+  }
+
+  .page-pilot .section-head .step-number {
+    font-size: 50px;
+  }
+
+  .page-pilot h2 {
+    font-size: clamp(28px, 2.8vw, 37px);
+  }
+
+  .page-pilot .form-section {
+    column-gap: 54px;
+  }
+
+  .page-pilot .reassurance {
+    padding: 16px 0 16px 30px;
+  }
+
+  .page-pilot .reassurance p {
+    font-size: 25px;
+  }
+
+  .page-pilot .location-primary,
+  .page-pilot .location-option {
+    padding: 24px;
+  }
+
+  .page-pilot .editor {
+    margin: 34px 0 50px;
+    padding: 26px;
+  }
+
+  .page-pilot .editor-topline h3 {
+    font-size: 26px;
+  }
+
+  .page-pilot .editor-help {
+    margin: 16px 0 22px;
+    font-size: 16px;
+  }
+
+  .page-pilot .planner-heading h3 {
+    font-size: 22px;
+  }
+
+  .page-pilot .doors {
+    gap: 20px;
+  }
+
+  .page-pilot .door {
+    padding: 21px 17px 10px;
+  }
+
+  .page-pilot .shortcut {
+    margin-top: 36px;
+    padding: 22px 26px;
+  }
+
+  .page-pilot .shortcut > strong {
+    font-size: 22px;
+  }
+
+  .page-pilot .shortcut p {
+    font-size: 18px;
+  }
+
+  .page-pilot .send-section {
+    margin-top: 86px;
+    padding: 38px;
+  }
+
+  .page-pilot .send-actions {
+    gap: 22px;
+  }
+
+  .page-pilot .send-step {
+    padding: 23px 24px;
+  }
+
+  .page-pilot .send-step h3 {
+    font-size: 25px;
+  }
+
+  .page-pilot .send-step p {
+    margin-bottom: 22px;
+    font-size: 16px;
+  }
+
+  .page-pilot .send-step .button {
+    min-height: 54px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 760px) {
+  .page-home section,
+  .page-salon section,
+  .page-why section {
+    padding-top: 54px;
+    padding-bottom: 54px;
+  }
+
+  .page-home .hero-split,
+  .page-salon .hero-split,
+  .page-why .hero-split {
+    padding-top: 42px;
+    padding-bottom: 48px;
+  }
+
+  .page-home .pilot-panel {
+    padding: 28px 22px;
+  }
+
+  .page-salon .employee-onboarding {
+    padding-top: 46px;
+    padding-bottom: 46px;
+  }
+
+  .page-salon .onboarding-step {
+    grid-template-columns: 54px 1fr;
+    gap: 16px;
+  }
+
+  .page-salon .onboarding-step .step-number {
+    width: 52px;
+    height: 52px;
+    font-size: 21px;
+  }
+
+  .page-professional .hero,
+  .page-professional .section,
+  .page-professional .personal,
+  .page-professional .scan-section,
+  .page-professional .shortcut,
+  .page-professional .keep-share,
+  .page-professional .closing {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+
+  .page-pilot main {
+    padding-top: 38px;
+    padding-bottom: 60px;
+  }
+
+  .page-pilot .progress {
+    margin-top: 28px;
+  }
+
+  .page-pilot .identity-panel {
+    margin-top: 36px;
+    padding: 22px 20px;
+  }
+
+  .page-pilot .section {
+    margin-top: 52px;
+    padding-top: 34px;
+  }
+
+  .page-pilot .editor,
+  .page-pilot .send-section {
+    padding: 22px 18px;
+  }
+}
