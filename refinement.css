@@ -446,3 +446,243 @@
     padding: 22px 18px;
   }
 }
+
+/* Review-driven sales clarity and connected sample page */
+.sample-bridge {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 28px;
+  margin-top: 26px;
+  padding: 26px 30px;
+  border: 1px solid rgba(223, 165, 66, .42);
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(223, 165, 66, .11), rgba(255, 255, 255, .025));
+}
+
+.sample-bridge strong {
+  display: block;
+  margin-bottom: 7px;
+  color: #f7efe3;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: clamp(22px, 2.4vw, 32px);
+}
+
+.sample-bridge p {
+  max-width: 760px;
+  margin: 0;
+  color: #cfc5b7;
+}
+
+.sample-bridge-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 20px;
+  border: 1px solid #dfa542;
+  border-radius: 999px;
+  color: #0b0906;
+  background: #dfa542;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.visibility-section {
+  border-top: 1px solid rgba(223, 165, 66, .18);
+  border-bottom: 1px solid rgba(223, 165, 66, .18);
+  background: radial-gradient(circle at 50% 0, rgba(223, 165, 66, .10), transparent 42%);
+}
+
+.preview-label {
+  display: inline-flex;
+  margin: 18px 0 0;
+  padding: 7px 11px;
+  border: 1px solid rgba(223, 165, 66, .45);
+  border-radius: 999px;
+  color: #efbd68;
+  background: rgba(223, 165, 66, .08);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.role-tour,
+.data-path,
+.scale-options {
+  display: grid;
+  gap: 18px;
+}
+
+.role-tour {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 34px;
+}
+
+.role-card,
+.data-card,
+.scale-card {
+  padding: 25px;
+  border: 1px solid rgba(223, 165, 66, .25);
+  border-radius: 18px;
+  background: #11100d;
+}
+
+.role-card .role-kicker,
+.data-card .role-kicker,
+.scale-card .role-kicker {
+  color: #dfa542;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.role-card h3,
+.data-card h3,
+.scale-card h3 {
+  margin: 9px 0 12px;
+  color: #f8f2e9;
+  font-size: clamp(20px, 2vw, 26px);
+}
+
+.role-card ul,
+.data-card ul,
+.scale-card ul {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #cfc5b7;
+}
+
+.role-card li::before,
+.data-card li::before,
+.scale-card li::before {
+  content: "•";
+  margin-right: 9px;
+  color: #dfa542;
+}
+
+.data-path {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 18px;
+}
+
+.privacy-line {
+  margin-top: 18px;
+  padding: 20px 24px;
+  border-left: 3px solid #dfa542;
+  border-radius: 0 14px 14px 0;
+  background: rgba(223, 165, 66, .07);
+  color: #d9d0c4;
+}
+
+.privacy-line strong {
+  color: #f7efe3;
+}
+
+.field-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 18px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.field-list li {
+  padding: 12px 14px;
+  border: 1px solid rgba(223, 165, 66, .28);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, .025);
+  color: #f2e7d7;
+  font-weight: 700;
+}
+
+.sample-page-label {
+  display: inline-flex;
+  margin-bottom: 18px;
+  padding: 7px 12px;
+  border: 1px solid rgba(223, 165, 66, .5);
+  border-radius: 999px;
+  color: #efbd68;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .page-home .nav .row,
+  .page-salon .nav .row,
+  .page-why .nav .row,
+  .page-professional .nav .wrap,
+  .page-pilot .nav-row {
+    flex-wrap: wrap;
+  }
+
+  .page-home .nav .links,
+  .page-salon .nav .links,
+  .page-why .nav .links,
+  .page-professional .nav-links,
+  .page-pilot .nav-links {
+    display: flex;
+    width: 100%;
+    gap: 18px;
+    padding-bottom: 4px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    scrollbar-width: none;
+  }
+
+  .page-home .nav .links::-webkit-scrollbar,
+  .page-salon .nav .links::-webkit-scrollbar,
+  .page-why .nav .links::-webkit-scrollbar,
+  .page-professional .nav-links::-webkit-scrollbar,
+  .page-pilot .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .page-home .nav .links a,
+  .page-salon .nav .links a,
+  .page-why .nav .links a,
+  .page-professional .nav-links a,
+  .page-pilot .nav-links a {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .sample-bridge,
+  .role-tour,
+  .data-path {
+    grid-template-columns: 1fr;
+  }
+
+  .sample-bridge-link {
+    justify-self: start;
+  }
+}
+
+@media (max-width: 620px) {
+  .sample-bridge,
+  .role-card,
+  .data-card,
+  .scale-card {
+    padding: 21px;
+  }
+
+  .field-list {
+    grid-template-columns: 1fr;
+  }
+
+  .sample-bridge-link {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+}
