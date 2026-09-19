@@ -1,5 +1,6 @@
 (() => {
   const tour = document.getElementById('dashboard-tour');
+  if (!tour) return;
   const tabs = [...tour.querySelectorAll('[role="tab"]')];
   const panels = [...tour.querySelectorAll('[role="tabpanel"]')];
   const select = tab => {
@@ -51,5 +52,44 @@
     const active = viewer.classList.toggle('is-zoomed');
     zoom.textContent = active ? 'Fit width' : 'Actual size';
     zoom.setAttribute('aria-pressed', String(active));
+  });
+
+  // One player for the whole tour. Video bytes load only after a user asks.
+  const videoDialog = document.getElementById('tour-video-dialog');
+  const player = document.getElementById('tour-video-player');
+  const videoError = document.getElementById('tour-video-error');
+  let videoOpener, videoOverflow;
+  const playVideo = () => player.play().catch(() => {
+    // Native Play remains available if the browser declines automatic playback.
+    if (player.error) videoError.hidden = false;
+  });
+  tour.querySelectorAll('.tour-watch').forEach(button => {
+    button.addEventListener('click', () => {
+      videoOpener = button;
+      videoOverflow = document.body.style.overflow;
+      videoError.hidden = true;
+      document.getElementById('tour-video-title').textContent = button.dataset.title;
+      player.setAttribute('aria-label', button.dataset.title + ': silent walkthrough');
+      player.src = button.dataset.video;
+      document.getElementById('tour-video-download').href = button.dataset.video;
+      videoDialog.showModal();
+      document.body.style.overflow = 'hidden';
+      playVideo();
+    });
+  });
+  player.addEventListener('error', () => {
+    if (videoDialog.open) videoError.hidden = false;
+  });
+  document.getElementById('tour-video-replay').addEventListener('click', () => {
+    player.currentTime = 0;
+    playVideo();
+  });
+  document.getElementById('tour-video-close').addEventListener('click', () => videoDialog.close());
+  videoDialog.addEventListener('close', () => {
+    player.pause();
+    player.removeAttribute('src');
+    player.load();
+    document.body.style.overflow = videoOverflow;
+    videoOpener?.focus({preventScroll: true});
   });
 })();

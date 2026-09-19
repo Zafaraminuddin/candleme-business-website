@@ -800,3 +800,34 @@ body .backtop, body .back-to-top { background: rgba(255,255,255,.055); border: 1
   .tour-viewer-actions { align-self: flex-end; }
   .tour-viewer-stage { padding: 8px; }
 }
+
+/* Short, optional walkthroughs. One shared player, loaded on request. */
+#dashboard-tour .tour-watch { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 10px; min-height: 46px; margin-top: 24px; padding: 11px 15px; background: #e5b45d; color: #15110a; border: 0; border-radius: 8px; font: 650 14px/1.5 Arial,sans-serif; cursor: pointer; }
+#dashboard-tour .tour-watch:hover { background: #f3c778; }
+#dashboard-tour .tour-watch-duration { font-size: 12px; font-weight: 400; opacity: .75; }
+#tour-video-dialog { box-sizing: border-box; position: fixed; inset: 0; width: min(1440px,calc(100% - 32px)); max-width: none; height: min(920px,calc(100dvh - 32px)); max-height: calc(100dvh - 32px); margin: auto; padding: 0; border: 1px solid #353535; border-radius: 14px; background: #060606; color: #f5f0e7; }
+#tour-video-dialog[open] { display: flex; flex-direction: column; }
+#tour-video-dialog::backdrop { background: #000e; }
+#tour-video-dialog * { box-sizing: border-box; }
+#tour-video-dialog .tour-video-toolbar { position: static; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-shrink: 0; padding: 18px 22px; background: #121212; }
+#tour-video-title { margin: 5px 0 0; font-size: clamp(17px,2vw,24px); line-height: 1.3; }
+.tour-video-actions { display: flex; gap: 10px; flex-shrink: 0; }
+.tour-video-actions button { min-height: 44px; padding: 10px 15px; border: 1px solid #49443b; border-radius: 7px; background: #1a1a1a; color: #f1d09a; font: 14px/1.4 Arial,sans-serif; cursor: pointer; }
+.tour-video-actions button:focus-visible, #tour-video-player:focus-visible { outline: 2px solid #e5b45d; outline-offset: 3px; }
+.tour-video-stage { display: flex; flex: 1; min-height: 0; align-items: center; justify-content: center; padding: 8px; }
+#tour-video-player { display: block; width: 100%; height: 100%; min-height: 0; object-fit: contain; background: #060606; }
+#tour-video-dialog .tour-video-footer { position: static; display: block; flex-shrink: 0; padding: 8px 22px 14px; background: #101010; }
+#tour-video-dialog .tour-video-footer p { font: 13px/1.5 Arial,sans-serif; color: #bcb9b3; margin: 0; }
+#tour-video-error a { color: #e5b45d; }
+@media(max-width:760px) {
+ #tour-video-dialog { width: 100%; height: 100dvh; max-height: 100dvh; border: 0; border-radius: 0; }
+ #tour-video-dialog .tour-video-toolbar { padding: max(12px,env(safe-area-inset-top)) 14px 12px; flex-wrap: wrap; gap: 10px; }
+ .tour-video-actions { margin-left: auto; }
+ #tour-video-dialog .tour-video-footer { padding: 8px 14px max(12px,env(safe-area-inset-bottom)); }
+}
+@media(max-height:480px) {
+ #tour-video-dialog .tour-video-toolbar { padding: 6px 12px; }
+ #tour-video-dialog .tour-video-toolbar .tour-eyebrow, #tour-video-description { display: none; }
+ #tour-video-title { font-size: 16px; margin: 0; }
+ #tour-video-dialog .tour-video-footer { padding: 0 12px 4px; }
+}
