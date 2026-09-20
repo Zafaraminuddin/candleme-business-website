@@ -26,6 +26,11 @@
     sampleDialog.querySelector('[data-close-sample]')?.addEventListener('click', () => sampleDialog.close());
   }
 
+  document.querySelectorAll('.v2-section h2, .v2-grid > .v2-card, .onboarding-example-grid > li').forEach((item, index) => {
+    if (!item.hasAttribute('data-reveal')) item.setAttribute('data-reveal', '');
+    item.style.setProperty('--reveal-delay', `${Math.min(index % 4, 3) * 55}ms`);
+  });
+
   const revealItems = document.querySelectorAll('[data-reveal]');
   if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const revealObserver = new IntersectionObserver((entries, observer) => {
