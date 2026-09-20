@@ -10,8 +10,8 @@ Insert the approved analytics snippet here when ready.
 -->
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="refinement.css">
-<link rel="stylesheet" href="version2.css?v=14">
-<script src="site.js?v=14" defer>
+<link rel="stylesheet" href="version2.css?v=15">
+<script src="site.js?v=15" defer>
 </script>
 </head>
 <body id="top" class="v2 page-home">
@@ -81,7 +81,18 @@ Insert the approved analytics snippet here when ready.
 <p>One tap from a client to a friend, long after the visit.</p>
 </article>
 </div>
-<p class="">Add aftercare, loyalty, offers, or your latest work. Up to 12 destinations, all changeable from your dashboard in minutes.</p>
+<div class="destination-extras">
+<figure class="handoff-photo" data-reveal>
+<img src="images/salon-handoff.webp" width="1500" height="844" loading="lazy" decoding="async" alt="A salon professional helping a client save a digital gift to her phone">
+<figcaption>Give it in the chair, at checkout, or in a follow-up link.</figcaption>
+</figure>
+<ul class="check-list destination-checks" aria-label="More destinations you can add">
+<li>Add aftercare or care instructions</li>
+<li>Add loyalty and special offers</li>
+<li>Show your latest work</li>
+<li>Choose up to 12 destinations and change any of them in minutes</li>
+</ul>
+</div>
 <p class="small">No app to download. No account to create. Clients scan, save, and they’re done.</p>
 </div>
 </section>
@@ -93,14 +104,24 @@ Insert the approved analytics snippet here when ready.
 <p>When a client shares their Candle, the person they share it with receives their own, connected to the one it came from. That new client can book, shop and share too. You see which Candles are bringing in new clients, by location and by professional, without asking anyone to fill in a form.</p>
 <p class="v2-emphasis">This is the part a saved link can never do.</p>
 </div>
-<figure class="sharing-visual" data-reveal><img src="images/client-sharing.webp" width="1500" height="844" loading="lazy" decoding="async" alt="Two clients sharing a digital connection from one phone to another"></figure>
+<figure class="sharing-visual" data-reveal><img src="images/client-sharing.webp" width="1500" height="844" loading="lazy" decoding="async" alt="Two clients sharing a digital connection from one phone to another"><figcaption>No phone number or email to ask for. A client scans or opens your link, saves the Candle, and can share it with anyone.</figcaption></figure>
 </div>
 </div>
 </section>
 <section id="comparison" class="v2-section">
 <div class="wrap">
 <p class="comparison-kicker" data-reveal><span>Your business, easier to keep.</span> <span class="gold-line">Easier to return to.</span></p>
-<div class="return-path" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<div class="return-network" aria-label="Clients returning to your business from every direction">
+<span class="return-hub">Your Business</span>
+<span class="return-lane" style="--angle:0deg"><i></i><i></i><i></i><i></i></span>
+<span class="return-lane" style="--angle:45deg"><i></i><i></i><i></i><i></i></span>
+<span class="return-lane" style="--angle:90deg"><i></i><i></i><i></i><i></i></span>
+<span class="return-lane" style="--angle:135deg"><i></i><i></i><i></i><i></i></span>
+<span class="return-lane" style="--angle:180deg"><i></i><i></i><i></i><i></i></span>
+<span class="return-lane" style="--angle:225deg"><i></i><i></i><i></i><i></i></span>
+<span class="return-lane" style="--angle:270deg"><i></i><i></i><i></i><i></i></span>
+<span class="return-lane" style="--angle:315deg"><i></i><i></i><i></i><i></i></span>
+</div>
 <h2>A saved website vs. a Candle</h2>
 <div class="v2-grid two">
 <article class="v2-card saved-site" data-reveal>
@@ -160,13 +181,16 @@ Insert the approved analytics snippet here when ready.
 </li>
 </ol>
 <p class="onboarding-caption">One location QR connects every team member to the right business and location.</p>
-<p class="small privacy-note">Employee contact details are used only for onboarding and recovery. They are never shown on a Candle, visible to clients, or used for marketing.</p>
+<div class="privacy-note" data-reveal>
+<span class="privacy-lock" aria-hidden="true"><svg viewBox="0 0 24 24" role="img"><path d="M7 10V7a5 5 0 0 1 10 0v3m-9 0h8a2 2 0 0 1 2 2v7H6v-7a2 2 0 0 1 2-2Zm2 0V7a2 2 0 0 1 4 0v3"/></svg></span>
+<p><strong>Private by design.</strong><br>Employee contact details are used only for onboarding and recovery. They never appear on a Candle, are never visible to clients, and are never used for marketing.</p>
+</div>
 </div>
 </section>
 <section id="dashboard" class="v2-section">
 <div class="wrap">
 <h2 data-reveal><span>Your business at a glance.</span> <span class="gold-line">Everything in one place.</span></h2>
-<div class="v2-grid three">
+<div class="v2-grid four dashboard-summary-grid">
 <article class="v2-card dashboard-card" data-reveal>
 <h3>Your business at a glance.</h3>
 <p>Saves, returns, shares, and new clients by location and by professional.</p>
@@ -179,16 +203,39 @@ Insert the approved analytics snippet here when ready.
 <h3>What brings people back.</h3>
 <p>Which destinations get used, which Candles are shared, and where it is happening. Export any time.</p>
 </article>
+<article class="v2-card dashboard-card" data-reveal>
+<h3>Enterprise-level engagement.</h3>
+<p>See return activity, visit frequency, destination choices, and performance by location or professional.</p>
+</article>
 </div>
+<p class="dashboard-direction">To explore every view, open <a href="dashboard.html">Your CandleMe Dashboard</a> from the header or footer.</p>
 </div>
 </section>
 <section id="pilot" class="v2-section">
 <div class="wrap">
 <h2 data-reveal><span>Try it for 30 days.</span> <span class="gold-line">See it working in your business.</span></h2>
-<p class="">A pilot runs for 30 days at the standard monthly rate for your plan, per location. An activation is simply the first time a person intentionally opens their Candle from its QR code or link. During the pilot there is no activation limit and no activation charges.</p>
-<p class="">Each plan organizes destinations into four simple groups, so booking, shopping, reviews, loyalty, offers, and more stay easy to find. All four groups are open during the pilot at no extra cost.</p>
-<h3>We do the setup.</h3>
-<p class="">For each location we need three things: the location name, the address, and the manager’s email. Send a file, send the page on your website that lists them, or type them in. We build the list, you confirm it, and nothing is created until you do.</p>
+<div class="pilot-story-grid">
+<div class="pilot-offer" data-reveal>
+<p class="pilot-terms">Favorable pilot terms</p>
+<ul class="check-list pilot-checks">
+<li>30 days to see CandleMe working</li>
+<li>Standard monthly rate for your plan, per location</li>
+<li>No activation limit during the pilot</li>
+<li>No activation charges during the pilot</li>
+<li>All four destination groups open at no extra cost</li>
+<li>Change destinations from your dashboard</li>
+</ul>
+<p class="activation-definition"><strong>Activation:</strong> the first intentional open from a Candle’s QR code or link.</p>
+</div>
+<figure class="pilot-photo" data-reveal><img src="images/pilot-manager.webp" width="1500" height="844" loading="lazy" decoding="async" alt="A salon owner and her team reviewing the business during a pilot"><figcaption>See the program working with your own team, locations, and clients.</figcaption></figure>
+</div>
+<h3 class="setup-heading">We do the setup.</h3>
+<ol class="setup-steps">
+<li><span>1</span><p><strong>Send the essentials.</strong><br>Location name, address, and manager email.</p></li>
+<li><span>2</span><p><strong>Use what you already have.</strong><br>Upload a file, share your locations page, or type them in.</p></li>
+<li><span>3</span><p><strong>We prepare everything.</strong><br>We build the location list and organize the setup.</p></li>
+<li><span>4</span><p><strong>You confirm.</strong><br>Nothing is created until you approve it.</p></li>
+</ol>
 <p class="price-anchor"><a href="https://candlemenow.com/claim" target="_blank" rel="noopener noreferrer">See plans and pricing</a> before you begin. The pricing page opens separately, and this page will still be here when you return.
 </p>
 <div class="v2-actions">
@@ -247,9 +294,9 @@ Insert the approved analytics snippet here when ready.
 <div class="wrap">
 <h2 data-reveal>Ready for more bookings, more retail, and more new clients?</h2>
 <p class="closing-line">One setup. A gift that goes home with every client.</p>
-<div class="v2-actions">
-<a class="button" href="start-a-pilot.html">Start a Pilot</a>
-<button class="text-button" type="button" data-book-call>Prefer to talk first? Book a Call.</button>
+<div class="v2-actions closing-actions">
+<a class="button closing-primary" href="start-a-pilot.html">Start a Pilot</a>
+<div class="talk-option"><span>Prefer to talk first?</span><button class="button secondary" type="button" data-book-call>Book a Call</button></div>
 </div>
 </div>
 </section>
@@ -267,7 +314,11 @@ Insert the approved analytics snippet here when ready.
 <button class="button secondary" type="button" data-book-call>Book a Call</button>
 </div>
 <p class="">connect@candlemenow.com</p>
-<p class="iddas-credit"><span>Powered by</span><img src="images/iddas-logo-footer.webp" width="180" height="80" loading="lazy" alt="IDDAS"></p>
+<div class="footer-brand-pair">
+<a class="footer-candleme" href="index.html"><img src="images/asset-c6485ba494ec.webp" width="24" height="35" alt="">CandleMe</a>
+<span class="powered-label">Powered by</span>
+<span class="iddas-spin" aria-label="IDDAS"><img class="iddas-face iddas-front" src="images/iddas-logo-footer.webp" width="180" height="80" loading="lazy" alt=""><img class="iddas-face iddas-back" src="images/iddas-logo-footer.webp" width="180" height="80" loading="lazy" alt=""></span>
+</div>
 </div>
 </footer>
 <dialog id="booking-placeholder" class="v2-dialog">
