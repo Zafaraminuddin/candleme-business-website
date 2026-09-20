@@ -10,7 +10,19 @@
 
   const sampleDialog = document.getElementById('sample-intro');
   if (sampleDialog) {
-    sampleDialog.showModal();
+    const openSampleDialog = () => {
+      if (sampleDialog.open) return;
+      try {
+        sampleDialog.showModal();
+      } catch (error) {
+        sampleDialog.setAttribute('open', '');
+      }
+    };
+    if (document.readyState === 'complete') {
+      openSampleDialog();
+    } else {
+      window.addEventListener('load', openSampleDialog, { once: true });
+    }
     sampleDialog.querySelector('[data-close-sample]')?.addEventListener('click', () => sampleDialog.close());
   }
 
