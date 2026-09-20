@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Start a Pilot | CandleMe for Salons and Spas</title>
+<meta name="description" content="A CandleMe pilot runs 30 days at your plan’s standard rate with every door open and no activation charges. We do the setup. Tell us about your locations.">
+<meta name="robots" content="noindex, nofollow">
+<!-- [ANALYTICS]
+Insert the approved analytics snippet here when ready.
+-->
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="refinement.css">
+<link rel="stylesheet" href="planner.css">
+<link rel="stylesheet" href="version2.css?v=23">
+<link rel="stylesheet" href="pilot-metal-preview.css">
+<script src="site.js?v=18" defer>
+</script>
+</head>
+<body id="top" class="v2 page-pilot page-pilot-metal-preview">
+<nav class="nav v2-nav" aria-label="Main navigation">
+<div class="wrap v2-nav-row">
+<a class="logo" href="index.html">
+<img src="images/asset-c6485ba494ec.webp" width="24" height="35" alt="">CandleMe</a>
+<div class="v2-nav-links">
+<a class="" href="why-candleme.html">Why CandleMe</a>
+<a class="nav-two-line" href="dashboard.html">Your CandleMe<br>Dashboard</a>
+<a class="nav-two-line" href="professional.html">Sample Professional<br>Page</a>
+<a class="nav-two-line recovery-nav-link" href="sample-recovery.html">Sample Recovery<br>Page</a>
+<a href="https://candlemenow.com/claim" target="_blank" rel="noopener noreferrer">Pricing</a>
+<a class="" href="start-a-pilot.html">Start a Pilot</a>
+<button class="button secondary" type="button" data-book-call>Book a Call</button>
+</div>
+</div>
+</nav>
+<main>
+<section id="hero" class="v2-section">
+<div class="wrap">
+<div class="v2-grid hero-grid">
+<div>
+<p class="eyebrow">Your CandleMe pilot</p>
+<h1>Let’s start <span class="gold-inline">your pilot.</span></h1>
+<ul class="pilot-checklist"><li>Tell us about your business.</li><li>We prepare your location list.</li><li>You confirm the details.</li><li>We set everything up.</li></ul>
+</div>
+</div>
+</div>
+</section>
+<section id="pilot-definition" class="v2-section">
+<div class="wrap">
+<div class="pilot-metal-shell" aria-label="30-day CandleMe pilot">
+<div class="pilot-metal-panel">
+<div class="pilot-metal-medallion" aria-hidden="true">
+<span class="pilot-metal-number">30</span>
+<span class="pilot-metal-days">DAYS</span>
+</div>
+<div class="pilot-metal-content">
+<h2>See CandleMe in action.</h2>
+<ul class="pilot-metal-benefits">
+<li>Run it in real locations</li>
+<li>Unlimited activations</li>
+<li>No activation charges during your pilot</li>
+</ul>
+<div class="pilot-metal-prices">
+<p>Plans from <strong>$29/month</strong></p>
+<p>Multi-location from <strong>$99/location/month</strong></p>
+</div>
+<a class="pilot-metal-cta" href="https://candlemenow.com/claim" target="_blank" rel="noopener noreferrer">SEE PLANS &amp; PRICING</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="request" class="v2-section">
+<div class="wrap">
+<h2>Tell us about your business.</h2>
+<form id="pilot-request" action="[FORM ENDPOINT]" method="post" enctype="multipart/form-data">
+<div class="v2-form-grid">
+<label>Business name<input name="business" id="business" type="text" required>
+</label>
+<label>Your name<input name="name" id="name" type="text" required>
+</label>
+<label>Email<input name="email" id="email" type="email" required>
+</label>
+<label>Phone (optional)<input name="phone" id="phone" type="tel">
+</label>
+<label class="call-time-field" hidden>Best time to call<input name="bestCallTime" id="bestCallTime" type="text" placeholder="For example, weekday mornings" disabled>
+</label>
+<label>Total locations<select name="totalLocations" required>
+<option value="">
+</option>
+<option>1</option>
+<option>2 to 5</option>
+<option>6 to 20</option>
+<option>21 to 50</option>
+<option>51 to 200</option>
+<option>More than 200</option>
+</select>
+</label>
+<label>Locations for the pilot<input name="pilotLocations" type="number" min="1" inputmode="numeric" required placeholder="Enter the exact number">
+</label>
+<label>Website<input name="website" id="website" type="url" required>
+</label>
+</div>
+<fieldset class="location-options">
+<legend>How would you like to share your pilot locations?</legend>
+<div class="v2-methods">
+<label>
+<input type="radio" name="locationMethod" value="0" checked>Type them in</label>
+<label>
+<input type="radio" name="locationMethod" value="1">Upload a file</label>
+<label>
+<input type="radio" name="locationMethod" value="2">Paste your website’s location-page link</label>
+</div>
+<div data-location-panel="0">
+<textarea name="locationsManual" aria-label="Your pilot locations" required rows="8" placeholder="Location name | Address | Manager email&#10;One location per line">
+</textarea>
+</div>
+<div data-location-panel="1" hidden>
+<input type="file" name="locationFile" aria-label="Upload a file" accept=".xlsx,.xls,.csv,.pdf,.doc,.docx" disabled required>
+<a class="" href="Location-Template.xlsx">Download the location template</a>
+</div>
+<div data-location-panel="2" hidden>
+<label>Link to your locations page<input type="url" name="locationsWebsite" aria-label="Website locations page" disabled required placeholder="https://">
+</label>
+<label>Which locations should be included?<textarea name="includedLocations" aria-label="Which locations are in the pilot" rows="4" disabled required placeholder="List the location names, or tell us to use all locations on the page.">
+</textarea>
+</label>
+</div>
+<ul class="location-checklist small"><li>Only the pilot locations are needed now.</li><li>For each location: name, address, and manager email.</li><li>The email above is your contact email.</li><li>For larger groups, upload a file or use the template.</li></ul>
+</fieldset>
+<label>Additional information you’d like to share (optional)<textarea name="notes" rows="4">
+</textarea>
+</label>
+<button type="button" class="button" id="savePilot">Save and continue to destinations</button>
+<p class="small submit-explainer" id="pilotSaveStatus" role="status">Your information stays in this browser until you choose to send it.</p>
+<p class="v2-placeholder endpoint">[FORM ENDPOINT]</p>
+<p id="request-success" role="status" hidden>Got it. Expect a reply within one business day with your location list to confirm and a time to talk.</p>
+</form>
+<p>Prefer to talk first? <button type="button" class="text-button" data-book-call>Book a Call.</button>
+</p>
+</div>
+</section>
+<section class="v2-section">
+<div class="wrap">
+<section class="v2-planner" id="destinations" aria-labelledby="destinations-title">
+<h2 id="destinations-title">Plan your destinations <small>Optional</small></h2>
+<p>Want to think through what goes inside? Use the planner.</p>
+<details class="planner-disclosure planner-editor-disclosure">
+<summary><span>Build your destination plan</span><small>Add the links you already use.</small></summary>
+<div class="planner-disclosure-body">
+<div class="editor" id="editor" aria-labelledby="entry-title">
+<div class="editor-topline">
+<div>
+<span class="eyebrow">Enter your link here</span>
+<h3 id="entry-title">Add a destination.</h3>
+</div>
+<span class="pilot-note">Planner only. Nothing here is live until setup.</span>
+</div>
+<p class="editor-help">Choose a door and slot, add a name and link, then save. Your link will appear in the cards below.</p>
+<div class="slot-choice">
+<label for="slotPicker">Choose a door and slot<select id="slotPicker" aria-describedby="slotHint">
+</select>
+</label>
+<p id="slotHint">You can also select a slot in the cards below.</p>
+</div>
+<h4 id="selected" class="selected-slot" aria-live="polite">Keeper Door · Slot 1</h4>
+<p id="main-destination-hint">Your main destination. Usually your booking page.</p>
+<div class="editor-grid">
+<label for="label">Name clients will see<input id="label" type="text" placeholder="e.g. Our business" maxlength="100">
+</label>
+<label for="url">Website link<input id="url" type="url" placeholder="https://" spellcheck="false" autocomplete="off">
+</label>
+<button class="button" id="saveSlot" type="button">Save to my plan <span aria-hidden="true">✓</span>
+</button>
+</div>
+<div class="editor-foot">
+<p class="status" id="status" role="status" aria-live="polite">Select a slot to add your link. Keeper labels are suggestions.</p>
+<button class="text-button" id="clearSlot" type="button">Clear slot</button>
+</div>
+</div>
+</div>
+</details>
+<details class="planner-disclosure doors-disclosure">
+<summary><span>Four doors. Up to 12 destinations.</span><small>Links your clients can reach inside their Candle.</small></summary>
+<div class="planner-disclosure-body">
+<div class="planner-heading planner-capacity-row"><span class="capacity" id="capacity"></span></div>
+<div class="doors" id="doors">
+</div>
+<aside class="shortcut">
+<div><strong>Your Keeper shortcut.</strong>
+<p>Extinguish the flame, then <b>double-tap the CandleMe symbol</b>. The Keeper Door opens to the links saved there.</p></div>
+<img src="images/asset-0427d4d597ac.webp" width="600" height="1000" loading="lazy" alt="A hand double-tapping the CandleMe symbol to open the Keeper Door">
+</aside>
+</div>
+</details>
+<div class="v2-actions">
+<button type="submit" form="pilot-request" class="button">Send my pilot request</button>
+<button type="button" class="button secondary" id="download">Download my plan</button>
+</div>
+<p id="downloadStatus" role="status">
+</p>
+<p id="autosaveStatus" class="small" role="status">
+</p>
+<p id="draftNote" class="small">Saved on this device. Nothing is sent until you select “Send my pilot request.”</p>
+</section>
+</div>
+</section>
+<div id="printSummary" hidden>
+</div>
+<script id="saved-plan" type="application/json">{}</script>
+<script src="pilot-form.js?v=2" defer>
+</script>
+<script src="planner.js" defer>
+</script>
+</main>
+<footer class="v2-footer">
+<div class="wrap">
+<p class="footer-promise">Easy to give. A gift they’ll save. Easy to find again.</p>
+<div class="v2-footer-links">
+<a class="" href="dashboard.html">Your CandleMe Dashboard</a>
+<a class="" href="professional.html">Sample Professional Page</a>
+<a class="" href="sample-recovery.html">Sample Recovery Page</a>
+<a class="" href="why-candleme.html">Why CandleMe</a>
+<a href="https://candlemenow.com/claim" target="_blank" rel="noopener noreferrer">Pricing</a>
+<a class="" href="start-a-pilot.html">Start a Pilot</a>
+<button class="button secondary" type="button" data-book-call>Book a Call</button>
+</div>
+<p class="">connect@candlemenow.com</p>
+<div class="footer-brand-pair"><a class="footer-candleme" href="index.html"><img src="images/asset-c6485ba494ec.webp" width="24" height="35" alt="">CandleMe</a><span class="powered-label">Powered by</span><span class="iddas-spin" aria-label="IDDAS"><img class="iddas-face iddas-front" src="images/iddas-logo-footer.webp" width="180" height="80" loading="lazy" alt=""><img class="iddas-face iddas-back" src="images/iddas-logo-footer.webp" width="180" height="80" loading="lazy" alt=""></span></div>
+</div>
+</footer>
+<dialog id="booking-placeholder" class="v2-dialog">
+<button type="button" data-close-booking aria-label="Close">×</button>
+<p>[CAL BOOKING LINK]</p>
+</dialog>
+<a class="back-to-top" href="#top" aria-label="Back to top">↑</a>
+</body>
+</html>
