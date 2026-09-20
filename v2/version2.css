@@ -1771,3 +1771,46 @@ body.v2.page-why #closing .v2-actions{justify-content:center}
   body.v2.page-recovery .result-actions{justify-items:center;text-align:center}
   body.v2.page-pilot .planner-disclosure>summary{padding:19px 52px 19px 18px}
 }
+
+/* V25: apply the September 20 review notes and expose the finished layouts. */
+body.v2.page-professional .sample-intro-dialog [data-close-sample]{
+  display:flex;
+  width:max-content;
+  margin:28px auto 0;
+}
+
+body.v2.page-home #how .onboarding-example-grid>li{
+  min-height:300px;
+  padding:26px 24px 28px;
+}
+body.v2.page-home #how .onboarding-example-grid h3{
+  min-height:52px;
+  margin-bottom:14px;
+}
+body.v2.page-home #how .onboarding-points{
+  margin:16px 0 0;
+}
+
+body.v2.page-home .pilot-offer{
+  background:linear-gradient(145deg,#2a130f,#160a08 50%,#0e0807);
+}
+body.v2.page-home .pilot-term-note{
+  min-height:106px;
+  margin:auto 0 20px;
+  padding:20px 48px;
+  border-radius:14px;
+  text-wrap:balance;
+}
+body.v2.page-home .pilot-offer .activation-definition{
+  margin:0;
+}
+body.v2.page-home .pilot-features li::before,
+body.v2.page-home .pilot-features li:hover::before{
+  color:var(--gold);
+  text-shadow:0 0 8px rgba(237,178,75,.3);
+}
+
+@media(max-width:760px){
+  body.v2.page-home #how .onboarding-example-grid>li{min-height:0}
+  body.v2.page-home .pilot-term-note{min-height:0;margin:20px 0;padding:18px 24px}
+}
