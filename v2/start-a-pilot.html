@@ -11,8 +11,8 @@ Insert the approved analytics snippet here when ready.
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="refinement.css">
 <link rel="stylesheet" href="planner.css">
-<link rel="stylesheet" href="version2.css?v=13">
-<script src="site.js?v=13" defer>
+<link rel="stylesheet" href="version2.css?v=14">
+<script src="site.js?v=14" defer>
 </script>
 </head>
 <body id="top" class="v2 page-pilot">
@@ -21,9 +21,9 @@ Insert the approved analytics snippet here when ready.
 <a class="logo" href="index.html">
 <img src="images/asset-c6485ba494ec.webp" width="24" height="35" alt="">CandleMe</a>
 <div class="v2-nav-links">
-<a class="" href="dashboard.html">Your CandleMe Dashboard</a>
-<a class="" href="professional.html">Sample Professional Page</a>
 <a class="" href="why-candleme.html">Why CandleMe</a>
+<a class="nav-two-line" href="dashboard.html">Your CandleMe<br>Dashboard</a>
+<a class="nav-two-line" href="professional.html">Sample Professional<br>Page</a>
 <a href="https://candlemenow.com/claim" target="_blank" rel="noopener noreferrer">Pricing</a>
 <a class="" href="start-a-pilot.html">Start a Pilot</a>
 <button class="button secondary" type="button" data-book-call>Book a Call</button>
@@ -36,21 +36,18 @@ Insert the approved analytics snippet here when ready.
 <div class="v2-grid hero-grid">
 <div>
 <p class="eyebrow">Your CandleMe pilot</p>
-<h1>Let’s start your pilot.</h1>
-<p class="v2-lead">Tell us about your business. We build the location list, confirm it with you, and set everything up. Nothing is created until you say so.</p>
+<h1>Let’s start <span class="gold-inline">your pilot.</span></h1>
+<ul class="pilot-checklist"><li>Tell us about your business.</li><li>We prepare your location list.</li><li>You confirm the details.</li><li>We set everything up.</li></ul>
 </div>
 </div>
 </div>
 </section>
 <section id="pilot-definition" class="v2-section">
 <div class="wrap">
-<h2><span>Thirty days.</span> <span class="gold-line">See CandleMe working in your business.</span></h2>
-<p class="pilot-definition-lead">Your pilot runs for 30 days from the day you go live, billed at the standard monthly rate for your plan and location.</p>
-<div class="v2-grid two pilot-definitions">
-<article><h3>What is an activation?</h3><p>The first time someone intentionally opens a Candle from its QR code or link. During the pilot there is no activation limit and no activation charges.</p></article>
-<article><h3>What are the four groups?</h3><p>Four organized areas inside the Candle for booking, shopping, reviews, loyalty, offers, and more. All four are open during your pilot at no extra cost.</p></article>
-</div>
-<p>When the pilot ends, continue on your plan at standard terms, or stop. Pilots are arranged directly with us so we can set up your real locations and team.</p>
+<p class="eyebrow">Your 30-day pilot</p>
+<h2>See CandleMe working in your business.</h2>
+<p class="pilot-definition-lead">Run CandleMe in real locations, with every activation included. No activation limit. No activation charges during the pilot.</p>
+<p class="small activation-note">An activation is the first time someone intentionally opens a Candle from its QR code or link.</p>
 <p class="price-anchor">Plans start at $29 a month. Multi-location groups start at $99 per location per month. <a href="https://candlemenow.com/claim" target="_blank" rel="noopener noreferrer">See plans and pricing.</a>
 </p>
 </div>
@@ -68,7 +65,7 @@ Insert the approved analytics snippet here when ready.
 </label>
 <label>Phone (optional)<input name="phone" id="phone" type="tel">
 </label>
-<label>Best time to call (optional)<input name="bestCallTime" id="bestCallTime" type="text" placeholder="For example, weekday mornings">
+<label class="call-time-field" hidden>Best time to call<input name="bestCallTime" id="bestCallTime" type="text" placeholder="For example, weekday mornings" disabled>
 </label>
 <label>Total locations<select name="totalLocations" required>
 <option value="">
@@ -111,13 +108,13 @@ Insert the approved analytics snippet here when ready.
 </textarea>
 </label>
 </div>
-<p class="small">Only the pilot locations are needed now. For each one, include the location name, address, and that location manager’s email. The email requested above is your contact email. Rolling out to more locations later works the same way, and for large groups a file or the template is easiest.</p>
+<ul class="location-checklist small"><li>Only the pilot locations are needed now.</li><li>For each location: name, address, and manager email.</li><li>The email above is your contact email.</li><li>For larger groups, upload a file or use the template.</li></ul>
 </fieldset>
 <label>Additional information you’d like to share (optional)<textarea name="notes" rows="4">
 </textarea>
 </label>
-<button type="submit" class="button">Submit my pilot request</button>
-<p class="small submit-explainer">This sends your request to CandleMe. We will confirm your location list with you before anything is created.</p>
+<button type="button" class="button" id="savePilot">Save and continue to destinations</button>
+<p class="small submit-explainer" id="pilotSaveStatus" role="status">Your information stays in this browser until you choose to send it.</p>
 <p class="v2-placeholder endpoint">[FORM ENDPOINT]</p>
 <p id="request-success" role="status" hidden>Got it. Expect a reply within one business day with your location list to confirm and a time to talk.</p>
 </form>
@@ -129,7 +126,7 @@ Insert the approved analytics snippet here when ready.
 <div class="wrap">
 <section class="v2-planner" id="destinations" aria-labelledby="destinations-title">
 <h2>Plan your destinations (optional).</h2>
-<p class="">Want to think through what goes inside your Candle before we talk? Use the planner below. It stays in this browser and never sends with the pilot form. Download a copy to keep or bring to the call. You can also skip it and plan with us.</p>
+<p>Want to think through what goes inside your Candle before we talk? Use the planner below, or skip it and plan with us.</p>
 <div class="editor" id="editor" aria-labelledby="entry-title">
 <div class="editor-topline">
 <div>
@@ -175,13 +172,14 @@ Insert the approved analytics snippet here when ready.
 <p>With the flame extinguished, <b>double-tap the CandleMe symbol</b> to open the Keeper Door.</p>
 </aside>
 <div class="v2-actions">
-<button type="button" class="button" id="download">Download my plan</button>
+<button type="submit" form="pilot-request" class="button">Send my pilot request</button>
+<button type="button" class="button secondary" id="download">Download my plan</button>
 </div>
 <p id="downloadStatus" role="status">
 </p>
 <p id="autosaveStatus" class="small" role="status">
 </p>
-<p id="draftNote" class="small">Your plan is saved in this browser only. Nothing is sent until you submit the form above.</p>
+<p id="draftNote" class="small">Saved on this device. Nothing is sent until you select “Send my pilot request.”</p>
 </section>
 </div>
 </section>
@@ -195,7 +193,7 @@ Insert the approved analytics snippet here when ready.
 </main>
 <footer class="v2-footer">
 <div class="wrap">
-<p class="footer-promise">A gift they’ll save. Easy to give. Easy to find again.</p>
+<p class="footer-promise">Easy to give. A gift they’ll save. Easy to find again.</p>
 <div class="v2-footer-links">
 <a class="" href="dashboard.html">Your CandleMe Dashboard</a>
 <a class="" href="professional.html">Sample Professional Page</a>
@@ -206,7 +204,7 @@ Insert the approved analytics snippet here when ready.
 <button class="button secondary" type="button" data-book-call>Book a Call</button>
 </div>
 <p class="">connect@candlemenow.com</p>
-<p class="small">Powered by IDDAS</p>
+<p class="iddas-credit"><span>Powered by</span><img src="images/iddas-logo-footer.webp" width="180" height="80" loading="lazy" alt="IDDAS"></p>
 </div>
 </footer>
 <dialog id="booking-placeholder" class="v2-dialog">

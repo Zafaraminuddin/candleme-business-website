@@ -10,8 +10,8 @@ Insert the approved analytics snippet here when ready.
 -->
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="refinement.css">
-<link rel="stylesheet" href="version2.css?v=13">
-<script src="site.js?v=13" defer>
+<link rel="stylesheet" href="version2.css?v=14">
+<script src="site.js?v=14" defer>
 </script>
 </head>
 <body id="top" class="v2 page-home">
@@ -20,9 +20,9 @@ Insert the approved analytics snippet here when ready.
 <a class="logo" href="index.html">
 <img src="images/asset-c6485ba494ec.webp" width="24" height="35" alt="">CandleMe</a>
 <div class="v2-nav-links">
-<a class="" href="dashboard.html">Your CandleMe Dashboard</a>
-<a class="" href="professional.html">Sample Professional Page</a>
 <a class="" href="why-candleme.html">Why CandleMe</a>
+<a class="nav-two-line" href="dashboard.html">Your CandleMe<br>Dashboard</a>
+<a class="nav-two-line" href="professional.html">Sample Professional<br>Page</a>
 <a href="https://candlemenow.com/claim" target="_blank" rel="noopener noreferrer">Pricing</a>
 <a class="" href="start-a-pilot.html">Start a Pilot</a>
 <button class="button secondary" type="button" data-book-call>Book a Call</button>
@@ -41,7 +41,7 @@ Insert the approved analytics snippet here when ready.
 <a class="button" href="start-a-pilot.html">Start a Pilot</a>
 <button class="button secondary" type="button" data-book-call>Book a Call</button>
 </div>
-<p class="hero-proof">Clients save it in seconds. No form. No account. Nothing to download.</p>
+<p class="hero-proof"><strong>Clients save your Candle directly to Apple Wallet or Google Wallet in seconds.</strong><br>No form. No account. No login. No personal information required.</p>
 </div>
 <figure class="hero-candle">
 <!-- [CANDLE IMAGE] -->
@@ -53,7 +53,7 @@ Insert the approved analytics snippet here when ready.
 <section id="problem" class="v2-section">
 <div class="wrap">
 <div class="narrow">
-<h2>After the visit, you disappear into their phone.</h2>
+<h2>After the visit, <span class="gold-inline">you disappear</span> into their phone.</h2>
 <p class="">Your booking link is in a text thread from three weeks ago. Your Instagram is one of two hundred accounts they follow. Your website is a bookmark they will never open. Clients rarely leave because they were unhappy. They leave because nothing reminded them to come back.</p>
 <p class="v2-emphasis" data-reveal>A Candle stays where they keep the things they actually use: <strong>their Wallet.</strong></p>
 </div>
@@ -87,16 +87,20 @@ Insert the approved analytics snippet here when ready.
 </section>
 <section id="sharing" class="v2-section">
 <div class="wrap">
-<div class="narrow">
+<div class="sharing-story">
+<div>
 <h2 data-reveal><span>Every share is a new client.</span> <span class="gold-line">And you can see the chain.</span></h2>
-<p class="">When a client shares their Candle, the person they share it with receives their own, connected to the one it came from. That new client can book, shop and share too. You see which Candles are bringing in new clients, by location and by professional, without asking anyone to fill in a form.</p>
+<p>When a client shares their Candle, the person they share it with receives their own, connected to the one it came from. That new client can book, shop and share too. You see which Candles are bringing in new clients, by location and by professional, without asking anyone to fill in a form.</p>
 <p class="v2-emphasis">This is the part a saved link can never do.</p>
+</div>
+<figure class="sharing-visual" data-reveal><img src="images/client-sharing.webp" width="1500" height="844" loading="lazy" decoding="async" alt="Two clients sharing a digital connection from one phone to another"></figure>
 </div>
 </div>
 </section>
 <section id="comparison" class="v2-section">
 <div class="wrap">
 <p class="comparison-kicker" data-reveal><span>Your business, easier to keep.</span> <span class="gold-line">Easier to return to.</span></p>
+<div class="return-path" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
 <h2>A saved website vs. a Candle</h2>
 <div class="v2-grid two">
 <article class="v2-card saved-site" data-reveal>
@@ -104,9 +108,9 @@ Insert the approved analytics snippet here when ready.
 <p class="">A shortcut back to a page. Easy to forget among a hundred others. Ends at the click.</p>
 </article>
 <article class="v2-card gilded candle-choice" data-reveal>
-<h3>A CandleMe Candle</h3>
+<h3>A Candle</h3>
 <p class="">A gift they keep in their Wallet. Opens to everything you chose. Passes the connection on to someone new.</p>
-<div class="wallet-badges" aria-label="Save to Apple Wallet or Google Wallet"><span>Apple Wallet</span><span>Google Wallet</span></div>
+<div class="wallet-badges" aria-label="Save to Apple Wallet or Google Wallet"><img src="images/apple-wallet-badge.webp" width="330" height="86" loading="lazy" alt="Add to Apple Wallet"><img src="images/google-wallet-badge.webp" width="330" height="86" loading="lazy" alt="Add to Google Wallet"></div>
 </article>
 </div>
 </div>
@@ -155,28 +159,27 @@ Insert the approved analytics snippet here when ready.
 <p>Share it while the client is in the chair, before or after the service, at checkout, at rebooking, or in a follow-up text.</p>
 </li>
 </ol>
-<p class="small onboarding-caption">One location QR connects every team member to the right business and location.</p>
+<p class="onboarding-caption">One location QR connects every team member to the right business and location.</p>
+<p class="small privacy-note">Employee contact details are used only for onboarding and recovery. They are never shown on a Candle, visible to clients, or used for marketing.</p>
 </div>
 </section>
 <section id="dashboard" class="v2-section">
 <div class="wrap">
 <h2 data-reveal><span>Your business at a glance.</span> <span class="gold-line">Everything in one place.</span></h2>
 <div class="v2-grid three">
-<a class="v2-card dashboard-card" href="dashboard.html#tour-panel-overview" data-reveal>
+<article class="v2-card dashboard-card" data-reveal>
 <h3>Your business at a glance.</h3>
 <p>Saves, returns, shares, and new clients by location and by professional.</p>
-</a>
-<a class="v2-card dashboard-card" href="dashboard.html#tour-panel-team" data-reveal>
+</article>
+<article class="v2-card dashboard-card" data-reveal>
 <h3>Who has joined.</h3>
 <p>Every team member who has onboarded, their location, and the details managers need to support the team.</p>
-</a>
-<a class="v2-card dashboard-card" href="dashboard.html#tour-panel-activity" data-reveal>
+</article>
+<article class="v2-card dashboard-card" data-reveal>
 <h3>What brings people back.</h3>
 <p>Which destinations get used, which Candles are shared, and where it is happening. Export any time.</p>
-</a>
+</article>
 </div>
-<p class="dashboard-cta"><a class="button" href="dashboard.html">Explore Your CandleMe Dashboard</a></p>
-<p class="small privacy-note">Employee contact details are used only for onboarding and recovery. They are never shown on a Candle, visible to clients, or used for marketing.</p>
 </div>
 </section>
 <section id="pilot" class="v2-section">
@@ -190,7 +193,6 @@ Insert the approved analytics snippet here when ready.
 </p>
 <div class="v2-actions">
 <a class="button" href="start-a-pilot.html">Start a Pilot</a>
-<button class="button secondary" type="button" data-book-call>Book a Call</button>
 </div>
 </div>
 </section>
@@ -254,18 +256,18 @@ Insert the approved analytics snippet here when ready.
 </main>
 <footer class="v2-footer">
 <div class="wrap">
-<p class="footer-promise">A gift they’ll save. Easy to give. Easy to find again.</p>
+<p class="footer-promise">Easy to give. A gift they’ll save. Easy to find again.</p>
 <div class="v2-footer-links">
+<a class="" href="why-candleme.html">Why CandleMe</a>
 <a class="" href="dashboard.html">Your CandleMe Dashboard</a>
 <a class="" href="professional.html">Sample Professional Page</a>
 <a class="" href="sample-recovery.html">Sample Recovery Page</a>
-<a class="" href="why-candleme.html">Why CandleMe</a>
 <a href="https://candlemenow.com/claim" target="_blank" rel="noopener noreferrer">Pricing</a>
 <a class="" href="start-a-pilot.html">Start a Pilot</a>
 <button class="button secondary" type="button" data-book-call>Book a Call</button>
 </div>
 <p class="">connect@candlemenow.com</p>
-<p class="small">Powered by IDDAS</p>
+<p class="iddas-credit"><span>Powered by</span><img src="images/iddas-logo-footer.webp" width="180" height="80" loading="lazy" alt="IDDAS"></p>
 </div>
 </footer>
 <dialog id="booking-placeholder" class="v2-dialog">
