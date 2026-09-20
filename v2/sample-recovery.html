@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sample Recovery Page | CandleMe</title>
-<meta name="description" content="A sample CandleMe recovery page showing how a team member securely finds and restores an assigned Candle.">
+<meta name="description" content="See how a company claims its Candle, how an employee finds an assigned Candle, and where employee onboarding begins.">
 <!-- [ANALYTICS]
 Insert the approved analytics snippet here when ready.
 -->
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="refinement.css">
-<link rel="stylesheet" href="version2.css?v=20">
+<link rel="stylesheet" href="version2.css?v=21">
 <script src="site.js?v=17" defer></script>
 </head>
 <body id="top" class="v2 page-recovery">
@@ -31,41 +31,97 @@ Insert the approved analytics snippet here when ready.
 <div class="v2-example-banner">Sample Recovery Page</div>
 <section id="hero" class="v2-section recovery-hero">
 <div class="wrap">
-<p class="eyebrow">Employee Candle recovery</p>
-<h1><span>Find your Candle.</span> <span class="gold-line">Pick up where you left off.</span></h1>
-<p class="v2-lead">A team member can restore the Candle already assigned to them without asking a manager to rebuild it.</p>
+<p class="eyebrow">Employee Candle access and recovery</p>
+<h1><span>A simple way in.</span> <span class="gold-line">A reliable way back.</span></h1>
+<p class="v2-lead">A company can claim its Candle, and a team member can find the Candle already assigned to them. Each page is branded for the client program.</p>
 </div>
 </section>
-<section class="v2-section">
-<div class="wrap recovery-shell">
-<div class="recovery-flow" aria-label="Recovery steps">
-<article class="recovery-step active"><span>01</span><strong>Find</strong><small>Use the email or mobile number used during onboarding.</small></article>
-<article class="recovery-step"><span>02</span><strong>Confirm</strong><small>Verify the matching business and location.</small></article>
-<article class="recovery-step"><span>03</span><strong>Restore</strong><small>Save the assigned Candle back to the phone.</small></article>
+<section class="v2-section recovery-story-section">
+<div class="wrap">
+<div class="recovery-story-intro">
+<p class="eyebrow">Two paths, clearly separated</p>
+<h2>For the company. For every team member.</h2>
+<p>Each person sees only the route that applies to them. The result is the same: the correct Candle, ready to save and use again.</p>
 </div>
-<form class="v2-card recovery-form" onsubmit="return false">
-<p class="eyebrow">Step 1 of 3</p>
-<h2>Let’s find your Candle.</h2>
-<p>Enter the email address or full mobile number used when you joined your location.</p>
-<label>Email or mobile number
-<input type="text" autocomplete="email" placeholder="name@example.com or full mobile number">
-</label>
-<button class="button" type="button">Find my Candle</button>
-<p class="small recovery-privacy">Your contact information is used only to locate your assigned Candle. It is never shown to clients or used for marketing.</p>
-<p class="sample-only">Sample only. This page does not submit information.</p>
-</form>
-<aside class="recovery-value">
-<p class="eyebrow">Built into every program</p>
-<h2><span>No rebuilding.</span> <span class="gold-line">No lost connection.</span></h2>
-<p>Once a CandleMe program is live, every location can have a recovery page like this. It gives the team a simple route back to the Candle and dashboard already assigned to them.</p>
-<a class="button secondary" href="start-a-pilot.html">Start a Pilot</a>
+<div class="recovery-story-grid">
+<article class="recovery-story-card recovery-company-card" data-reveal>
+<div class="recovery-story-copy">
+<p class="eyebrow">01 · Company Candle</p>
+<h3>Claim the company Candle.</h3>
+<p>Confirm the contact information on file, claim the branded Candle, then save it to Apple Wallet or Google Wallet.</p>
+<ul class="recovery-points">
+<li>Confirm the match</li>
+<li>Save to Wallet</li>
+<li>Keep it ready to use and share</li>
+</ul>
+</div>
+<figure class="recovery-screen-stage company-claim-stage">
+<a href="images/recovery-company-claim.webp" target="_blank" rel="noopener noreferrer" aria-label="Open the company Candle claim example at full size">
+<img src="images/recovery-company-claim.webp" width="286" height="471" loading="lazy" decoding="async" alt="Sample company Candle claim page followed by its Apple Wallet and Google Wallet save screen">
+</a>
+<figcaption><span>Claim the company Candle, then save it to the appropriate Wallet.</span><a href="images/recovery-company-claim.webp" target="_blank" rel="noopener noreferrer">Open full size ↗</a></figcaption>
+</figure>
+</article>
+<article class="recovery-story-card recovery-employee-card" data-reveal>
+<div class="recovery-story-copy">
+<p class="eyebrow">02 · Employee Candle</p>
+<h3>Find the Candle already assigned.</h3>
+<p>A returning team member uses the mobile number or email address on file to retrieve the same Employee Candle. A manager does not need to rebuild it.</p>
+<ul class="recovery-points">
+<li>Find the correct Candle</li>
+<li>Reconnect to the correct business and location</li>
+<li>Save it back to Apple Wallet or Google Wallet</li>
+</ul>
+</div>
+<figure class="recovery-screen-stage employee-find-stage">
+<a href="images/recovery-employee-find-clean.webp" target="_blank" rel="noopener noreferrer" aria-label="Open the Employee Candle recovery example at full size">
+<img src="images/recovery-employee-find-clean.webp" width="1395" height="1127" loading="lazy" decoding="async" alt="Sample branded Find your Candle page for retrieving an assigned Employee Candle">
+</a>
+<figcaption><span>Find the assigned Employee Candle without rebuilding the profile.</span><a href="images/recovery-employee-find-clean.webp" target="_blank" rel="noopener noreferrer">Open full size ↗</a></figcaption>
+</figure>
+</article>
+</div>
+<aside class="recovery-security" data-reveal aria-label="Privacy promise">
+<span class="recovery-security-icon" aria-hidden="true"></span>
+<p><strong>Private by design.</strong> Contact information is used only to locate the assigned Candle. It is never displayed on the Candle or used for marketing.</p>
 </aside>
+</div>
+</section>
+<section class="v2-section recovery-onboarding-section">
+<div class="wrap recovery-onboarding-story">
+<div class="recovery-onboarding-copy">
+<p class="eyebrow">03 · Employee onboarding</p>
+<h2>Where every Employee Candle begins.</h2>
+<p>The location’s onboarding QR is clearly marked for employees only. It already knows the correct business and location, so each person begins in the right place.</p>
+<ol class="recovery-onboarding-steps">
+<li><span>1</span><p><strong>Show or post the QR.</strong> A manager can keep it on a phone or print it for an employee-only area.</p></li>
+<li><span>2</span><p><strong>The team member joins.</strong> Their unique Candle and personal dashboard open immediately.</p></li>
+<li><span>3</span><p><strong>The recovery path stays ready.</strong> If the link is lost or the phone changes, the same Candle can be found again.</p></li>
+</ol>
+</div>
+<figure class="recovery-onboarding-figure" data-reveal>
+<a href="images/employee-onboarding-only.webp" target="_blank" rel="noopener noreferrer" aria-label="Open the employee-only onboarding QR example at full size">
+<img src="images/employee-onboarding-only.webp" width="1672" height="941" loading="lazy" decoding="async" alt="Phone mockup showing an Employee Onboarding screen marked For Employees Only with a location-specific QR code">
+</a>
+<figcaption><span>One employee-only onboarding QR connects each person to the correct company and location.</span><a href="images/employee-onboarding-only.webp" target="_blank" rel="noopener noreferrer">Open full size ↗</a></figcaption>
+</figure>
+</div>
+</section>
+<section class="v2-section recovery-pilot-section">
+<div class="wrap recovery-pilot-close">
+<p class="eyebrow">Included from the pilot</p>
+<h2><span>The way in and the way back</span> <span class="gold-line">are built together.</span></h2>
+<p>Once a client program is live, including during a pilot, its branded claim, onboarding and recovery pages can be ready for the company and its team.</p>
+<div class="v2-actions recovery-actions">
+<a class="button" href="start-a-pilot.html">Start a Pilot</a>
+<a class="button secondary" href="https://cal.com/zafar-amin-eshaen/15min" target="_blank" rel="noopener noreferrer">Book a Call</a>
+</div>
 </div>
 </section>
 </main>
 <footer class="v2-footer">
 <div class="wrap">
-<p class="footer-promise">A reliable way back for every member of your team.</p>
+<p class="footer-promise">A simple way in. A reliable way back.</p>
 <div class="v2-footer-links">
 <a href="dashboard.html">Your CandleMe Dashboard</a>
 <a href="professional.html">Sample Professional Page</a>
