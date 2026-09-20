@@ -49,6 +49,8 @@
   saveButton.addEventListener('click', () => {
     if (!form.reportValidity()) return;
     saveDraft();
+    const planner = document.querySelector('#destinations .planner-editor-disclosure');
+    if (planner) planner.open = true;
     document.getElementById('destinations').scrollIntoView({behavior:'smooth', block:'start'});
   });
   form.addEventListener('submit', async event => {

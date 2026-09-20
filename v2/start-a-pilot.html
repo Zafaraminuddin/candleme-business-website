@@ -11,8 +11,8 @@ Insert the approved analytics snippet here when ready.
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="refinement.css">
 <link rel="stylesheet" href="planner.css">
-<link rel="stylesheet" href="version2.css?v=21">
-<script src="site.js?v=17" defer>
+<link rel="stylesheet" href="version2.css?v=23">
+<script src="site.js?v=18" defer>
 </script>
 </head>
 <body id="top" class="v2 page-pilot">
@@ -24,6 +24,7 @@ Insert the approved analytics snippet here when ready.
 <a class="" href="why-candleme.html">Why CandleMe</a>
 <a class="nav-two-line" href="dashboard.html">Your CandleMe<br>Dashboard</a>
 <a class="nav-two-line" href="professional.html">Sample Professional<br>Page</a>
+<a class="nav-two-line recovery-nav-link" href="sample-recovery.html">Sample Recovery<br>Page</a>
 <a href="https://candlemenow.com/claim" target="_blank" rel="noopener noreferrer">Pricing</a>
 <a class="" href="start-a-pilot.html">Start a Pilot</a>
 <button class="button secondary" type="button" data-book-call>Book a Call</button>
@@ -125,8 +126,11 @@ Insert the approved analytics snippet here when ready.
 <section class="v2-section">
 <div class="wrap">
 <section class="v2-planner" id="destinations" aria-labelledby="destinations-title">
-<h2>Plan your destinations (optional).</h2>
-<p>Want to think through what goes inside your Candle before we talk? Use the planner below, or skip it and plan with us.</p>
+<h2 id="destinations-title">Plan your destinations <small>Optional</small></h2>
+<p>Want to think through what goes inside? Use the planner.</p>
+<details class="planner-disclosure planner-editor-disclosure">
+<summary><span>Build your destination plan</span><small>Add the links you already use.</small></summary>
+<div class="planner-disclosure-body">
 <div class="editor" id="editor" aria-labelledby="entry-title">
 <div class="editor-topline">
 <div>
@@ -157,20 +161,21 @@ Insert the approved analytics snippet here when ready.
 <button class="text-button" id="clearSlot" type="button">Clear slot</button>
 </div>
 </div>
-<div class="planner-heading">
-<div>
-<h3>Four doors. Up to 12 destinations.</h3>
-<p>Links your clients can reach inside their Candle.</p>
 </div>
-<span class="capacity" id="capacity">
-</span>
-</div>
+</details>
+<details class="planner-disclosure doors-disclosure">
+<summary><span>Four doors. Up to 12 destinations.</span><small>Links your clients can reach inside their Candle.</small></summary>
+<div class="planner-disclosure-body">
+<div class="planner-heading planner-capacity-row"><span class="capacity" id="capacity"></span></div>
 <div class="doors" id="doors">
 </div>
 <aside class="shortcut">
-<strong>Your Keeper shortcut.</strong>
-<p>With the flame extinguished, <b>double-tap the CandleMe symbol</b> to open the Keeper Door.</p>
+<div><strong>Your Keeper shortcut.</strong>
+<p>Extinguish the flame, then <b>double-tap the CandleMe symbol</b>. The Keeper Door opens to the links saved there.</p></div>
+<img src="images/asset-0427d4d597ac.webp" width="600" height="1000" loading="lazy" alt="A hand double-tapping the CandleMe symbol to open the Keeper Door">
 </aside>
+</div>
+</details>
 <div class="v2-actions">
 <button type="submit" form="pilot-request" class="button">Send my pilot request</button>
 <button type="button" class="button secondary" id="download">Download my plan</button>
@@ -186,7 +191,7 @@ Insert the approved analytics snippet here when ready.
 <div id="printSummary" hidden>
 </div>
 <script id="saved-plan" type="application/json">{}</script>
-<script src="pilot-form.js" defer>
+<script src="pilot-form.js?v=2" defer>
 </script>
 <script src="planner.js" defer>
 </script>

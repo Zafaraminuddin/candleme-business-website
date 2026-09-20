@@ -26,6 +26,21 @@
     sampleDialog.querySelector('[data-close-sample]')?.addEventListener('click', () => sampleDialog.close());
   }
 
+  const recoveryViewer = document.getElementById('recovery-viewer');
+  const recoveryViewerImage = recoveryViewer?.querySelector('[data-recovery-viewer-image]');
+  if (recoveryViewer && recoveryViewerImage) {
+    document.querySelectorAll('[data-recovery-view]').forEach(button => button.addEventListener('click', () => {
+      recoveryViewerImage.src = button.dataset.recoveryView;
+      recoveryViewerImage.alt = button.dataset.recoveryAlt || 'Enlarged screen preview';
+      if (typeof recoveryViewer.showModal === 'function') recoveryViewer.showModal();
+      else recoveryViewer.setAttribute('open', '');
+    }));
+    recoveryViewer.querySelector('[data-close-recovery]')?.addEventListener('click', () => recoveryViewer.close());
+    recoveryViewer.addEventListener('click', event => {
+      if (event.target === recoveryViewer) recoveryViewer.close();
+    });
+  }
+
   document.querySelectorAll('.v2-section h2, .v2-grid > .v2-card, .onboarding-example-grid > li').forEach((item, index) => {
     if (!item.hasAttribute('data-reveal')) item.setAttribute('data-reveal', '');
     item.style.setProperty('--reveal-delay', `${Math.min(index % 4, 3) * 55}ms`);
