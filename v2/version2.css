@@ -1400,6 +1400,7 @@ body.v2.page-recovery .recovery-screen-stage figcaption a:hover,
 body.v2.page-recovery .recovery-screen-stage figcaption a:focus-visible,
 body.v2.page-recovery .recovery-onboarding-figure figcaption a:hover,
 body.v2.page-recovery .recovery-onboarding-figure figcaption a:focus-visible{text-decoration:underline}
+body.v2.page-recovery .company-claim-stage figcaption{display:grid;justify-content:center;text-align:center}
 body.v2.page-recovery .recovery-security{
   display:grid;
   grid-template-columns:58px minmax(0,1fr);
