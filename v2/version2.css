@@ -2449,3 +2449,17 @@ body.v2.page-recovery .recovery-rollout-model-continue {
   justify-self: center !important;
   margin-inline: auto !important;
 }
+
+
+/* Place Continue directly beneath step 02. */
+body.v2.page-recovery .recovery-rollout-model-continue {
+  grid-column: 2 !important;
+  justify-self: center !important;
+  margin: 0 auto !important;
+  transform: none !important;
+}
+@media (max-width:760px) {
+  body.v2.page-recovery .recovery-rollout-model-continue {
+    grid-column: 1 !important;
+  }
+}
