@@ -2386,3 +2386,46 @@ body.v2.page-recovery .recovery-rollout-model-continue{background:var(--gold);co
 body.v2.page-professional .luxury-object img{mix-blend-mode:normal}
 body.v2.page-recovery .recovery-rollout-model-continue{justify-self:center;margin-inline:auto}
 
+
+
+/* Final alignment and heading corrections from the latest reference screenshots. */
+body.v2.page-recovery .recovery-rollout-model {
+  position: fixed !important;
+  left: 50% !important;
+  top: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  inset: auto !important;
+  margin: 0 !important;
+  transform: translate(-50%, -50%) !important;
+}
+body.v2.page-recovery .recovery-rollout-model[open] {
+  animation: recovery-rollout-centered-final .24s ease-out both !important;
+}
+@keyframes recovery-rollout-centered-final {
+  from { opacity: 0; transform: translate(-50%, -47%) scale(.98) !important; }
+  to { opacity: 1; transform: translate(-50%, -50%) scale(1) !important; }
+}
+body.v2.page-recovery .recovery-rollout-model-steps li > span {
+  flex-basis: 41px;
+  width: 41px;
+  height: 41px;
+  font-size: .9rem;
+}
+body.v2.page-recovery .recovery-rollout-model-continue {
+  grid-column: 2;
+  justify-self: center !important;
+  margin-inline: auto !important;
+}
+body.v2.page-pilot #pilot-heading-3,
+body.v2.page-pilot #destinations-title,
+body.v2.page-pilot .planner-editor-disclosure > summary span,
+body.v2.page-pilot .doors-disclosure > summary span,
+body.v2.page-pilot #entry-title {
+  color: var(--gold-light) !important;
+}
+@media (max-width:760px) {
+  body.v2.page-recovery .recovery-rollout-model-continue {
+    grid-column: 1;
+  }
+}
