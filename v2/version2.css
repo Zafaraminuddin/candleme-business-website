@@ -2036,3 +2036,23 @@ body.v2.page-professional .professional-profile-bio>p:last-child{font-size:15px;
 .professional-booking-preview p{font-size:12px;line-height:1.6;color:#c6bca8;margin:12px 0 0}
 @media(max-width:1000px){body.v2.page-professional .professional-profile{grid-template-columns:160px minmax(0,1fr);gap:25px;padding:30px}.professional-profile-contact{grid-column:1/-1;border-left:0;border-top:1px solid #b894514d;padding:25px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}.professional-profile-contact ul{margin:0}.professional-booking-preview{max-width:300px}}
 @media(max-width:600px){body.v2.page-professional .professional-profile{grid-template-columns:1fr;gap:24px;padding:26px 22px}body.v2.page-professional .professional-portrait{max-width:180px}body.v2.page-professional .professional-profile .professional-name,body.v2.page-professional .professional-profile-bio{text-align:center}body.v2.page-professional .professional-profile .professional-role{font-size:19px}.professional-gold-rule{margin:18px auto}.professional-profile-contact{grid-template-columns:1fr;gap:22px}.professional-booking-preview{max-width:none}.professional-profile-contact li{font-size:14px}}
+
+/* V32: Start a Pilot carries the shared silver action treatment across every page. */
+body.v2 .v2-nav-links a[href="start-a-pilot.html"]{color:#151718;background:linear-gradient(180deg,#f5f7f7,#aab1b5);border-color:#d6dcde;box-shadow:inset 0 1px #fff,0 6px 18px -13px #dce3e5}
+body.v2 .v2-nav-links a[href="start-a-pilot.html"]:hover,body.v2 .v2-nav-links a[href="start-a-pilot.html"]:focus-visible{color:#0b0d0e;background:linear-gradient(180deg,#fff,#c8ced1);border-color:#f2f4f5;box-shadow:inset 0 1px #fff,0 8px 22px -14px #e1e7e9}
+
+/* V33: the sample professional closing follows the supplied team-page layout. */
+body.v2.page-professional #closing{padding:72px 0 92px;background:radial-gradient(ellipse at 50% 100%,rgba(189,137,47,.10),transparent 55%)}
+body.v2.page-professional #closing>.wrap{padding:0}
+body.v2.page-professional .candle-closing{display:grid;grid-template-columns:minmax(260px,.72fr) minmax(0,1.08fr);gap:0;align-items:stretch;max-width:1590px;margin:auto;padding:56px 10.5%;border:2px solid #c4943c;border-radius:27px;background:radial-gradient(circle at 14% 48%,rgba(234,175,69,.18),transparent 28%),linear-gradient(145deg,#1d1b17,#080909 68%);box-shadow:inset 0 1px rgba(255,238,192,.15),0 24px 60px -42px #e9b451}
+body.v2.page-professional .candle-closing>img{justify-self:center;align-self:center;width:min(100%,220px);max-height:470px;object-fit:contain;filter:drop-shadow(0 20px 25px rgba(0,0,0,.65))}
+body.v2.page-professional .professional-closing-copy{display:flex;flex-direction:column;justify-content:center;min-height:420px;padding:26px 0 26px clamp(46px,7vw,110px);border-left:1px solid rgba(211,161,68,.75)}
+body.v2.page-professional .professional-closing-copy h2{max-width:760px;margin:0;color:#f7f3eb;font-size:clamp(45px,4.5vw,76px);line-height:1.05;letter-spacing:-.035em;text-wrap:balance}
+body.v2.page-professional .professional-closing-copy h2::first-line{color:#f7f3eb}
+body.v2.page-professional .professional-closing-copy h2{background:linear-gradient(90deg,#f7f3eb 0 65%,#f0bd5d 65%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+body.v2.page-professional .closing-checks{justify-items:stretch;gap:0;max-width:710px;margin:30px 0 34px}
+body.v2.page-professional .closing-checks li{width:100%;padding:16px 0;border-bottom:1px solid rgba(191,145,56,.3);color:#f2f0eb;font-size:18px}
+body.v2.page-professional .closing-checks li::before{color:#f3bb4d;font-size:30px;line-height:.75}
+body.v2.page-professional .professional-closing-copy .v2-actions{margin:0;gap:20px}
+body.v2.page-professional .professional-closing-copy .button{min-width:230px;padding:18px 28px;font-size:18px}
+@media(max-width:760px){body.v2.page-professional #closing{padding:42px 0 58px}body.v2.page-professional .candle-closing{grid-template-columns:1fr;padding:36px 26px;border-radius:19px}body.v2.page-professional .candle-closing>img{width:150px;max-height:280px;margin-bottom:28px}body.v2.page-professional .professional-closing-copy{min-height:0;padding:30px 0 0;border-left:0;border-top:1px solid rgba(211,161,68,.7)}body.v2.page-professional .professional-closing-copy h2{font-size:clamp(38px,11vw,53px)}body.v2.page-professional .closing-checks li{font-size:16px}body.v2.page-professional .professional-closing-copy .v2-actions{align-items:stretch}body.v2.page-professional .professional-closing-copy .button{width:100%;min-width:0}}
