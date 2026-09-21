@@ -15,11 +15,15 @@ Insert the approved analytics snippet here when ready.
 </script>
 <style>
 body.page-car-wash .hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);align-items:center}
-body.page-car-wash figure.car-wash-hero{position:relative;min-height:440px;display:flex;flex-direction:column;align-items:stretch;overflow:hidden;border-radius:18px;background:#08090a}
+body.page-car-wash figure.car-wash-hero{position:relative;min-height:440px;display:flex;flex-direction:column;align-items:stretch;overflow:visible;border-radius:18px;background:linear-gradient(145deg,#171717,#070707);border:1px solid rgba(222,174,72,.3);box-shadow:18px 18px 0 rgba(34,25,10,.72),0 24px 50px rgba(0,0,0,.45);transform:translateX(3%)}
+body.page-car-wash figure.car-wash-hero:after{content:"";position:absolute;right:-18px;bottom:-18px;width:100%;height:100%;border-right:1px solid rgba(222,174,72,.22);border-bottom:1px solid rgba(222,174,72,.22);border-radius:0 0 18px 0;pointer-events:none}
+body.page-car-wash figure.car-wash-hero .car-wash-hero-scene{min-height:470px;object-position:center}
 body.page-car-wash figure.car-wash-hero .car-wash-hero-slogan{width:100%;box-sizing:border-box;flex:0 0 auto}
 body.page-car-wash figure.car-wash-hero .car-wash-hero-scene{width:100%;flex:1 1 auto}
 body.page-car-wash .car-wash-hero-scene{display:block;width:100%;height:100%;min-height:440px;object-fit:cover;object-position:center}
 body.page-car-wash .car-wash-hero-slogan{position:static;margin:0;padding:30px 12% 24px;color:#e8b95d;background:linear-gradient(180deg,rgba(24,20,13,.98),rgba(12,12,12,.98));border-bottom:1px solid rgba(222,174,72,.38);text-align:center;font:700 clamp(1.05rem,2vw,1.55rem)/1.25 Arial,sans-serif;letter-spacing:.02em;text-shadow:0 2px 14px rgba(0,0,0,.6)}
+.hero-proof{font-weight:500!important}
+body.page-car-wash .v2-emphasis span{color:#f5f0e8;font-weight:400}
 body.page-car-wash .car-wash-services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;list-style:none;margin:22px 0 26px;padding:0}
 body.page-car-wash .car-wash-services li{position:relative;padding:16px 14px 16px 48px;border:1px solid rgba(222,174,72,.55);border-radius:14px;background:linear-gradient(135deg,rgba(42,31,12,.78),rgba(16,16,16,.9));color:#f5f0e8;font:500 1rem/1.3 Arial,sans-serif}
 body.page-car-wash .car-wash-services li:before{content:"✓";position:absolute;left:16px;top:50%;transform:translateY(-50%);width:24px;height:24px;border:1px solid rgba(222,174,72,.8);border-radius:50%;color:#f1bb4f;text-align:center;font-weight:700;line-height:22px;box-shadow:0 0 12px rgba(222,174,72,.25)}
@@ -29,7 +33,7 @@ body.page-car-wash .car-wash-no-list li+li{margin-left:-7px}
 body.page-car-wash .car-wash-no-list li:after{content:"›";position:absolute;right:-10px;top:50%;transform:translateY(-50%);z-index:2;color:#e8b95d;font:400 2rem/1 Arial,sans-serif;text-shadow:0 0 8px rgba(222,174,72,.65)}
 @media (max-width:800px){body.page-car-wash .car-wash-hero-slogan{top:18px;left:8%;right:8%;font-size:1rem}body.page-car-wash .car-wash-services{gap:8px;margin-top:18px}body.page-car-wash .car-wash-services li{padding:13px 9px 13px 38px;font-size:.86rem}body.page-car-wash .car-wash-services li:before{left:10px;width:20px;height:20px;line-height:18px}body.page-car-wash .car-wash-no-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}body.page-car-wash .car-wash-no-list li{padding:14px 5px;font-size:.67rem}body.page-car-wash .car-wash-no-list li+li{margin-left:0}body.page-car-wash .car-wash-no-list li:after{display:none}}
 
-@media (max-width:800px){body.page-car-wash .hero-grid{grid-template-columns:1fr}body.page-car-wash figure.car-wash-hero{min-height:300px}body.page-car-wash .car-wash-hero-slogan{padding:22px 9% 18px;font-size:1rem}body.page-car-wash .car-wash-hero-scene{min-height:300px}}
+@media (max-width:800px){body.page-car-wash .hero-grid{grid-template-columns:1fr}body.page-car-wash figure.car-wash-hero{min-height:300px;transform:none;box-shadow:10px 10px 0 rgba(34,25,10,.65),0 18px 36px rgba(0,0,0,.4)}body.page-car-wash figure.car-wash-hero .car-wash-hero-scene{min-height:300px}body.page-car-wash .car-wash-hero-slogan{padding:22px 9% 18px;font-size:1rem}body.page-car-wash .car-wash-hero-scene{min-height:300px}}
 </style>
 </head>
 <body id="top" class="v2 page-home page-car-wash">
@@ -60,7 +64,7 @@ body.page-car-wash .car-wash-no-list li:after{content:"›";position:absolute;ri
 <a class="button" href="start-a-pilot.html">Start a Pilot</a>
 <button class="button secondary" type="button" data-book-call>Book a Call</button>
 </div>
-<p class="hero-proof"><strong>Customers save your Candle directly to Apple Wallet or Google Wallet in seconds.</strong><br>No form. No account. No login. No personal information required.</p>
+<p class="hero-proof">Customers save your Candle directly to Apple Wallet or Google Wallet in seconds.<br>No form. No account. No login. No personal information required.</p>
 </div>
 <figure class="hero-candle car-wash-hero">
 <p class="car-wash-hero-slogan">CandleMe brings your services together and puts them in your customer’s pocket.</p>
@@ -73,16 +77,16 @@ body.page-car-wash .car-wash-no-list li:after{content:"›";position:absolute;ri
 <section id="problem" class="v2-section">
 <div class="wrap">
 <div class="narrow">
-<h2>Most customer relationships are lost <span class="gold-inline">at the moment of signup.</span></h2>
+<h2><span>Most customer relationships are</span> <span class="gold-inline">lost at the moment of signup.</span></h2>
 <p class="">The wash is over. The customer liked the experience. They may even want to come back.<br><br>The usual path asks customers to do too much before they receive anything:</p><ul class="car-wash-no-list"><li>NO APP DOWNLOAD</li><li>NO REGISTRATION</li><li>NO IDENTIFICATION</li><li>NO LOGIN</li></ul>
 <p class="">A customer scans your Candle and saves it to Apple Wallet or Google Wallet. Then the next wash, offer, membership, fundraiser, or service link is already waiting.</p>
-<p class="v2-emphasis" data-reveal><strong>Give them something useful first.</strong><br>A simple way back to your wash.</p>
+<p class="v2-emphasis" data-reveal><strong>Give them something useful first.</strong><br><span>A simple way back to your wash.</span></p>
 </div>
 </div>
 </section>
 <section id="destinations" class="v2-section">
 <div class="wrap">
-<h2 data-reveal><span>One Candle.</span> <span class="gold-line">Every service in their pocket.</span></h2>
+<h2 data-reveal><span class="gold-line">One Candle.</span> <span>Every service in their pocket.</span></h2>
 <p class="">Bring your customer’s next wash, membership, detailing service, offer, referral, fundraiser, and support link together in one place. You choose what goes inside.</p>
 <div class="v2-grid four">
 <article class="v2-card destination-card" data-reveal>
