@@ -13,6 +13,13 @@ Insert the approved analytics snippet here when ready.
 <link rel="stylesheet" href="version2.css?v=38">
 <script src="site.js?v=20" defer>
 </script>
+<style>
+body.page-car-wash .hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);align-items:center}
+body.page-car-wash .car-wash-hero{position:relative;min-height:440px;display:block;overflow:hidden;border-radius:18px;background:#08090a}
+body.page-car-wash .car-wash-hero-scene{display:block;width:100%;height:100%;min-height:440px;object-fit:cover;object-position:center}
+body.page-car-wash .car-wash-hero-candle{position:absolute;right:7%;bottom:-6%;width:18%;height:auto;max-height:78%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 12px 24px rgba(0,0,0,.55))}
+@media (max-width:800px){body.page-car-wash .hero-grid{grid-template-columns:1fr}body.page-car-wash .car-wash-hero{min-height:300px}body.page-car-wash .car-wash-hero-scene{min-height:300px}body.page-car-wash .car-wash-hero-candle{width:22%;right:5%}}
+</style>
 </head>
 <body id="top" class="v2 page-home page-car-wash">
 <nav class="nav v2-nav" aria-label="Main navigation">
@@ -44,9 +51,9 @@ Insert the approved analytics snippet here when ready.
 </div>
 <p class="hero-proof"><strong>Customers save your Candle directly to Apple Wallet or Google Wallet in seconds.</strong><br>No form. No account. No login. No personal information required.</p>
 </div>
-<figure class="hero-candle">
-<!-- [CANDLE IMAGE] -->
-<img src="images/candle-hero.webp" width="921" height="2048" alt="CandleMe Candle" fetchpriority="high" decoding="async">
+<figure class="hero-candle car-wash-hero">
+<img class="car-wash-hero-scene" src="images/car-wash-hero.webp" width="1600" height="900" alt="A premium car at a car wash with warm gold lighting" fetchpriority="high" decoding="async">
+<img class="car-wash-hero-candle" src="images/candleme-car-hero.png" width="720" height="1440" alt="CandleMe Candle" decoding="async">
 </figure>
 </div>
 </div>
