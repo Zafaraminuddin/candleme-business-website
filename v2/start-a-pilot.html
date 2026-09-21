@@ -11,8 +11,9 @@ Insert the approved analytics snippet here when ready.
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="refinement.css">
 <link rel="stylesheet" href="planner.css">
-<link rel="stylesheet" href="version2.css?v=30">
+<link rel="stylesheet" href="version2.css?v=31">
 <link rel="stylesheet" href="pilot-metal-preview.css?v=3">
+<link rel="stylesheet" href="pilot-flow.css?v=1">
 <script src="site.js?v=20" defer>
 </script>
 </head>
@@ -70,76 +71,51 @@ Insert the approved analytics snippet here when ready.
 </div>
 </section>
 <section id="request" class="v2-section">
-<div class="wrap">
-<h2>Tell us about your business.</h2>
-<form id="pilot-request" action="[FORM ENDPOINT]" method="post" enctype="multipart/form-data">
-<div class="v2-form-grid">
-<label>Business name<input name="business" id="business" type="text" required>
-</label>
-<label>Your name<input name="name" id="name" type="text" required>
-</label>
-<label>Email<input name="email" id="email" type="email" required>
-</label>
-<label>Phone (optional)<input name="phone" id="phone" type="tel">
-</label>
-<label class="call-time-field" hidden>Best time to call<input name="bestCallTime" id="bestCallTime" type="text" placeholder="For example, weekday mornings" disabled>
-</label>
-<label>Total locations<select name="totalLocations" required>
-<option value="">
-</option>
-<option>1</option>
-<option>2 to 5</option>
-<option>6 to 20</option>
-<option>21 to 50</option>
-<option>51 to 200</option>
-<option>More than 200</option>
-</select>
-</label>
-<label>Locations for the pilot<input name="pilotLocations" type="number" min="1" inputmode="numeric" required placeholder="Enter the exact number">
-</label>
-<label>Website<input name="website" id="website" type="url" required>
-</label>
+<div class="wrap pilot-flow-wrap">
+<div class="pilot-flow-intro"><p class="eyebrow">A little about you. A lot of possibility.</p><h2>Let’s make it <span class="gold-inline">your pilot.</span></h2><p>Two short steps. We’ll help with the rest.</p></div>
+<form id="pilot-request" class="pilot-flow" data-submission-endpoint="" method="post" enctype="multipart/form-data" novalidate>
+<div class="pilot-progress-head">
+<div><p class="pilot-step-caption" id="pilotStepCaption">Step 1 of 2</p><p class="pilot-progress-title" id="pilotProgressTitle">Your business</p></div>
+<div class="pilot-gauge-group"><div class="pilot-gauge-label"><span>Your progress</span><strong id="pilotPercent">0%</strong></div><div class="pilot-cylinder" id="pilotProgress" role="progressbar" aria-label="Pilot details completed" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span class="pilot-cylinder-fill"></span><span class="pilot-cylinder-ticks"></span></div></div>
 </div>
-<fieldset class="location-options">
-<legend>How would you like to share your pilot locations?</legend>
-<div class="v2-methods">
-<label>
-<input type="radio" name="locationMethod" value="0" checked>Type them in</label>
-<label>
-<input type="radio" name="locationMethod" value="1">Upload a file</label>
-<label>
-<input type="radio" name="locationMethod" value="2">Paste your website’s location-page link</label>
+<ol class="pilot-step-track" aria-label="Your pilot request"><li data-pilot-marker="1" aria-current="step"><span>01</span> Your business</li><li data-pilot-marker="2"><span>02</span> Your pilot</li><li data-pilot-marker="3"><span>✓</span> Ready to share</li></ol>
+<section class="pilot-step" data-pilot-step="1" aria-labelledby="pilot-heading-1">
+<h3 id="pilot-heading-1" tabindex="-1">First, your business.</h3><p class="pilot-step-lead">Just two details to get started.</p>
+<div class="pilot-fields">
+<label for="business">Business name<input name="business" id="business" type="text" autocomplete="organization" placeholder="Your business or group" maxlength="160" required></label>
+<label for="email">Your email<input name="email" id="email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="254" required></label>
 </div>
-<div data-location-panel="0">
-<textarea name="locationsManual" aria-label="Your pilot locations" required rows="8" placeholder="Location name | Address | Manager email&#10;One location per line">
-</textarea>
-</div>
-<div data-location-panel="1" hidden>
-<input type="file" name="locationFile" aria-label="Upload a file" accept=".xlsx,.xls,.csv,.pdf,.doc,.docx" disabled required>
-<a class="" href="Location-Template.xlsx">Download the location template</a>
-</div>
-<div data-location-panel="2" hidden>
-<label>Link to your locations page<input type="url" name="locationsWebsite" aria-label="Website locations page" disabled required placeholder="https://">
-</label>
-<label>Which locations should be included?<textarea name="includedLocations" aria-label="Which locations are in the pilot" rows="4" disabled required placeholder="List the location names, or tell us to use all locations on the page.">
-</textarea>
-</label>
-</div>
-<ul class="location-checklist small"><li>Only the pilot locations are needed now.</li><li>For each location: name, address, and manager email.</li><li>The email above is your contact email.</li><li>For larger groups, upload a file or use the template.</li></ul>
-</fieldset>
-<label>Additional information you’d like to share (optional)<textarea name="notes" rows="4">
-</textarea>
-</label>
-<button type="button" class="button" id="savePilot">Save and continue to destinations</button>
-<p class="small submit-explainer" id="pilotSaveStatus" role="status">Your information stays in this browser until you choose to send it.</p>
-<p class="v2-placeholder endpoint">[FORM ENDPOINT]</p>
-<p id="request-success" role="status" hidden>Got it. Expect a reply within one business day with your location list to confirm and a time to talk.</p>
-</form>
-<p>Prefer to talk first? <button type="button" class="text-button" data-book-call>Book a Call.</button>
-</p>
-</div>
+<p class="pilot-field-note">Use the email where you’d like us to follow up about your pilot.</p>
+<div class="pilot-step-actions"><button type="button" class="button pilot-next" id="pilotContinue">Continue <span aria-hidden="true">→</span></button><span class="pilot-next-hint">Next: your pilot details</span></div>
 </section>
-<section class="v2-section">
+<section class="pilot-step" data-pilot-step="2" aria-labelledby="pilot-heading-2" hidden>
+<h3 id="pilot-heading-2" tabindex="-1">Make it yours.</h3><p class="pilot-step-lead" id="pilotPersonalGreeting">Tell us a little about your pilot. We’ll help with setup.</p>
+<div class="pilot-fields pilot-fields-two">
+<label for="name">Your name<input name="name" id="name" type="text" autocomplete="name" placeholder="First and last name" maxlength="160" required></label>
+<label for="website">Business website<input name="website" id="website" type="url" autocomplete="url" placeholder="yourbusiness.com" maxlength="2048" required></label>
+<label for="totalLocations">Total business locations<select name="totalLocations" id="totalLocations" required><option value="">Select a range</option><option>1</option><option>2 to 5</option><option>6 to 20</option><option>21 to 50</option><option>51 to 200</option><option>More than 200</option></select></label>
+<label for="pilotLocations">Locations to include in the pilot<input name="pilotLocations" id="pilotLocations" type="number" min="1" step="1" inputmode="numeric" placeholder="e.g. 3" required></label>
+</div>
+<details class="pilot-extra"><summary>Add a phone number or a note <span>Optional</span></summary><div class="pilot-extra-body"><label for="phone">Phone (optional)<input name="phone" id="phone" type="tel" autocomplete="tel" maxlength="60"></label><label class="call-time-field" for="bestCallTime" hidden>Best time to call (optional)<input name="bestCallTime" id="bestCallTime" type="text" maxlength="160" disabled></label><label for="notes">Anything you’d like us to know? (optional)<textarea name="notes" id="notes" rows="3" maxlength="5000"></textarea></label></div></details>
+<div class="pilot-step-actions"><button type="button" class="text-button" data-pilot-back="1">← Back</button><button type="submit" class="button pilot-next" id="pilotReview">Review my request <span aria-hidden="true">→</span></button></div>
+</section>
+<section class="pilot-step pilot-ready" data-pilot-step="3" aria-labelledby="pilot-heading-3" hidden>
+<div class="pilot-ready-icon" aria-hidden="true">✓</div><h3 id="pilot-heading-3" tabindex="-1">Your pilot starts here.</h3><p class="pilot-step-lead">Your request is ready. Review it, then choose how to share it.</p>
+<dl class="pilot-review-summary" id="pilotReviewSummary"></dl><button type="button" class="text-button" data-pilot-back="2">Edit my details</button>
+<details class="pilot-extra"><summary>Add your pilot locations <span>Optional</span></summary><div class="pilot-extra-body"><p>You can share these now or work through them with us later.</p><fieldset class="location-options"><legend>How would you like to share your locations?</legend><div class="v2-methods"><label><input type="radio" name="locationMethod" value="0" checked>Type them in</label><label><input type="radio" name="locationMethod" value="1">Attach a file</label><label><input type="radio" name="locationMethod" value="2">Use a location-page link</label></div>
+<div data-location-panel="0"><label for="locationsManual">Pilot locations<textarea id="locationsManual" name="locationsManual" rows="4" maxlength="12000" placeholder="Location name | Address | Manager email&#10;One location per line"></textarea></label></div>
+<div data-location-panel="1" hidden><label for="locationFile">Your location list<input type="file" id="locationFile" name="locationFile" accept=".xlsx,.xls,.csv,.pdf,.doc,.docx" disabled></label><a href="Location-Template.xlsx">Download the location template</a><p class="small">Files aren’t saved in your browser draft. If sending by email, attach the original file to your message.</p></div>
+<div data-location-panel="2" hidden><label for="locationsWebsite">Link to your locations page<input type="url" id="locationsWebsite" name="locationsWebsite" placeholder="https://" disabled></label><label for="includedLocations">Which locations should be included?<textarea id="includedLocations" name="includedLocations" rows="3" maxlength="5000" placeholder="Location names, or all locations on the page" disabled></textarea></label></div></fieldset></div></details>
+<div class="pilot-share-actions"><a class="button" id="emailPilot" href="mailto:connect@candlemenow.com">Email my request <span aria-hidden="true">↗</span></a><button class="button" id="sendPilotOnline" type="button" hidden>Send my request</button><button class="button secondary" id="downloadPilot" type="button">Download my request</button></div>
+<p class="pilot-field-note" id="pilotDeliveryNote">Email opens your mail app with your request prepared. Review it and press Send there. Nothing has been sent yet.</p><p id="request-success" role="status" hidden></p>
+<a class="pilot-plan-link" href="#destinations">Want to plan your links too? <span>Explore the optional planner ↓</span></a>
+</section>
+<div class="pilot-draft-line"><span class="pilot-save-dot" aria-hidden="true"></span><p id="pilotSaveStatus" role="status">Your draft stays on this device until you choose to share it.</p><button type="button" class="text-button" id="clearPilotDraft" hidden>Clear draft</button></div>
+<noscript><p>This guided form needs JavaScript. You can also email <a href="mailto:connect@candlemenow.com">connect@candlemenow.com</a> to start your pilot.</p></noscript>
+</form>
+<p class="pilot-talk">Prefer a conversation? <button type="button" class="text-button" data-book-call>Book a Call.</button></p>
+</div></section>
+<section class="v2-section" id="pilotOptionalSetup" hidden>
 <div class="wrap">
 <section class="v2-planner" id="destinations" aria-labelledby="destinations-title">
 <h2 id="destinations-title">Plan your destinations <small>Optional</small></h2>
@@ -193,23 +169,23 @@ Insert the approved analytics snippet here when ready.
 </div>
 </details>
 <div class="v2-actions">
-<button type="submit" form="pilot-request" class="button">Send my pilot request</button>
+<a href="#request" class="button">Back to my request</a>
 <button type="button" class="button secondary" id="download">Download my plan</button>
 </div>
 <p id="downloadStatus" role="status">
 </p>
 <p id="autosaveStatus" class="small" role="status">
 </p>
-<p id="draftNote" class="small">Saved on this device. Nothing is sent until you select “Send my pilot request.”</p>
+<p id="draftNote" class="small">Saved on this device. Nothing is sent until you share your request.</p>
 </section>
 </div>
 </section>
 <div id="printSummary" hidden>
 </div>
 <script id="saved-plan" type="application/json">{}</script>
-<script src="pilot-form.js?v=2" defer>
+<script src="pilot-flow.js?v=1" defer>
 </script>
-<script src="planner.js" defer>
+<script src="planner.js?v=2" defer>
 </script>
 </main>
 <footer class="v2-footer">

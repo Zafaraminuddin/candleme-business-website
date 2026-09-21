@@ -2000,3 +2000,39 @@ body.v2 .v2-menu-toggle{display:none}
   body.v2.page-professional #hero h1{font-size:clamp(32px,8.8vw,40px);line-height:1.1;margin:14px 0 20px}
   body.v2.page-why #hero .v2-lead{font-size:17px;line-height:1.6;margin:0}
 }
+
+/* V31: consistent navigation and a compact mahogany pilot offer. */
+body.v2 .v2-nav-links .recovery-nav-link,
+body.v2 .v2-footer-links .recovery-footer-link{color:#ddd8ce;border-color:rgba(246,206,130,.16)}
+body.v2 .v2-nav-links .recovery-nav-link:hover,
+body.v2 .v2-nav-links .recovery-nav-link:focus-visible{color:var(--gold-light);border-color:rgba(246,206,130,.48);box-shadow:none;background:rgba(237,178,75,.045)}
+@media(min-width:1181px){
+ body.v2 .v2-nav-links>a,body.v2 .v2-nav-links>.button{min-height:46px}
+ body.v2 .v2-nav-links>a[href="https://candlemenow.com/claim"]{min-width:104px}
+}
+body.v2.page-home .pilot-offer{background:linear-gradient(145deg,#211210,#120b09 60%,#0e0908);padding:30px}
+body.v2.page-home .pilot-terms{background:linear-gradient(145deg,#2b1611,#180d0a);box-shadow:inset 0 1px #e7c28724;color:#f4d48f}
+body.v2.page-home .pilot-term-note{flex:1;min-height:160px;margin:22px 0;padding:28px;max-height:none;border-radius:14px;background:radial-gradient(ellipse at center,#52321f44,transparent 75%),#180e0b;font-size:19px;line-height:1.55}
+body.v2.page-home .pilot-offer .activation-definition{margin:0;padding-top:18px}
+@media(max-width:760px){body.v2.page-home .pilot-term-note{flex:auto;min-height:150px;margin:18px 0;padding:24px;font-size:17px}body.v2.page-home .pilot-offer{padding:24px}}
+
+/* Ava's profile: source portrait, warm metal accents, and a responsive contact column. */
+body.v2.page-professional .professional-profile{display:grid;grid-template-columns:minmax(150px,.75fr) minmax(0,1.5fr) minmax(0,1.3fr);gap:32px;align-items:center;margin:24px 0 34px;padding:38px;border:1px solid #c29a50;border-radius:20px;background:radial-gradient(ellipse at 15% 0,#bc965511,transparent 60%),linear-gradient(140deg,#171613,#0d0d0b);box-shadow:inset 0 1px #f5d99b44,0 22px 45px -35px #000}
+body.v2.page-professional .professional-portrait{position:relative;width:100%;max-width:240px;aspect-ratio:1;margin:auto;overflow:hidden;border-radius:50%;border:1px solid #d9b164;box-shadow:0 8px 28px #0005}
+body.v2.page-professional .professional-portrait img{position:absolute;width:640%;max-width:none;height:auto;left:-55%;top:-59.375%;margin:0;display:block}
+body.v2.page-professional .professional-profile .professional-name{font-size:clamp(48px,5.4vw,76px);line-height:1;margin:0 0 12px;text-align:left}
+body.v2.page-professional .professional-profile .professional-role{font-size:20px;font-weight:600;line-height:1.4;margin:0;color:#ecc57f}
+body.v2.page-professional .professional-profile-bio>p:last-child{font-size:15px;line-height:1.75;color:#ddd8cc;margin:0}
+.professional-gold-rule{display:block;width:44px;height:2px;background:#dfbc77;margin:20px 0}
+.professional-profile-contact{border-left:1px solid #b894514d;padding-left:28px;min-width:0}
+.professional-profile-contact ul{padding:0;margin:0 0 22px;list-style:none;display:grid;gap:16px}
+.professional-profile-contact li{display:flex;align-items:flex-start;gap:14px;color:#e2ded3;font-size:14px;line-height:1.65;overflow-wrap:anywhere}
+.professional-profile-contact li>span{min-width:0}
+.professional-profile-contact svg{width:23px;height:23px;flex-shrink:0;color:#f0c67a;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 1px 2px #c7923533);margin-top:1px}
+.professional-profile .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.professional-booking-preview summary{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:13px 22px;border-radius:10px;border:1px solid #b88c40;background:linear-gradient(160deg,#f0d18d,#b58743);box-shadow:inset 0 1px #ffebba77,0 7px 20px -14px #e6b966;color:#21180b;font-size:15px;font-weight:600;cursor:pointer;list-style:none}
+.professional-booking-preview summary::-webkit-details-marker{display:none}
+.professional-booking-preview summary>span{font-size:22px;line-height:1}
+.professional-booking-preview p{font-size:12px;line-height:1.6;color:#c6bca8;margin:12px 0 0}
+@media(max-width:1000px){body.v2.page-professional .professional-profile{grid-template-columns:160px minmax(0,1fr);gap:25px;padding:30px}.professional-profile-contact{grid-column:1/-1;border-left:0;border-top:1px solid #b894514d;padding:25px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}.professional-profile-contact ul{margin:0}.professional-booking-preview{max-width:300px}}
+@media(max-width:600px){body.v2.page-professional .professional-profile{grid-template-columns:1fr;gap:24px;padding:26px 22px}body.v2.page-professional .professional-portrait{max-width:180px}body.v2.page-professional .professional-profile .professional-name,body.v2.page-professional .professional-profile-bio{text-align:center}body.v2.page-professional .professional-profile .professional-role{font-size:19px}.professional-gold-rule{margin:18px auto}.professional-profile-contact{grid-template-columns:1fr;gap:22px}.professional-booking-preview{max-width:none}.professional-profile-contact li{font-size:14px}}

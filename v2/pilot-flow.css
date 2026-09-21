@@ -1,0 +1,77 @@
+/* Guided pilot request. Scoped to the existing pilot page. */
+body.v2.page-pilot .pilot-flow-wrap{max-width:870px}
+body.v2.page-pilot .pilot-flow-intro{text-align:center;margin-bottom:30px}
+body.v2.page-pilot .pilot-flow-intro .eyebrow{font-size:11px;letter-spacing:.16em}
+body.v2.page-pilot .pilot-flow-intro h2{margin:10px 0 14px;font-size:clamp(34px,4vw,48px)}
+body.v2.page-pilot .pilot-flow-intro>p:last-child{color:#bdb5a6;font-size:17px}
+body.v2.page-pilot #pilot-request.pilot-flow{padding:36px 42px 20px;border:1px solid #735a35;border-radius:24px;background:radial-gradient(ellipse at 95% 0,rgba(227,172,72,.09),transparent 50%),linear-gradient(135deg,#20120f,#130e0b 65%);box-shadow:inset 0 1px #e3c98a2b,0 24px 70px -40px #000}
+.pilot-flow [hidden],#pilotOptionalSetup[hidden]{display:none!important}
+.pilot-progress-head{display:flex;align-items:center;justify-content:space-between;gap:28px}
+body.v2.page-pilot .pilot-step-caption{margin:0 0 5px;text-transform:uppercase;letter-spacing:.16em;font-size:10px;font-weight:700;color:#cab998}
+body.v2.page-pilot .pilot-progress-title{margin:0;color:#f4e4c3;font-size:19px;font-weight:600}
+.pilot-gauge-group{width:260px;max-width:52%}
+.pilot-gauge-label{display:flex;align-items:baseline;justify-content:space-between;margin:0 3px 8px;color:#bfb6a5;font-size:11px}
+.pilot-gauge-label strong{font-size:14px;font-variant-numeric:tabular-nums;color:#f5cf83}
+.pilot-cylinder{--pilot-fill:0%;height:30px;position:relative;isolation:isolate;overflow:hidden;border-radius:50px / 28px;border:1px solid #967745;background:linear-gradient(180deg,#080705,#433725 30%,#211a11 57%,#080705);box-shadow:inset 0 2px 5px #000a,inset 0 -2px 3px #ffeab326,0 5px 14px #0005}
+.pilot-cylinder::before,.pilot-cylinder::after{content:"";position:absolute;top:0;bottom:0;width:15px;z-index:3;border:1px solid #dfbb725e;border-radius:50%;pointer-events:none}
+.pilot-cylinder::before{left:-3px;background:linear-gradient(90deg,#05040388,transparent)}
+.pilot-cylinder::after{right:-3px;background:linear-gradient(90deg,transparent,#f8d69318)}
+.pilot-cylinder-fill{position:absolute;inset:1px auto 1px 0;width:var(--pilot-fill);border-radius:50px / 28px;background:linear-gradient(180deg,#a56d24 0%,#f5d790 17%,#eab74f 36%,#b7802b 69%,#f5d589 91%,#c68d32);box-shadow:inset 0 1px 1px #fff4c9,0 0 18px #e4b95144;transition:width .65s cubic-bezier(.2,.7,.2,1)}
+.pilot-cylinder-fill::after{content:"";position:absolute;right:0;top:0;bottom:0;width:13px;border:1px solid #ffe7a994;border-radius:50%;background:linear-gradient(95deg,#78511c55,#ffe4a659)}
+.pilot-cylinder-ticks{position:absolute;inset:8px 22px;opacity:.35;background:repeating-linear-gradient(90deg,transparent 0,transparent calc(20% - 1px),#fff0c4 calc(20% - 1px),#fff0c4 20%);pointer-events:none}
+.pilot-step-track{display:flex;justify-content:space-between;list-style:none;gap:12px;margin:26px 0 30px;padding:0 0 20px;border-bottom:1px solid #cda35c2b}
+.pilot-step-track li{display:flex;align-items:center;gap:8px;font-size:11px;color:#a69a86}
+.pilot-step-track li>span{display:grid;place-items:center;width:24px;height:24px;border:1px solid #605039;border-radius:50%;font-size:9px;font-weight:700}
+.pilot-step-track li[aria-current=step]{color:#ffe1a1}
+.pilot-step-track li[aria-current=step]>span,.pilot-step-track li.is-complete>span{border-color:#dbaf59;background:#deb3621c;color:#f5d083}
+body.v2.page-pilot .pilot-step h3{font-size:clamp(27px,3vw,34px);line-height:1.15;color:#faf4e8;margin:0 0 10px;text-align:left;font-family:Georgia,serif;font-weight:500;letter-spacing:-.025em}
+body.v2.page-pilot .pilot-step-lead{color:#c1b7a7;margin:0 0 25px;font-size:15px;line-height:1.6}
+.pilot-fields{display:grid;gap:20px}
+.pilot-fields-two{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 18px}
+body.v2.page-pilot #pilot-request.pilot-flow label,body.v2.page-pilot #pilot-request.pilot-flow legend{font-size:13px;line-height:1.5;color:#e9dfca;font-weight:500}
+body.v2.page-pilot #pilot-request.pilot-flow input:not([type=radio]),body.v2.page-pilot #pilot-request.pilot-flow select,body.v2.page-pilot #pilot-request.pilot-flow textarea{display:block;width:100%;max-width:100%;min-width:0;min-height:52px;padding:13px 15px;border:1px solid #62513b;border-radius:10px;background:#0e0c09;color:#f7eddd;font:400 16px/1.5 Inter,Arial,sans-serif;box-shadow:inset 0 2px 6px #0002;margin:8px 0 0}
+body.v2.page-pilot #pilot-request.pilot-flow input::placeholder,body.v2.page-pilot #pilot-request.pilot-flow textarea::placeholder{color:#978e80;opacity:1}
+body.v2.page-pilot #pilot-request.pilot-flow input:focus,body.v2.page-pilot #pilot-request.pilot-flow select:focus,body.v2.page-pilot #pilot-request.pilot-flow textarea:focus{outline:2px solid #f0c576;outline-offset:2px;border-color:#edbc67;box-shadow:0 0 0 5px #c28c341a}
+body.v2.page-pilot .pilot-field-note{font-size:12px;line-height:1.65;color:#b7ad9d;margin:15px 0 0}
+.pilot-step-actions{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:28px}
+body.v2.page-pilot .pilot-flow .button{min-height:49px;padding:13px 23px;border-radius:10px;gap:18px;font-size:14px}
+body.v2.page-pilot .pilot-flow .button:not(.secondary){background:linear-gradient(120deg,#f4cd7a,#e4aa43);color:#211608;box-shadow:inset 0 1px #fff3bb,0 7px 22px -14px #efb647}
+body.v2.page-pilot .pilot-flow .button:hover{transform:translateY(-1px)}
+.pilot-next-hint{font-size:12px;color:#b6aa94}
+.pilot-extra{border:1px solid #b8914e33;border-radius:12px;margin-top:24px;background:#00000016}
+.pilot-extra summary{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px;font-size:13px;font-weight:500;cursor:pointer;color:#e2d2b5;list-style:none}
+.pilot-extra summary::before{content:"+";color:#dfb965;font-size:19px;line-height:1}
+.pilot-extra[open]>summary::before{content:"−"}
+.pilot-extra summary span{margin-left:auto;font-size:10px;color:#c2b28f;border:1px solid #766344;border-radius:20px;padding:3px 8px}
+.pilot-extra-body{padding:0 16px 18px;display:grid;gap:16px}
+.pilot-extra-body>p{font-size:13px;margin:0;color:#bdb2a1}
+body.v2.page-pilot .pilot-flow .location-options{border:0;padding:0;margin:0;min-width:0}
+body.v2.page-pilot .pilot-flow .location-options [data-location-panel]{padding:12px}
+.pilot-review-summary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px;margin:24px 0 16px;padding:20px;border-radius:12px;border:1px solid #ad8b513b;background:#09080566}
+.pilot-review-summary>div{min-width:0}
+.pilot-review-summary dt{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#b9a789;margin-bottom:5px}
+.pilot-review-summary dd{font-size:14px;color:#f1e4ce;margin:0;overflow-wrap:anywhere}
+.pilot-ready-icon{display:grid;place-items:center;width:42px;height:42px;margin-bottom:16px;border:1px solid #d5af67;border-radius:50%;color:#f6d490;background:#d3a95217;font-size:22px}
+.pilot-share-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}
+.pilot-plan-link{display:block;margin-top:25px;padding-top:20px;border-top:1px solid #b88d4533;font-size:13px;color:#e4d3ae;text-decoration:none;line-height:1.7}
+.pilot-plan-link span{display:block;color:#bea87e;font-size:12px}
+.pilot-draft-line{display:flex;align-items:baseline;gap:8px;margin-top:28px;padding-top:16px;border-top:1px solid #b7914d20}
+body.v2.page-pilot #pilotSaveStatus{font-size:11px;color:#b3a78e;margin:0;min-height:18px;line-height:1.6;flex:1}
+.pilot-save-dot{width:5px;height:5px;border-radius:50%;flex:0 0 5px;background:#ccb17b;align-self:flex-start;margin-top:6px}
+body.v2.page-pilot .pilot-flow .text-button{color:#e1c084;font-size:12px;min-height:32px}
+body.v2.page-pilot .pilot-talk{text-align:center;margin:18px 0 0;font-size:13px;color:#b8b0a1}
+body.v2.page-pilot .pilot-talk .text-button{font-size:13px;color:#f2cf8c}
+body.v2.page-pilot #request-success{padding:14px;border:1px solid #bca368;border-radius:10px;font-size:14px;color:#f5d696}
+.pilot-step h3:focus{outline:none}
+@media(max-width:600px){
+ body.v2.page-pilot #pilot-request.pilot-flow{padding:24px 20px 16px;border-radius:19px}
+ .pilot-progress-head{gap:16px}.pilot-gauge-group{width:155px;max-width:50%}.pilot-cylinder{height:26px}
+ body.v2.page-pilot .pilot-progress-title{font-size:16px}.pilot-gauge-label{font-size:10px}
+ .pilot-step-track{gap:7px;margin:23px 0 26px}.pilot-step-track li{font-size:10px;gap:5px}.pilot-step-track li>span{width:20px;height:20px;flex-shrink:0;font-size:8px}
+ .pilot-fields-two{grid-template-columns:1fr}.pilot-next-hint{display:none}.pilot-step-actions .pilot-next{flex:1}
+ .pilot-review-summary{grid-template-columns:1fr;padding:16px;gap:15px}.pilot-share-actions{flex-direction:column}.pilot-share-actions .button{width:100%}
+ .pilot-extra summary{padding:13px;gap:7px;font-size:12px}.pilot-extra summary span{font-size:9px;padding:2px 6px}
+ .pilot-draft-line{flex-wrap:wrap}.pilot-draft-line #clearPilotDraft{margin-left:auto}
+ body.v2.page-pilot .pilot-flow-intro .eyebrow{font-size:9px;letter-spacing:.12em}
+}
+@media(prefers-reduced-motion:reduce){.pilot-cylinder-fill{transition:none}.pilot-flow .button{transition:none!important;transform:none!important}}

@@ -166,6 +166,7 @@ function initPlanner() {
     });
     root.append(node('p','Planner only. Nothing here is live until setup.'));
   }
+  if ($('pilot-request')) window.candlemePilotPlan = () => { if (!commit()) return null; return snapshot(); };
   ['label','url'].forEach(id => $(id).addEventListener('input', markChanged));
   $('slotPicker').addEventListener('change', () => chooseSlot(Number($('slotPicker').value)));
   $('saveSlot').addEventListener('click', () => {if (commit()) {lastSavedIndex = selected; draw(); autosave(); message(slots[selected].url ? 'Link added to ' + names[Math.floor(selected / 3)] + ' · Slot ' + (selected % 3 + 1) + '. Choose another slot when you’re ready.' : 'This slot is empty.');}});
