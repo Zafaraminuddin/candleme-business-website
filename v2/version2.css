@@ -2488,3 +2488,35 @@ body.v2.page-recovery .recovery-rollout-model-continue {
     margin-inline: auto !important;
   }
 }
+
+
+/* Structural correction: the modal uses three columns so Continue belongs under 02. */
+@media (min-width:761px) {
+  body.v2.page-recovery .recovery-rollout-model-card {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+  body.v2.page-recovery .recovery-rollout-model-card > div:first-child {
+    grid-column: 1 / 2 !important;
+  }
+  body.v2.page-recovery .recovery-rollout-model-card > p {
+    grid-column: 2 / 4 !important;
+  }
+  body.v2.page-recovery .recovery-rollout-model-continue {
+    position: static !important;
+    grid-column: 2 !important;
+    justify-self: center !important;
+    transform: none !important;
+    margin: 0 auto !important;
+  }
+}
+@media (max-width:760px) {
+  body.v2.page-recovery .recovery-rollout-model-card {
+    grid-template-columns: 1fr !important;
+  }
+  body.v2.page-recovery .recovery-rollout-model-card > div:first-child,
+  body.v2.page-recovery .recovery-rollout-model-card > p,
+  body.v2.page-recovery .recovery-rollout-model-continue {
+    grid-column: 1 !important;
+  }
+}
