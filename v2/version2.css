@@ -2123,3 +2123,8 @@ body.v2.page-professional .sample-intro-logo{display:block;width:34px;height:48p
 body.v2.page-professional .sample-intro-dialog h2{color:#f7f3eb!important}
 body.v2.page-professional .sample-intro-dialog .sample-benefits span{color:#f7f3eb!important;border-color:#5f5140;background:#0b0c0d}
 body.v2.page-professional .sample-intro-logo{display:block;width:34px;height:48px;object-fit:contain;margin:0 0 16px}
+
+/* V40: use the supplied finished professional team panel. */
+body.v2.page-professional .professional-closing-reference-section{padding:64px 0 88px;background:#080909}
+body.v2.page-professional .professional-closing-reference{width:100%;max-width:1670px;margin:0 auto;border:1px solid #be8b32;border-radius:18px;box-shadow:0 24px 60px -38px #d9a441;display:block}
+@media(max-width:760px){body.v2.page-professional .professional-closing-reference-section{padding:38px 0 54px}body.v2.page-professional .professional-closing-reference{border-radius:12px}}
