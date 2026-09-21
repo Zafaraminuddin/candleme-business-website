@@ -2381,3 +2381,8 @@ body.v2.page-recovery .recovery-rollout-model-steps{list-style:none}
 body.v2.page-recovery .recovery-rollout-model-close{top:12px;right:16px;width:34px;height:34px;border:1px solid rgba(190,198,204,.42);border-radius:50%;background:#0b0d0f;color:#f1f2f2;font-size:25px}
 body.v2.page-recovery .recovery-rollout-model-continue{background:var(--gold);color:#080909;border-color:var(--gold-light)}
 @media(max-width:760px){body.v2.page-recovery .recovery-rollout-model-card{padding:24px 20px 22px}}
+
+/* Final reference corrections. */
+body.v2.page-professional .luxury-object img{mix-blend-mode:normal}
+body.v2.page-recovery .recovery-rollout-model-continue{justify-self:center;margin-inline:auto}
+
