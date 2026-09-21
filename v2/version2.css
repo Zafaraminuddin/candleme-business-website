@@ -2463,3 +2463,28 @@ body.v2.page-recovery .recovery-rollout-model-continue {
     grid-column: 1 !important;
   }
 }
+
+
+/* Final visual alignment: Continue sits beneath step 02, not the right column. */
+@media (min-width:761px) {
+  body.v2.page-recovery .recovery-rollout-model-card {
+    position: relative;
+  }
+  body.v2.page-recovery .recovery-rollout-model-continue {
+    position: absolute !important;
+    left: 39% !important;
+    bottom: 26px !important;
+    grid-column: auto !important;
+    transform: translateX(-50%) !important;
+    margin: 0 !important;
+  }
+}
+@media (max-width:760px) {
+  body.v2.page-recovery .recovery-rollout-model-continue {
+    position: static !important;
+    grid-column: 1 !important;
+    transform: none !important;
+    justify-self: center !important;
+    margin-inline: auto !important;
+  }
+}
