@@ -2194,3 +2194,111 @@ body.v2.page-pilot .pilot-cylinder-fill {
   );
 }
 
+/* Compact recovery rollout model, scoped to the Sample Recovery Page. */
+body.v2.page-recovery .recovery-rollout-model {
+  width: min(840px, calc(100vw - 32px));
+  max-width: 840px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #f1f2f2;
+  overflow: visible;
+}
+body.v2.page-recovery .recovery-rollout-model::backdrop {
+  background: rgba(0, 0, 0, .82);
+  backdrop-filter: blur(5px);
+}
+body.v2.page-recovery .recovery-rollout-model[open] {
+  animation: recovery-rollout-in .24s ease-out both;
+}
+body.v2.page-recovery .recovery-rollout-model-close {
+  position: absolute;
+  z-index: 2;
+  top: 8px;
+  right: 14px;
+  border: 0;
+  background: transparent;
+  color: #e8e3d9;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
+@keyframes recovery-rollout-in {
+  from { opacity: 0; transform: translateY(12px) scale(.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+body.v2.page-recovery .recovery-rollout-model-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 1fr);
+  gap: 20px 42px;
+  align-items: center;
+  padding: 28px 32px;
+  border: 1px solid rgba(190, 196, 201, .28);
+  border-radius: 16px;
+  background: linear-gradient(135deg, #111315, #090a0b);
+  box-shadow: 0 18px 44px -34px rgba(237, 178, 75, .7);
+}
+body.v2.page-recovery .recovery-rollout-model-card .eyebrow {
+  margin: 0 0 8px;
+  color: #d4d8dc;
+  letter-spacing: .14em;
+}
+body.v2.page-recovery .recovery-rollout-model-card h2 {
+  margin: 0;
+  color: var(--gold-light);
+  font-size: clamp(1.45rem, 2.4vw, 2.15rem);
+  line-height: 1.08;
+}
+body.v2.page-recovery .recovery-rollout-model-copy {
+  margin: 0;
+  color: #e2e5e7;
+  font-size: .98rem;
+  line-height: 1.6;
+}
+body.v2.page-recovery .recovery-rollout-model-steps {
+  display: flex;
+  grid-column: 1 / -1;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body.v2.page-recovery .recovery-rollout-model-steps li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex: 1;
+  color: #f1f2f2;
+  font-size: .88rem;
+}
+body.v2.page-recovery .recovery-rollout-model-steps li > span {
+  display: inline-grid;
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--gold);
+  color: #080909;
+  font-weight: 800;
+  font-size: .76rem;
+}
+body.v2.page-recovery .recovery-rollout-model-continue {
+  justify-self: start;
+  min-width: 116px;
+  padding: 11px 22px;
+  background: var(--gold);
+  color: #080909;
+}
+@media (max-width: 760px) {
+  body.v2.page-recovery .recovery-rollout-model-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 23px 20px;
+  }
+  body.v2.page-recovery .recovery-rollout-model-steps {
+    display: grid;
+    gap: 11px;
+  }
+  body.v2.page-recovery .recovery-rollout-model-steps li { flex: none; }
+}
