@@ -2093,3 +2093,10 @@ body.v2.page-pilot .pilot-metal-benefits li{border-color:#929898;background:line
 body.v2.page-pilot .pilot-metal-benefits li::before{color:#f0f0ed;background:#292b2b;border-color:#cfd3d2}
 body.v2.page-pilot .pilot-metal-prices>div{border-color:#888d8d;background:linear-gradient(145deg,#252727,#121414);color:#d9dcda}
 body.v2.page-pilot .pilot-metal-cta{background:linear-gradient(180deg,#f0c96d,#b9842e);border-color:#ffe2a0;color:#17130d;box-shadow:inset 0 1px #fff8,0 10px 24px -16px #d9a441}
+
+/* V36: gold emphasis on the pilot’s three conversion headings. */
+body.v2.page-pilot #hero h1,
+body.v2.page-pilot #pilot-definition .pilot-metal-content h2,
+body.v2.page-pilot .pilot-flow-intro h2{color:#e5b45d}
+body.v2.page-pilot #hero h1 .gold-inline,
+body.v2.page-pilot .pilot-flow-intro h2 .gold-inline{color:#f0c875}
