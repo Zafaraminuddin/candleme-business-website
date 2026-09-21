@@ -52,7 +52,7 @@ function initPlanner() {
       persisted = true;
       if ($('autosaveStatus').textContent !== 'Saved on this device') $('autosaveStatus').textContent = 'Saved on this device';
       $('autosaveStatus').classList.toggle('unavailable',false);
-      $('draftNote').textContent = "Your plan is saved in this browser only. Nothing is sent until you submit the form above.";
+      $('draftNote').textContent = "Your plan is saved in this browser only. Nothing is sent until you share your request.";
     } catch (_) {
       persisted = false;
       $('autosaveStatus').textContent = 'Autosave unavailable in this browser';

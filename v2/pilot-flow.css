@@ -75,3 +75,4 @@ body.v2.page-pilot #request-success{padding:14px;border:1px solid #bca368;border
  body.v2.page-pilot .pilot-flow-intro .eyebrow{font-size:9px;letter-spacing:.12em}
 }
 @media(prefers-reduced-motion:reduce){.pilot-cylinder-fill{transition:none}.pilot-flow .button{transition:none!important;transform:none!important}}
+body.v2.page-pilot #pilot-request .pilot-step{padding:0;margin:0;border:0;background:transparent}
