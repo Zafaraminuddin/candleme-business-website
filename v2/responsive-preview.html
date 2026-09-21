@@ -20,8 +20,15 @@
   <main><iframe id="preview" title="Site at selected viewport width" src="sample-recovery.html?mobile-review=29"></iframe></main>
   <script>
     const preview=document.getElementById('preview');
-    document.getElementById('width').addEventListener('change',event=>{preview.style.width=event.target.value+'px'});
-    document.getElementById('page').addEventListener('change',event=>{preview.src=event.target.value+'?mobile-review=29'});
+    const pageControl=document.getElementById('page');
+    const widthControl=document.getElementById('width');
+    const params=new URLSearchParams(location.search);
+    if([...pageControl.options].some(option=>option.value===params.get('page'))) pageControl.value=params.get('page');
+    if([...widthControl.options].some(option=>option.value===params.get('width'))) widthControl.value=params.get('width');
+    preview.style.width=widthControl.value+'px';
+    preview.src=pageControl.value+'?mobile-review=30';
+    widthControl.addEventListener('change',()=>{preview.style.width=widthControl.value+'px'});
+    pageControl.addEventListener('change',()=>{preview.src=pageControl.value+'?mobile-review=30'});
   </script>
 </body>
 </html>
