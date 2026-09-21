@@ -378,3 +378,32 @@ body.v2.page-pilot-metal-preview #pilot-definition > .wrap {
     transform: none;
   }
 }
+
+/* Silver refinement: one material language across the pilot page. */
+.page-pilot-metal-preview{
+  --pilot-silver-dark:#4e5459;
+  --pilot-silver-mid:#aeb4b8;
+  --pilot-silver-light:#f0f2f3;
+  --pilot-metal-edge:#70777c;
+}
+body.v2.page-pilot-metal-preview #hero .gold-inline,
+body.v2.page-pilot-metal-preview .gold-inline{color:var(--pilot-silver-light)}
+body.v2.page-pilot-metal-preview .eyebrow{color:#c5c9cb}
+body.v2.page-pilot-metal-preview .pilot-checklist li{border-color:rgba(191,198,202,.3);background:linear-gradient(145deg,rgba(219,224,226,.075),rgba(255,255,255,.018));color:#e8e9e8}
+body.v2.page-pilot-metal-preview .pilot-checklist li::before{color:#e7eaeb;text-shadow:0 0 12px rgba(235,239,241,.25)}
+.page-pilot-metal-preview .pilot-metal-shell{background:linear-gradient(135deg,#202225,#090a0b 52%,#17191b);box-shadow:0 22px 56px rgba(0,0,0,.58),inset 0 1px rgba(255,255,255,.12)}
+.page-pilot-metal-preview .pilot-metal-shell::before{background:linear-gradient(95deg,rgba(255,255,255,.33),rgba(255,255,255,.03) 26%,rgba(255,255,255,.16) 58%,rgba(255,255,255,.03));}
+.page-pilot-metal-preview .pilot-metal-panel{border-color:var(--pilot-metal-edge);background:radial-gradient(circle at 75% 20%,rgba(216,222,225,.12),transparent 31%),linear-gradient(145deg,#24272a,#090a0b 58%,#181a1d);box-shadow:inset 0 1px rgba(255,255,255,.2),inset 0 -20px 40px rgba(0,0,0,.38),0 18px 44px rgba(0,0,0,.42)}
+.page-pilot-metal-preview .pilot-metal-panel::after{border-color:rgba(213,218,221,.26)}
+.page-pilot-metal-preview .pilot-metal-medallion{background:radial-gradient(circle at 32% 27%,#fcfdfd 0 2%,#b5babd 9%,#4d5357 29%,#16191b 58%,#050606 74%);box-shadow:0 22px 44px rgba(0,0,0,.66),0 0 0 3px #4e5459,0 0 0 6px #c5c9cb,inset 0 0 0 3px rgba(255,255,255,.38),inset 0 0 40px rgba(0,0,0,.92)}
+.page-pilot-metal-preview .pilot-metal-medallion::before{border-color:#e7eaeb;box-shadow:0 0 0 3px rgba(72,78,82,.9),inset 0 0 24px rgba(0,0,0,.74)}
+.page-pilot-metal-preview .pilot-metal-number{color:#f0f2f3;text-shadow:0 2px 0 #3c4145,0 8px 18px #000}
+.page-pilot-metal-preview .pilot-metal-days{color:#d9dddf}
+.page-pilot-metal-preview .pilot-metal-content h2{color:#f0f2f3}
+.page-pilot-metal-preview .pilot-metal-content h2::after{background:linear-gradient(90deg,transparent,#c9ced1,transparent)}
+.page-pilot-metal-preview .pilot-metal-benefits li{color:#d8dcde}
+.page-pilot-metal-preview .pilot-metal-benefits li::before{color:#e6e9ea}
+.page-pilot-metal-preview .pilot-metal-prices p{border-color:rgba(204,210,213,.28);background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.025));color:#cbd0d2}
+.page-pilot-metal-preview .pilot-metal-prices strong{color:#f3f4f4}
+.page-pilot-metal-preview .pilot-metal-cta{border-color:#bac0c3;background:linear-gradient(180deg,#f3f5f5,#aab0b3);color:#17191a;box-shadow:inset 0 1px #fff,0 8px 24px -14px #c8ced1}
+.page-pilot-metal-preview .pilot-metal-cta:hover{background:linear-gradient(180deg,#fff,#c8cdd0);color:#0d0f10}

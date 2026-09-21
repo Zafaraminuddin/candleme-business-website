@@ -76,3 +76,43 @@ body.v2.page-pilot #request-success{padding:14px;border:1px solid #bca368;border
 }
 @media(prefers-reduced-motion:reduce){.pilot-cylinder-fill{transition:none}.pilot-flow .button{transition:none!important;transform:none!important}}
 body.v2.page-pilot #pilot-request .pilot-step{padding:0;margin:0;border:0;background:transparent}
+
+/* Silver refinement: modern graphite form, larger and clearer progress steps. */
+body.v2.page-pilot .pilot-flow-intro .eyebrow{color:#bbc1c4}
+body.v2.page-pilot .pilot-flow-intro .gold-inline{color:#eef0f1}
+body.v2.page-pilot #pilot-request.pilot-flow{border-color:#626a70;background:radial-gradient(ellipse at 95% 0,rgba(228,233,235,.11),transparent 49%),linear-gradient(135deg,#1e2022,#0c0d0e 66%);box-shadow:inset 0 1px rgba(255,255,255,.16),0 24px 70px -40px #000}
+body.v2.page-pilot .pilot-step-caption{color:#b9c0c3}
+body.v2.page-pilot .pilot-progress-title{color:#f0f2f2}
+.pilot-gauge-label{color:#b6bdc0}
+.pilot-gauge-label strong{color:#f0f2f3;font-size:16px}
+.pilot-cylinder{border-color:#7a8287;background:linear-gradient(180deg,#070809,#4d5458 30%,#1c2022 57%,#070809);box-shadow:inset 0 2px 5px #000a,inset 0 -2px 3px #e5e9eb2d,0 5px 14px #0005}
+.pilot-cylinder::before,.pilot-cylinder::after{border-color:#d6dbdd70}
+.pilot-cylinder::after{background:linear-gradient(90deg,transparent,#e6ebed1e)}
+.pilot-cylinder-fill{background:linear-gradient(180deg,#7d858a 0%,#f7f8f8 17%,#c8ced1 38%,#70787d 69%,#eef1f2 91%,#9ea6aa);box-shadow:inset 0 1px 1px #fff,0 0 18px #dce2e444}
+.pilot-cylinder-fill::after{border-color:#f2f5f6a8;background:linear-gradient(95deg,#59616666,#f4f7f8a8)}
+.pilot-cylinder-ticks{background:repeating-linear-gradient(90deg,transparent 0,transparent calc(20% - 1px),#f5f7f866 calc(20% - 1px),#f5f7f866 20%)}
+.pilot-step-track{gap:20px;border-bottom-color:#c3cbce30}
+.pilot-step-track li{gap:11px;font-size:13px;color:#afb6b9}
+.pilot-step-track li>span{width:34px;height:34px;border-color:#697177;border-radius:10px;font-size:12px;color:#c9d0d2;background:linear-gradient(145deg,#25282a,#111214)}
+.pilot-step-track li[aria-current=step]{color:#f1f3f3}
+.pilot-step-track li[aria-current=step]>span,.pilot-step-track li.is-complete>span{border-color:#dce1e3;background:linear-gradient(145deg,#e9edee,#8f989d);color:#111314;box-shadow:inset 0 1px #fff,0 5px 14px -9px #d8dfe1}
+body.v2.page-pilot .pilot-step h3{color:#f5f6f6}
+body.v2.page-pilot .pilot-step-lead,.pilot-next-hint,body.v2.page-pilot .pilot-field-note{color:#b9c0c3}
+body.v2.page-pilot #pilot-request.pilot-flow label,body.v2.page-pilot #pilot-request.pilot-flow legend{color:#e4e8e9}
+body.v2.page-pilot #pilot-request.pilot-flow input:not([type=radio]),body.v2.page-pilot #pilot-request.pilot-flow select,body.v2.page-pilot #pilot-request.pilot-flow textarea{border-color:#5a6267;background:#0b0c0d;color:#f3f4f4}
+body.v2.page-pilot #pilot-request.pilot-flow input::placeholder,body.v2.page-pilot #pilot-request.pilot-flow textarea::placeholder{color:#899196}
+body.v2.page-pilot #pilot-request.pilot-flow input:focus,body.v2.page-pilot #pilot-request.pilot-flow select:focus,body.v2.page-pilot #pilot-request.pilot-flow textarea:focus{outline-color:#e6ebed;border-color:#dce1e3;box-shadow:0 0 0 5px rgba(210,218,221,.12)}
+body.v2.page-pilot .pilot-flow .button:not(.secondary){background:linear-gradient(120deg,#f2f4f4,#aab1b5);color:#141617;box-shadow:inset 0 1px #fff,0 7px 22px -14px #d9e0e2}
+body.v2.page-pilot .pilot-flow .button.secondary{border-color:#7a8388;background:linear-gradient(145deg,#2e3336,#121416);color:#edf0f1}
+.pilot-extra{border-color:#b6c0c333;background:#00000016}
+.pilot-extra summary,.pilot-extra-body>p{color:#d5dbdd}
+.pilot-extra summary::before{color:#e6ebed}
+.pilot-extra summary span{color:#c2c9cc;border-color:#6e777d}
+.pilot-review-summary{border-color:#b7c0c333;background:#08090a9c}
+.pilot-review-summary dt{color:#abb4b7}.pilot-review-summary dd{color:#f0f2f2}
+.pilot-ready-icon{border-color:#d7dde0;background:#dce3e51b;color:#f3f5f5}
+.pilot-plan-link{border-top-color:#b7c0c333;color:#e6eaeb}.pilot-plan-link span{color:#b9c1c4}
+body.v2.page-pilot #pilotSaveStatus,body.v2.page-pilot .pilot-talk{color:#aeb6b9}.pilot-save-dot{background:#d9dfe1}
+body.v2.page-pilot .pilot-flow .text-button,body.v2.page-pilot .pilot-talk .text-button{color:#e1e6e8}
+body.v2.page-pilot #request-success{border-color:#bec7ca;color:#eef1f2}
+@media(max-width:600px){.pilot-step-track{gap:8px}.pilot-step-track li{font-size:10px;gap:5px}.pilot-step-track li>span{width:27px;height:27px;border-radius:8px;font-size:10px}}
