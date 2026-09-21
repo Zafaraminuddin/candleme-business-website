@@ -2140,6 +2140,68 @@ body.v2.page-professional .luxury-object img {
   filter: saturate(.92) brightness(1.08);
 }
 
+/* Screenshot corrections: keep the professional object artwork clean on the dark cards. */
+body.v2.page-professional .luxury-object img {
+  background: transparent;
+  mix-blend-mode: multiply;
+}
+
+/* Screenshot corrections: pilot and planner section headings use CandleMe gold. */
+body.v2.page-pilot .pilot-step h3,
+body.v2.page-pilot #destinations-title,
+body.v2.page-pilot .planner-disclosure > summary span {
+  color: var(--gold-light);
+}
+
+/* Recovery rollout modal: centered, dark, compact, and independent of browser dialog chrome. */
+body.v2.page-recovery .recovery-rollout-model {
+  position: fixed;
+  inset: 50% auto auto 50%;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  width: min(860px, calc(100vw - 32px));
+  max-height: calc(100dvh - 32px);
+  overflow: auto;
+  border: 1px solid rgba(181, 188, 193, .58);
+  border-radius: 18px;
+  background: #111416;
+  box-shadow: 0 30px 90px rgba(0,0,0,.78), inset 0 1px rgba(255,255,255,.08);
+}
+body.v2.page-recovery .recovery-rollout-model[open] {
+  animation: recovery-rollout-in .24s ease-out both;
+}
+body.v2.page-recovery .recovery-rollout-model-card {
+  padding: 28px 32px 26px;
+  border: 0;
+  border-radius: 0;
+  background: linear-gradient(145deg, #1c2023, #0c0e10 72%);
+  box-shadow: none;
+}
+body.v2.page-recovery .recovery-rollout-model-card .eyebrow { color: #d9dde0; }
+body.v2.page-recovery .recovery-rollout-model-card h2 { color: var(--gold-light); }
+body.v2.page-recovery .recovery-rollout-model-copy,
+body.v2.page-recovery .recovery-rollout-model-steps li { color: #f0f1f1; }
+body.v2.page-recovery .recovery-rollout-model-steps { list-style: none; }
+body.v2.page-recovery .recovery-rollout-model-close {
+  top: 12px;
+  right: 16px;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(190,198,204,.42);
+  border-radius: 50%;
+  background: #0b0d0f;
+  color: #f1f2f2;
+  font-size: 25px;
+}
+body.v2.page-recovery .recovery-rollout-model-continue {
+  background: var(--gold);
+  color: #080909;
+  border-color: var(--gold-light);
+}
+@media (max-width:760px) {
+  body.v2.page-recovery .recovery-rollout-model-card { padding: 24px 20px 22px; }
+}
+
 body.v2.page-recovery h1,
 body.v2.page-recovery h2,
 body.v2.page-recovery h3,
@@ -2302,3 +2364,20 @@ body.v2.page-recovery .recovery-rollout-model-continue {
   }
   body.v2.page-recovery .recovery-rollout-model-steps li { flex: none; }
 }
+
+/* Final screenshot correction overrides. */
+body.v2.page-professional .luxury-object img{background:transparent;mix-blend-mode:multiply}
+body.v2.page-pilot .pilot-step h3,
+body.v2.page-pilot #destinations-title,
+body.v2.page-pilot .planner-disclosure>summary span{color:var(--gold-light)}
+body.v2.page-recovery .recovery-rollout-model{position:fixed;inset:50% auto auto 50%;margin:0;transform:translate(-50%,-50%);width:min(860px,calc(100vw - 32px));max-height:calc(100dvh - 32px);overflow:auto;border:1px solid rgba(181,188,193,.58);border-radius:18px;background:#111416;box-shadow:0 30px 90px rgba(0,0,0,.78),inset 0 1px rgba(255,255,255,.08)}
+body.v2.page-recovery .recovery-rollout-model[open]{animation:recovery-rollout-centered .24s ease-out both}
+@keyframes recovery-rollout-centered{from{opacity:0;transform:translate(-50%,-47%) scale(.98)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+body.v2.page-recovery .recovery-rollout-model-card{padding:28px 32px 26px;border:0;border-radius:0;background:linear-gradient(145deg,#1c2023,#0c0e10 72%);box-shadow:none}
+body.v2.page-recovery .recovery-rollout-model-card .eyebrow{color:#d9dde0}
+body.v2.page-recovery .recovery-rollout-model-card h2{color:var(--gold-light)}
+body.v2.page-recovery .recovery-rollout-model-copy,body.v2.page-recovery .recovery-rollout-model-steps li{color:#f0f1f1}
+body.v2.page-recovery .recovery-rollout-model-steps{list-style:none}
+body.v2.page-recovery .recovery-rollout-model-close{top:12px;right:16px;width:34px;height:34px;border:1px solid rgba(190,198,204,.42);border-radius:50%;background:#0b0d0f;color:#f1f2f2;font-size:25px}
+body.v2.page-recovery .recovery-rollout-model-continue{background:var(--gold);color:#080909;border-color:var(--gold-light)}
+@media(max-width:760px){body.v2.page-recovery .recovery-rollout-model-card{padding:24px 20px 22px}}
