@@ -2113,3 +2113,13 @@ body.v2.page-professional .sample-intro-dialog h2,
 body.v2.page-professional .sample-benefits span{color:#f7f3eb}
 body.v2.page-professional .sample-benefits span{border-color:#5f5140;background:#0b0c0d}
 body.v2.page-professional .professional-closing-copy h2{color:#f7f3eb}
+
+/* V39: modal reference correction. */
+body.v2.page-professional .sample-intro-dialog h2{color:#f7f3eb!important}
+body.v2.page-professional .sample-intro-dialog .sample-benefits span{color:#f7f3eb!important;border-color:#5f5140;background:#0b0c0d}
+body.v2.page-professional .sample-intro-logo{display:block;width:34px;height:48px;object-fit:contain;margin:0 0 16px}
+
+/* V39: modal reference correction. */
+body.v2.page-professional .sample-intro-dialog h2{color:#f7f3eb!important}
+body.v2.page-professional .sample-intro-dialog .sample-benefits span{color:#f7f3eb!important;border-color:#5f5140;background:#0b0c0d}
+body.v2.page-professional .sample-intro-logo{display:block;width:34px;height:48px;object-fit:contain;margin:0 0 16px}
