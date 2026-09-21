@@ -67,6 +67,22 @@
     sampleDialog.querySelector('[data-close-sample]')?.addEventListener('click', () => sampleDialog.close());
   }
 
+  const recoveryRollout = document.getElementById('recovery-rollout-model');
+  if (recoveryRollout) {
+    const openRecoveryRollout = () => {
+      if (recoveryRollout.open) return;
+      if (typeof recoveryRollout.showModal === 'function') recoveryRollout.showModal();
+      else recoveryRollout.setAttribute('open', '');
+    };
+    if (document.readyState === 'complete') openRecoveryRollout();
+    else window.addEventListener('load', openRecoveryRollout, { once: true });
+    recoveryRollout.querySelector('[data-close-recovery-rollout]')?.addEventListener('click', () => recoveryRollout.close());
+    recoveryRollout.querySelector('.recovery-rollout-model-continue')?.addEventListener('click', () => recoveryRollout.close());
+    recoveryRollout.addEventListener('click', event => {
+      if (event.target === recoveryRollout) recoveryRollout.close();
+    });
+  }
+
   const recoveryViewer = document.getElementById('recovery-viewer');
   const recoveryViewerImage = recoveryViewer?.querySelector('[data-recovery-viewer-image]');
   if (recoveryViewer && recoveryViewerImage) {
