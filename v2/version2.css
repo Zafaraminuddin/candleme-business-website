@@ -2128,3 +2128,68 @@ body.v2.page-professional .sample-intro-logo{display:block;width:34px;height:48p
 body.v2.page-professional .professional-closing-reference-section{padding:64px 0 88px;background:#080909}
 body.v2.page-professional .professional-closing-reference{width:100%;max-width:1670px;margin:0 auto;border:1px solid #be8b32;border-radius:18px;box-shadow:0 24px 60px -38px #d9a441;display:block}
 @media(max-width:760px){body.v2.page-professional .professional-closing-reference-section{padding:38px 0 54px}body.v2.page-professional .professional-closing-reference{border-radius:12px}}
+
+/* Final CandleMe visual consistency corrections. */
+body.v2.page-professional .sample-intro-dialog h2,
+body.v2.page-professional #closing h2 {
+  color: var(--gold-light) !important;
+}
+
+body.v2.page-professional .luxury-object img {
+  mix-blend-mode: screen;
+  filter: saturate(.92) brightness(1.08);
+}
+
+body.v2.page-recovery h1,
+body.v2.page-recovery h2,
+body.v2.page-recovery h3,
+body.v2.page-recovery .recovery-security strong,
+body.v2.page-recovery .recovery-simple-steps strong {
+  color: var(--gold-light);
+}
+
+body.v2.page-recovery .recovery-simple-steps li > span,
+body.v2.page-recovery .recovery-security-icon {
+  border-color: var(--gold);
+  color: var(--gold-light);
+}
+
+body.v2.page-recovery .recovery-flow-card,
+body.v2.page-recovery .recovery-security,
+body.v2.page-recovery .recovery-wallet-result,
+body.v2.page-recovery .recovery-image-frame {
+  border-color: rgba(237, 178, 75, .35);
+}
+
+body.v2.page-pilot .pilot-step-track li[aria-current="step"],
+body.v2.page-pilot .pilot-step-track li.is-complete,
+body.v2.page-pilot .pilot-gauge-label strong,
+body.v2.page-pilot .pilot-step h3,
+body.v2.page-pilot .pilot-ready-icon,
+body.v2.page-pilot .pilot-progress-title {
+  color: var(--gold-light);
+}
+
+body.v2.page-pilot .pilot-step-track li[aria-current="step"] > span,
+body.v2.page-pilot .pilot-step-track li.is-complete > span,
+body.v2.page-pilot .pilot-ready-icon {
+  border-color: var(--gold);
+  background: rgba(237, 178, 75, .12);
+}
+
+body.v2.page-pilot .pilot-cylinder {
+  border-color: #967745;
+  background: linear-gradient(180deg, #080705, #433725 30%, #211a11 57%, #080705);
+}
+
+body.v2.page-pilot .pilot-cylinder-fill {
+  background: linear-gradient(
+    180deg,
+    #a56d24 0%,
+    #f5d790 17%,
+    #eab74f 36%,
+    #b7802b 69%,
+    #f5d589 91%,
+    #c68d32
+  );
+}
