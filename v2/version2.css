@@ -2429,3 +2429,15 @@ body.v2.page-pilot #entry-title {
     grid-column: 1;
   }
 }
+
+
+/* Emergency centering correction: left and top must come after inset. */
+body.v2.page-recovery .recovery-rollout-model {
+  inset: auto !important;
+  left: 50% !important;
+  top: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  margin: 0 !important;
+  transform: translate(-50%, -50%) !important;
+}
