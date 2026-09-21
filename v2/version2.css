@@ -2100,3 +2100,10 @@ body.v2.page-pilot #pilot-definition .pilot-metal-content h2,
 body.v2.page-pilot .pilot-flow-intro h2{color:#e5b45d}
 body.v2.page-pilot #hero h1 .gold-inline,
 body.v2.page-pilot .pilot-flow-intro h2 .gold-inline{color:#f0c875}
+
+/* V37: shared heading and action hierarchy across the V2 pages. */
+body.v2 main h2{color:#e5b45d}
+body.v2 main h2 .gold-line,body.v2 main h2 .gold-inline{color:#f0c875}
+body.v2 main h3{color:#f6f3eb}
+body.v2 main .v2-actions .button:not(.secondary),body.v2 main .pilot-step-actions .button,body.v2 main .pilot-share-actions .button{background:linear-gradient(180deg,#f0c96d,#b9842e);border-color:#ffe0a0;color:#1a140c;box-shadow:inset 0 1px #fff8,0 10px 24px -16px #d9a441}
+body.v2 main .v2-actions .button:not(.secondary):hover,body.v2 main .pilot-step-actions .button:hover,body.v2 main .pilot-share-actions .button:hover{background:linear-gradient(180deg,#ffe09a,#d39a3d)}
