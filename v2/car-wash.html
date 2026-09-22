@@ -74,6 +74,13 @@ body.page-car-wash .car-wash-no-list li:after{content:"›";position:absolute;ri
 @media (max-width:800px){body.page-car-wash .hero-proof-sub{flex-wrap:wrap;gap:10px 24px;padding:18px 10px}body.page-car-wash .hero-proof-sub span+span:before{display:none}}
 body.page-car-wash .car-wash-services li{transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
 body.page-car-wash .car-wash-services li:hover,body.page-car-wash .car-wash-services li:focus-within{transform:translateY(-8px);border-color:rgba(242,196,109,.95);box-shadow:0 14px 28px rgba(206,151,44,.22),inset 0 1px 0 rgba(255,255,255,.08)}
+body.page-car-wash .car-wash-flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:48px 0 54px;background:rgba(12,12,10,.28)}
+body.page-car-wash .car-wash-flow-step{position:relative;padding:0 clamp(14px,2vw,32px);text-align:center}
+body.page-car-wash .car-wash-flow-step+.car-wash-flow-step{border-left:1px solid rgba(222,174,72,.65)}
+body.page-car-wash .car-wash-flow-number{width:86px;height:86px;margin:0 auto 18px;border:2px solid #f2c46d;border-radius:50%;display:grid;place-items:center;color:#f7d58b;font:700 2.2rem/1 Arial,sans-serif;background:radial-gradient(circle at 35% 25%,rgba(242,196,109,.25),rgba(12,12,10,.9) 65%);box-shadow:0 0 18px rgba(242,196,109,.28),inset 0 0 16px rgba(242,196,109,.12)}
+body.page-car-wash .car-wash-flow-step h3{margin:0 0 18px;color:#f2c46d;font:700 clamp(1rem,1.5vw,1.45rem)/1.1 Arial,sans-serif;letter-spacing:.03em}
+body.page-car-wash .car-wash-flow-step p{margin:0;color:#f5f0e8;font:400 clamp(.95rem,1.35vw,1.22rem)/1.45 Arial,sans-serif}
+@media (max-width:800px){body.page-car-wash .car-wash-flow{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:34px}.car-wash-flow-step:nth-child(3){border-left:0}.car-wash-flow-step:nth-child(n+3){padding-top:30px;border-top:1px solid rgba(222,174,72,.4)}}
 </style>
 </head>
 <body id="top" class="v2 page-home page-car-wash">
@@ -100,7 +107,12 @@ body.page-car-wash .car-wash-services li:hover,body.page-car-wash .car-wash-serv
 <div class="narrow">
 <h2><span>Most customer relationships are</span> <span class="gold-inline">lost at the moment of signup.</span></h2>
 <p class="">The wash is over. The customer liked the experience. They may even want to come back.<br><br>The usual path asks customers to do too much before they receive anything:</p><ul class="car-wash-no-list"><li>NO APP DOWNLOAD</li><li>NO REGISTRATION</li><li>NO IDENTIFICATION</li><li>NO LOGIN</li></ul>
-<p class="">A customer scans your Candle and saves it to Apple Wallet or Google Wallet. Then the next wash, offer, membership, fundraiser, or service link is already waiting. Once a customer saves a Candle to Apple Wallet or Google Wallet, that same Candle stays with them and brings them back to your wash whenever they open it. Activation is charged once per customer, not each time they return. If they change devices, a new activation may be recorded.</p>
+<div class="car-wash-flow" aria-label="How the Candle works">
+<div class="car-wash-flow-step"><div class="car-wash-flow-number">1</div><h3>SCAN</h3><p>A customer scans your Candle.</p></div>
+<div class="car-wash-flow-step"><div class="car-wash-flow-number">2</div><h3>SAVE</h3><p>They save it to Apple Wallet or Google Wallet.</p></div>
+<div class="car-wash-flow-step"><div class="car-wash-flow-number">3</div><h3>RETURN</h3><p>Your next wash, offer, membership, fundraiser, or service link is waiting whenever they open it.</p></div>
+<div class="car-wash-flow-step"><div class="car-wash-flow-number">4</div><h3>SIMPLE BILLING</h3><p>Activation is charged once per customer, not each time they return. A device change may result in a new activation.</p></div>
+</div>
 <p class="v2-emphasis" data-reveal><strong>Give them something useful first.</strong><br><span>A simple way back to your wash.</span></p>
 </div>
 </div>
